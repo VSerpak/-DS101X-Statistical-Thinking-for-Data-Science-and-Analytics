@@ -1,0 +1,221 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So I'd like to talk now about one particular effort\par
+that researchers have made to produce a method, develop\par
+a method, a statistical epidemiological method that\par
+produces, in this particular case, p-values--\par
+so we're in the realm of significance testing here--\par
+that produces p-values that have the desired characteristics.\par
+So generally speaking, if you use a particular levels\par
+to declare statistical significance- like say 5%\par
+is very commonly used-- it should be the case\par
+that when you declare statistical significance when\par
+the p-value is less than 0.05, it\par
+should be the case that your type I error\par
+rate, in the jargon, is 5%.\par
+So in other words, that you have a false positive 5%\par
+of the time.\par
+So the work that [? Olmap ?] performed\par
+shows, at least in the situations\par
+they looked at, that in actual fact, when\par
+you use a 5% so so-called alpha level, control of the type I\par
+error rate, the actual type I error\par
+rate is more like 40% to 60%.\par
+So I would argue we urgently need methods\par
+that produced p-values that have these closer\par
+to the nominal characteristics.\par
+So what I'm going to show you is-- briefly,\par
+I'm not going to go into the details, any great details.\par
+I wanted to show you is a method that produces, if you will\par
+as its output, a picture that looks like this.\par
+So let me walk through this somewhat carefully.\par
+So on the horizontal axis here is\par
+relative risk, estimated relative risk\par
+from a given study.\par
+And on the vertical axis is standard error.\par
+So when you implement one of these designs on an R database,\par
+it produces an estimate effect size--\par
+in this case relative risk-- and an associated standard error,\par
+basically a measure of the uncertainty\par
+associated with that risk estimate.\par
+And so focus for now on these diagonal lines here.\par
+So these are the lines that demarcate\par
+nominal statistical significance.\par
+And let me explain what I mean by that.\par
+So each dot here is a particular study.\par
+So that dot there is a study that\par
+had a relative risk of around about 3,\par
+and a standard error of around about 0.4.\par
+So basically your study is statistically significant\par
+if you're below the diagonal lines.\par
+So if you're in this region or that region over there--\par
+ignore the colored region for now-- if you're\par
+both the dashed line, you would be statistically significant\par
+using the nominal criteria.\par
+You can see this makes a degree of sense.\par
+You get to be statistically significant\par
+if-- let me just focus on the positive side--\par
+you get to be statistically significant\par
+if you have a large relative risk estimate, and potentially\par
+a large standard error.\par
+You can tolerate a large standard error\par
+if the relative risk estimate is large\par
+and still be statistically significant.\par
+Or, as the relative risk estimates\par
+get smaller and smaller, as the estimate gets closer to 1, then\par
+to be statistically significant, your standard error\par
+has to be quite small.\par
+They're the kind of implied linear boundaries\par
+that demarcate statistical significance\par
+from nonsignificant.\par
+So basically all of these studies over here, these dots,\par
+each of these studies would be statistically\par
+significant at the nominal 5% level.\par
+And the studies above the lines, these ones here,\par
+would not be statistically significant\par
+at the nominal level.\par
+So they have, in some cases, there's\par
+a fairly large relative risk.\par
+It's above 2, the estimated relative risk.\par
+But the standard error is large, so it's not\par
+statistically significant.\par
+So what I'm going to show you very briefly\par
+is the [? Olmap ?] researchers devised a method\par
+to produce different boundaries for statistical significance.\par
+So that colored region over there\par
+and this colored region on the left hand side,\par
+they represent regions in which a so-called calibrated p-value\par
+is statistically significant.\par
+So to get to statistical significance\par
+using calibrated p-values, you have\par
+to be in the colored regions, either in the region\par
+on the left hand side here or the region on the right hand\par
+side.\par
+So as you can see, none of the studies on the below one\par
+that yielded estimated relative risk below 1,\par
+none of these studies achieved statistical significance.\par
+And on the right hand side, north\par
+of 1-- producing positive effect size\par
+estimates-- just one of those studies actually achieved\par
+statistical significance.\par
+So what I'm going to show you very briefly-- I\par
+won't go into the details-- is where do those regions come\par
+from?\par
+And the [? Olmap ?] researchers have studied this in detail.\par
+And we can show empirically that if you\par
+use these boundaries to demarcate or define\par
+statistical significance, indeed you\par
+do get type I error rates that are at the nominal levels,\par
+be it 5%, or 1%, or whatever you desire.\par
+So briefly, where does this come from?\par
+So where does nominal statistical significance\par
+come from?\par
+Well, this is classic textbook epidemiology and/or statistics.\par
+There's a notion of a null distribution.\par
+Essentially under certain assumptions about an analysis,\par
+and if the null hypothesis is true-- in this particular case,\par
+that would mean the effect size is 1.\par
+There's no association between the drug and the outcome.\par
+Under the null hypothesis and under certain assumptions\par
+about bias, and measurement error, and what have you,\par
+you can derive mathematically a null distribution.\par
+It's a bell curve that I'm showing here.\par
+And the interpretation of this curve\par
+is that if the null hypothesis is true-- there really\par
+is no affect between the drug and the outcome--\par
+you expect to get effect size estimates that\par
+are in this range.\par
+And in fact you can make probabilistic statements.\par
+So with probability, say, 2% or 3%,\par
+you expect to get an estimate.\par
+Let me go down here.\par
+You expect to get an estimate that's\par
+to the right of my finger, or to the left of my finger,\par
+and so on.\par
+So that density represents the kind of estimated\par
+relative risks you would expect to see\par
+if in fact the null hypothesis is true,\par
+that there is no association between this drug\par
+and this outcome in the particular context\par
+that you're in.\par
+And so, if in actual fact when you conduct your study,\par
+you get an estimated relative risk that's, say, close to two\par
+in this particular case, that would be highly statistically\par
+significant nominally.\par
+Meaning, if the null hypothesis is actually true,\par
+the probability that you would get an estimate relative risk\par
+that far away from 1 is very, very small.\par
+So the p-value here is vanishing small.\par
+It would 10 to the minus 10 or something like that,\par
+because it's way out.\par
+You can't event see in this picture.\par
+But that bell curve actually goes on forever.\par
+It asymptotes towards the horizontal axis.\par
+So the probability of being that far\par
+out in the tail of the Gaussian, the bell curve,\par
+is very, very small.\par
+That's where the p-value comes from.\par
+Now for that mathematical artifact to behave correctly,\par
+there are assumptions that go into it that must be met.\par
+One of them, for example, is that your estimator\par
+is unbiased.\par
+So for that null distribution to be correct,\par
+it must be the case that your method does not systematically\par
+overestimate or underestimate the true relative risk.\par
+Now we know from the [? Olmap ?] studies\par
+and from many other sources that many\par
+of these methods that are widely used in fact are biased.\par
+So for one reason, due to unmeasured confounders\par
+or various reasons, they're biased.\par
+And it could be in either direction.\par
+So we've seen in certain cases very strong positive bias,\par
+in other cases very strong negative bias.\par
+So we know that that assumption is unreasonable\par
+and is not met in practice.\par
+So in some sense we know that the nominal null distribution\par
+is incorrect.\par
+So what can we do about that?\par
+Well, here's an idea.\par
+We developed a set of negative controls\par
+for a number of different health care outcomes\par
+in a number of different drugs.\par
+So these are drug out compares where\par
+we know the null hypothesis is true,\par
+that the true effect size is 1.\par
+There is no effect.\par
+So instead of using this mathematical null distribution\par
+based on assumptions that we know are not correct,\par
+but we could do instead-- this is the same picture,\par
+but now I've expanded the axis-- we\par
+could derive a null-- I beg your pardon,\par
+an empirical null distribution from our negative controls.\par
+That's what I'm showing here.\par
+So along the horizontal axis are the point estimates\par
+for different negative controls under the null hypothesis.\par
+And as you can see, instead of being tightly\par
+clustered around 1 as the textbook would have it,\par
+in actual fact they're spread very widely.\par
+They're much more variable than theory would suggest.\par
+And in this particular case, 55% of them\par
+have a p-value less than 0.05.\par
+The nominal type I error rate is 5%.\par
+In this case it's about 55%.\par
+And in any event, the simple idea is well gee,\par
+we could just model the negative controls,\par
+the empirical distribution of the negative controls,\par
+and derive an empirical null distribution,\par
+and then compute a p-value using that empirical null.\par
+So this particular case the yellow dot at around 2,\par
+the idea here is using this empirical null distribution,\par
+we can compute the probability of being that far away from 1.\par
+So here it's close to 2 under the null.\par
+And as you can see the probability\par
+of being that far away from 1 is quite substantial.\par
+It's about 0.3 in this particular case.\par
+So that's where this picture came from\par
+and that's where those regions come from that show\par
+you calibrated p-values.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

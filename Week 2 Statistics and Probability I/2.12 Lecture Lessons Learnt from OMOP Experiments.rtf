@@ -1,0 +1,264 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So the overall project lasted for several years,\par
+and we learned many lessons from it.\par
+I want to highlight three particular lessons\par
+that we learned.\par
+As I said, these are three lessons from amongst many,\par
+but they're three important lessons that we\par
+learned from the OMOP project.\par
+So the first lesson I'd like to focus on concerns operating\par
+characteristics.\par
+So as we discussed previously, the operating characteristics\par
+of observational studies in big health care databases\par
+are unknown to a large extent.\par
+And in particular, when we consider statistical artifacts\par
+like confidence intervals and p values,\par
+we don't have much understanding of whether the operating\par
+characteristics are close to the nominal characteristics.\par
+So let's focus on confidence intervals.\par
+Let's think about 95% confidence intervals.\par
+So we did the following, and we did this over and over\par
+in many different contexts.\par
+We took a particular epidemiological design,\par
+in this case, the cohort design, which\par
+is a very widely used design and very common in the literature.\par
+We applied it in a particular database.\par
+This is a Medicare database.\par
+And we applied for 13 negative controls\par
+for acute liver injury.\par
+So we talked about negative controls previously.\par
+So these are drug outcome pairs where we\par
+believe there's no association.\par
+So here we have 30 different drugs\par
+along the horizontal axis.\par
+And we believe through exhaustive literature searches\par
+and other means, we're fairly sure that none of these drugs\par
+cause acute liver injury.\par
+So therefore, the true relative risk\par
+for each of these drugs and acute liver injury is one.\par
+So this vertical axis here is on the scale of relative risk.\par
+Here's one unity.\par
+And so we believe that the true relative risk\par
+for every one of these drugs with respect to acute liver\par
+injury is one.\par
+They neither increase the risk of acute liver injury\par
+nor decrease the risk of acute liver injury.\par
+So therefore, if we compute a 95% confidence interval\par
+for each one of these drugs with respect to acute liver injury,\par
+it should be the case-- this is the whole idea\par
+of a 95% confidence interval.\par
+It should be the case that 95% of the 30 intervals\par
+contain one, and 5% of them do not.\par
+Now, as it happens here, 95% is not an integer.\par
+It's 28.5.\par
+So we would expect, when we compute our 30 confidence\par
+intervals, that about 28 or 29 of them should contain one,\par
+and a smaller number of them, one or two of them,\par
+should not contain one.\par
+And it might not be terribly surprising\par
+if it was 27 of the intervals or 30 of the intervals.\par
+But it should be in and around 28 and 1/2 of the intervals\par
+should contain one.\par
+So what actually happened when we\par
+did this, when we ran this particular design set up\par
+in a particular way in this database for acute liver\par
+injury?\par
+But here are the 30 confidence intervals.\par
+So each confidence-- let's look at this one here, for example.\par
+So this confidence interval is a 95% confidence interval\par
+for Almotriptan-- that's a drug-- and acute liver injury.\par
+And as you can see, the point estimate\par
+here is just bigger than one.\par
+The confidence interval goes from something bigger than 4,\par
+all the way down to something like 0.4.\par
+And indeed, this interval straddles one.\par
+So as we discussed, 95% of the intervals,\par
+28 or 29 of the intervals, should look like that one.\par
+They should contain one.\par
+And a small number of the intervals\par
+should look like this one.\par
+This one's a very narrow interval here.\par
+This confidence interval, 95% confidence interval,\par
+does not contain one.\par
+It's actually nowhere near one.\par
+It's all below about 0.5.\par
+And the reason why some of these intervals are very narrow\par
+and some of them are quite wide is\par
+because these drugs vary quite significantly\par
+in terms of their prevalence, how widely used they are.\par
+And therefore, in this database, this Medicare database,\par
+for some of these drugs we have quite a lot of information,\par
+quite a lot of data, quite a large number of patients\par
+taking these drugs.\par
+And hence, we get very precise confidence intervals.\par
+And for some of the drugs, they're not so widely used.\par
+So we don't have so much data and you get much wider\par
+confidence intervals.\par
+But anyway, the main point here is\par
+to do with operating characteristics.\par
+What fraction of these confidence intervals\par
+actually contain one.\par
+It's that it should be around about 28.\par
+Let's count them all.\par
+So this one contains one, this one\par
+contains one, and just touches one, and so on.\par
+So as we count across here, what we find\par
+is that 13 of the confidence intervals contain one.\par
+And correspondingly, 17 of them do not contain one.\par
+So therefore, the estimated coverage probability\par
+in this context is actually 43%.\par
+This is not good.\par
+That number is meant to be 95%.\par
+So instead of 95% of the intervals including\par
+the truth, one in this case, it's only 43%.\par
+Now, this particular analysis is a particular design,\par
+a particular database, a particular outcome.\par
+We ran this exact same experiment\par
+for many different epidemiological designs\par
+on many databases for many different outcomes.\par
+And the picture is typically like this one.\par
+So typically, the coverage probability\par
+is in the 40% to 60% range.\par
+This is very problematic.\par
+It's nowhere near the nominal characteristics.\par
+Or put another way, when we do a study, an observational study\par
+in a health care database, and we produce a 95% confidence\par
+interval, we think we're fairly sure in some sense\par
+that that interval contains the true relative risk.\par
+But in fact, the chance-- it should be 95% chance\par
+that it contains the truth.\par
+The actual chance that it contains the truth\par
+is somewhere more like 50%.\par
+So this is quite problematic in terms of decision making.\par
+A second lesson that we learned is that database heterogeneity\par
+is perhaps a much more significant factor\par
+than we thought it.\par
+So let me explain.\par
+So we did the following.\par
+We took, in this particular case, 50 drug outcome pairs.\par
+These are listed here on the-- the font is quite small.\par
+But these are, if you will, like 50 studies.\par
+50 different drug outcome pairs that we studied.\par
+We then took a particular analysis.\par
+We took several particular analyses.\par
+But in this case here, we took one analysis\par
+and we applied that analysis to each of these 50 drug outcome\par
+pairs in up to 10 different databases.\par
+So what we're looking at here, the dots in this picture\par
+are-- so here for example, this is Amphotericin B\par
+and aplastic anemia.\par
+And we ran a particular analysis in several different databases.\par
+And what we see is that the estimate\par
+from each of the databases in which we\par
+ran this study is the point estimate is bigger than one.\par
+And some of these, the yellow ones\par
+are not statistically significant.\par
+And the red one over here is statistically significant.\par
+So in this particular case, we ran the analysis\par
+on three different databases.\par
+And the good news in this context,\par
+or let's look at the one directly above it,\par
+is there's a qualitative agreement\par
+amongst the different analyses.\par
+So in this particular case, if you\par
+run this analysis on five different databases,\par
+all five of them say that there is a positive effect.\par
+The estimated relative risk is bigger than one.\par
+And all of them say that it's statistically significant.\par
+However, if you cast your eye up and down this picture,\par
+across all these drug outcome pairs,\par
+you can see that in many instances,\par
+you can go from a statistically significant result in one\par
+direction, less than one, showing a protective effect,\par
+to a statistically significant effect in the other direction,\par
+suggesting a toxic effect, depending\par
+on which database you use.\par
+Now, in this particular case, it's\par
+a propensity score adjusted new user cohort design, which\par
+is probably the most widely used design in the health care\par
+literature.\par
+For this particular analysis, what\par
+we find is, just focusing on the result at the bottom here,\par
+21% of the pairs had at least one\par
+source, one database with a significant positive effect\par
+and one database with a significant negative effect.\par
+So depending on, if you will, you\par
+can choose a database to get whatever answer you want.\par
+This is not mathematically surprising.\par
+These databases represent different populations,\par
+different patients.\par
+But if you look at a typical observation study published\par
+in the health care literature, what you will find\par
+is they choose a database, the Kaiser database, or the GPRD,\par
+or whatever.\par
+They choose a database without comment\par
+and show the results of the analysis on that database.\par
+What this is showing, and it's not\par
+just specific to this particular analysis, across a variety\par
+of analytic methods, what we find\par
+is that there's between typically 20% to 40%--\par
+in 20% to 40% percent of the cases that we looked at,\par
+you can go from statistically significant in one direction\par
+to statistically significant in the other direction,\par
+depending on which database you pick.\par
+So put another way, when you pick up\par
+a paper that's done an analysis in a database, what\par
+the reader generally doesn't know\par
+is, had those authors used a different database,\par
+they might well have gotten a different answer, which\par
+is just quite problematic.\par
+The third lesson that I'll just highlight briefly\par
+concerns parameter sensitivity.\par
+So when you conduct these kinds of observational studies,\par
+there are various design choices that one makes.\par
+So for example, I'm showing here an analysis of Sertraline,\par
+which is a drug, and GI bleeding.\par
+This particular analysis yields a relative risk of 2.45.\par
+And you can see the 95% confidence interval.\par
+So that particular analysis-- for that particular analysis,\par
+these are some of the design choices\par
+that correspond, that go into making up\par
+that-- to producing that 2.45 and that 95% confidence\par
+interval.\par
+So this particular case, it's a case control design.\par
+So the kinds of choices that an analyst\par
+has to make when implementing a study like this,\par
+you have to choose the number of controls per case.\par
+You have to define a clean period prior to the outcome.\par
+You have to define the time at risk.\par
+In this particular case, it would\par
+be 30 days from the start of exposure to the drug.\par
+And so on.\par
+So there are a variety of choices\par
+that an analyst has to make.\par
+These are quite subjective in nature.\par
+There's no obvious right choice for any\par
+of these particular design choices.\par
+So what we're showing in this picture here\par
+is each dot corresponds a variant on those design choices\par
+that I just showed you.\par
+So in this particular case-- this is Sertraline and GI\par
+bleeding-- what we see is, depending\par
+on the choice that you make, you can\par
+go from a large, positive, statistically significant\par
+estimate, bigger than two, to a statistically significant\par
+protective effect, or negative effect, an estimate\par
+less than one.\par
+And basically, everything in between,\par
+depending on the particular choices you make.\par
+This is unfortunate.\par
+We would prefer if our analyses were robust to these choices\par
+so that no matter what choices you made within reason,\par
+you would get qualitatively similar findings.\par
+That is not the case.\par
+And this is not specific to Sertraline and GI bleeding.\par
+Across many drug outcome pairs and many types\par
+of analytic approaches, this is what we found,\par
+is that there is a lot of sensitivity to choices\par
+for which different analysts will, in general, make\par
+different choices.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

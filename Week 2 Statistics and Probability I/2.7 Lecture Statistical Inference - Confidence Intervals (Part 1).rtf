@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 This segment concerns statistical inference.\par
+The first inference topic we want to discuss\par
+is confidence interval.\par
+Let's recall the Lego example we did\par
+by creating two populations of Lego pieces\par
+and we sample run the pieces for all of the population\par
+to create a small sample.\par
+This is the plot we had, is that we have using computer\par
+simulation, we created the sample mean if we repetitively\par
+sampled 10 random pieces from the population a.\par
+For population b, we do the same thing.\par
+And the colored vertical bars, the histogram,\par
+indicate what will happen if we do that many, many times.\par
+So we call this, the histogram itself,\par
+is a hidden sampling distribution\par
+we have concerning the variability in sample\par
+average estimated using a random sample.\par
+It means that if you have a random sample out of population\par
+a of size 10, the average you compute by chance\par
+can be as small as 2 or as large as 12, but more likely,\par
+as described by this shape, more likely to be between 4 and 6\par
+and somewhere in this range.\par
+And what we also have seen before, previously we\par
+have discussed, that for population b,\par
+because the pieces are more homogeneous,\par
+the level of variability is smaller,\par
+which is also seen in the actual sample\par
+estimates we derived using random sample\par
+we actually conducted by hand.\par
+So this is a notion of sample distribution\par
+that can be used to describe the variability in sample average\par
+due to random sampling.\par
+We can study sampling distribution by simulation,\par
+by experiment, or sometimes we describe\par
+it using mathematical model.\par
+The reason why we can use mathematical model\par
+to describe it is there is a branch of probability\par
+concerns the behavior of sample statistic\par
+under random sampling.\par
+Then make assumptions.\par
+If the assumptions of these theoretical work\par
+are met, that the behavior of statistics such as sample\par
+average can be approximated by certain probability models,\par
+which make the computation much more convenient.\par
+So here, these are the three ways\par
+that one can derive sampling distributions concerning\par
+a sample statistic.\par
+So the sampling distribution model,\par
+whether we can derive it using simulation\par
+or mathematical model, is a model\par
+to describe the sampling distribution of the statistic.\par
+And it tells us where the center is, where the variability is.\par
+And the factors affect sampling distributions including\par
+the population distribution for the variable of interest,\par
+such as in the previous slide we have the population\par
+a and the population b, and if one population\par
+is more variable than the other population,\par
+such a variability will be inherited in the statistic\par
+sampling distribution.\par
+It also depends on the data-generation process.\par
+As we will discuss later in the context model for this week's\par
+study, that if we have the wrong assumption\par
+about data-generation process and use the wrong probability\par
+model to carry out statistic inference,\par
+then our conclusion based on such sampling distribution\par
+can be quite biased.\par
+The third factor that affects sampling distribution\par
+is sample size.\par
+The smaller sample size, the larger variability\par
+you have in sampling distributions.\par
+As the sample size grows, you have more and more information\par
+in your sample.\par
+Then your estimate should get more and more accurate.\par
+And therefore, the sample size is\par
+one of the most important factors when we carry out\par
+statistical inference because the more information we have\par
+in the sample, the result we derive\par
+under the right assumption will be more reliable.\par
+How do we use sample distribution in inference?\par
+For confidence interval, is we want\par
+to use the variability measured in the sampling distribution\par
+to extend a point estimate, such as sample mean,\par
+into an interval estimate.\par
+In a way, we say the population mean or the population quantity\par
+of interest is estimated to be within an interval\par
+instead of equal to a point.\par
+By extending from a point estimate\par
+to an interval estimate, our chance\par
+of covering the true value of the parameter,\par
+or the quantity in the population we're interested in,\par
+improves.\par
+This is how we use that.\par
+So assuming you actually know the sampling distribution--\par
+which is rarely the case in practice-- assuming you\par
+actually know the sampling distribution\par
+and you want to create a region where most of the sample\par
+estimates fall into-- so you want\par
+to describe the variability from the sampling distribution,\par
+the behavior of the sample estimate\par
+according to the distribution model using one length,\par
+and this length corresponding to 95% of chance.\par
+The width of this length corresponding to a notion\par
+that we have discussed in our statistical thinking practice\par
+called margin of error.\par
+So the margin of error is a length\par
+equal to the half of an interval-- that\par
+is, given the center of variability,\par
+you'll go this much to the left and this much to the right,\par
+you contain about 95% of the viability in the sample\par
+estimates.\par
+What that means is that if you draw different samples-- one,\par
+two, three, all the way to, say, 100 samples--\par
+most of the sample estimates derived\par
+from these random samples should give a numerical summary\par
+of the statistic of question within this range\par
+of variability, the central 95% interval.\par
+This is a probability interval because this is\par
+a true sampling distribution.\par
+So this is assuming that we actually\par
+know the sampling distribution, what\par
+are the expected behaviors of the sample\par
+estimates if you have many of them?\par
+Of course, in practice you do not\par
+have knowledge of the sampling distribution,\par
+so that disappears.\par
+Given some mathematical tools, assumptions,\par
+and probability calculation, most of the time\par
+we can estimate this width.\par
+So the width of this interval, probability interval,\par
+that if centered at the truth should contain\par
+95% of the sample estimates.\par
+Therefore, based on our information\par
+from the sample real data or certain assumptions,\par
+we derive this quantity, this width,\par
+and apply it to individual sample estimates.\par
+So here, what it means is I take the sample estimates\par
+and you extend the sample estimates to an interval using\par
+the length with a width derived on some estimation of sampling\par
+variability.\par
+So you estimate the extent of sampling variability\par
+using information from real data and you\par
+apply that width centered at the sample\par
+estimates to create an interval estimate.\par
+And if you have actually a lot of samples\par
+and repeat this process many, many times,\par
+according to our probability discussion\par
+on the previous slide as what the meaning of this length\par
+from the true sampling distribution,\par
+there should be a 95% chance that this individual interval\par
+created using individual sample estimates\par
+should cover the invisible truth.\par
+So of course, in practice, you do not know where the truth is,\par
+but because of the probability calculation and our logic\par
+creating this procedure, if every calculation is done\par
+correctly, the chance of this individual sample\par
+interval covering the truth is 95%.\par
+In practice, you do not actually have 100 intervals,\par
+you only have one, so the interval look\par
+like an estimate from your sample\par
+plus/minus an estimated margin of error.\par
+The confidence here in the title of this procedure,\par
+the confidence interval, is a probability value.\par
+So it is a probability describing\par
+the proportion of occurrence.\par
+So the occurrence we're interested in\par
+is whether this confidence interval\par
+will contain the true value of the parameter\par
+in the population we're interested in finding out.\par
+So confidence in the probability value assigned\par
+to this process describing how often we can use this process\par
+to derive a correct inference about population\par
+value that the interval actually contains the true value.\par
+So if we say it's a 95% confidence interval,\par
+it means that we are confident with 95% probability\par
+that this interval calculated will contain the true value\par
+of the parameter.\par
+It is not the probability that this particular exact numerical\par
+interval will be correct because it\par
+is either correct or incorrect given the truth of population.\par
+The probability value behind confidence\par
+is the probability value of describing the behavior\par
+of this estimating process.\par
+So confidence interval can take values other than 95%.\par
+So the 95% is the most commonly used, conventional value.\par
+You can actually have confidence values\par
+other than 95% such as 99% confidence or 90% confidence.\par
+Validity of a confidence interval in\par
+terms of true coverage probability\par
+or whether the-- so we know that the confidence is\par
+the probability describing the procedure\par
+and we derive that using sampling distribution we\par
+believe describe the sampling variability of an estimate,\par
+such as sample mean.\par
+We're also concerned about the true coverage\par
+probability of a procedure.\par
+So here, these two lines create a very interesting contrast.\par
+This value is what we use to design the estimation\par
+process of confidence interval.\par
+We rely on assumptions about the generation process.\par
+We rely on the results of the probability model\par
+for the sampling distribution.\par
+We believe if all these assumptions\par
+and theoretical method are valid,\par
+the probability is a true description\par
+of the behavior of this estimation process.\par
+This concerns the actual behavior of such a procedure\par
+in practice.\par
+So in practice, when you have a computation process, confidence\par
+interval, that rely on certain assumptions,\par
+it is quite possible certain assumptions are not met.\par
+Therefore, it is interesting, it is also very important,\par
+to gauge what is a true coverage probability.\par
+The true coverage probability depends\par
+on the validity of assumptions.\par
+As we will show you with real-world examples\par
+in the context module by Professor David Madigan,\par
+if the assumptions of the procedure creating the estimate\par
+plus/minus margin of error are not met,\par
+the coverage probability can be quite\par
+different from the confidence which we usually\par
+call a nominal confidence, and this is true size\par
+of the confidence interval.\par
+And that will be a problem because we use 95% confidence\par
+to indicate that you can believe in the result most of the time.\par
+But if the true behavior of this procedure\par
+departs from that confidence, giving a much lower value,\par
+that means that you are giving this illusion of confidence\par
+in this process.\par
+The result is not as reliable as you have thought.\par
+Therefore, it's very important for us\par
+to gauge the true coverage probability\par
+in practice, especially on some commonly\par
+used statistical procedures.\par
+Only when we realize extent of problem\par
+we can go back to the probability calculation\par
+of everything and then generate correction\par
+to the process to generate more reliable confidence intervals\par
+and other inference results.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

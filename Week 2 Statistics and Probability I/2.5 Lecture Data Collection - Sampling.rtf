@@ -1,0 +1,267 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 In this segment, we'll discuss sampling and conducting\par
+estimation using sample observations.\par
+Before we discuss sampling, let's discuss why we sample.\par
+In statistics, we always care about knowledge regarding\par
+the entire population.\par
+Here the population is referring to the entire collection\par
+of individuals of interest for a particular study.\par
+If the population is really our central goal to study,\par
+why should we sample?\par
+Let's consider an example.\par
+I have received a recipe for chocolate chip cookies,\par
+and I want to see how it works.\par
+So I created a population of cookies,\par
+and my variable of interest is the taste of this cookie.\par
+To study the entire population for this example\par
+will mean that I have to taste every single cookie I've made,\par
+which will be problematic if I am potentially\par
+interested in bringing this cookie\par
+to a bake sale at a school.\par
+Therefore, the more sensible thing to do\par
+is to sample a cookie at random and taste the cookie.\par
+The sample cookie will give us certain knowledge\par
+about the entire population in terms of how good\par
+the cookies taste as a population.\par
+Of course, the random sample of the cookie\par
+will not be identical to every single cookie\par
+in the population, but it tells you\par
+enough so that you'll know that the whole population of cookies\par
+is probably OK or not OK to be brought to a bake sale.\par
+To derive knowledge from sample to population,\par
+we need to have a representative sample.\par
+In order to learn why we should have a representative sample,\par
+it is more meaningful to discuss what happens if we do not\par
+have a good sample.\par
+When we have a non-representative sample,\par
+we tend to have misleading outcomes,\par
+and we'll have biased results.\par
+In order to correct for the bias caused\par
+by the bias in the sample, we will carry out\par
+a more sophisticated analysis which\par
+makes that analysis itself difficult. If this is not\par
+successful, then the time and research\par
+used to collect such data will be wasted.\par
+How do we get a representative sample, then?\par
+A representative sample is a sample\par
+that carries a correct image of the population.\par
+To do that, we need to award a biased sampling design\par
+that has systematic errors.\par
+In particular, when we study of variable of interest,\par
+we do not want the sampling chance\par
+of an individual being associated\par
+with the outcome of interest.\par
+If that's the case, and we worry about confounders\par
+that may potentially affect the outcome of interest,\par
+why not create a sample that is a matched\par
+image of the population?\par
+So why not matching?\par
+An example of matching in particular\par
+is to have a sample composition being exactly proportional\par
+to that of the population.\par
+So if you have a population of students on campus,\par
+and on this campus you have 64% females and 40% males,\par
+then you want to have a random sample that\par
+matches the population on this particular variable.\par
+However, in practice, we have many variables\par
+that can potentially be impacting\par
+the outcome of the interest, and if we\par
+want to match on all these variables,\par
+that can be very hard.\par
+So consider the cookie example we just discussed earlier.\par
+In matching we'll be creating a small cookie whose ingredients\par
+match the composition of ingredients\par
+of the entire batch of cookies.\par
+To do that, we will start with the recipe instead of mixing\par
+the ingredients randomly, we will\par
+take a small fraction of each of the ingredients\par
+and create a tiny cookie.\par
+That cookie will be a matched image of the entire population.\par
+This sounds pretty ridiculous, because we definitely do not\par
+do that in our daily life.\par
+So what do we actually is mix ingredients randomly--\par
+hopefully they are distributed more or less evenly--\par
+and random-sample a cookie so that the cookie is hopefully\par
+representative of the population.\par
+Here the key word is randomize, and we randomly\par
+select, which is the best design we can carry out in sampling.\par
+To create a representative sample,\par
+we need to sample randomly from the population\par
+with an equal chance-- not a chance\par
+associated with the outcome of interest-- towards individuals\par
+in the population.\par
+Here let's do a demonstration using LEGO pieces.\par
+We use a population of 200 LEGO pieces,\par
+and we want to create two populations.\par
+Here we create Population A and Population B.\par
+Each population has 100 pieces.\par
+The variable of interest-- let's call it\par
+x-- is the number of points on a sampled LEGO piece.\par
+Population A has a mixed population\par
+of some very small pieces and some very large pieces.\par
+Population B is a population that\par
+is relatively homogeneous in terms of the sizes of the LEGO\par
+pieces in it.\par
+So here in Population A, we counted the number of points\par
+on each of the pieces, and concluded that the average of x\par
+is 4.35.\par
+For Population B, the average for x is 5.84.\par
+So now, for illustration, we will randomly sample pieces\par
+from these two populations by hand.\par
+Sampling from Population A is done by Statistician 1,\par
+and the sampling from Population B is done by Statistician 2.\par
+We have seen in the demonstration\par
+we created two populations.\par
+In this histogram I distributed the size of the pieces\par
+in Population A and in Population B.\par
+As we have seen in the demonstration,\par
+Population A has many small pieces and several very\par
+big pieces.\par
+Population B, however, is more homogeneous in sizes,\par
+so you have Size 4, 6 and 8.\par
+They're more equally distributed,\par
+therefore creating a very strong contrast between the two\par
+populations.\par
+In our demonstration, we randomly\par
+select from the two populations.\par
+The first image shows up that we choose a random sample\par
+from Population A. You can see that you\par
+have some big pieces here and some small pieces there.\par
+For the second image that I have,\par
+a random sample from Population B,\par
+you can see that the size of the pieces\par
+are very similar to each other.\par
+Because I know what went into the populations,\par
+I can use computer simulations to illustrate what happens\par
+when we have a random sampling.\par
+Here is a histogram to show you how\par
+sample means distribute from random samples of the two\par
+populations.\par
+The first histogram is for Population A,\par
+and the second histogram is for Population B. Here I\par
+use a vertical line, this white line\par
+here, to indicate where the true average is in the population.\par
+You can see that there is a lot of variation\par
+here, though the plot indicates that from different samples\par
+you can have a sample mean as low as about 1 and as high\par
+as 12.\par
+This is constructed using 1,000 random samples.\par
+For Population B, because the population is more homogeneous,\par
+what it translates to is less variation in the sampling\par
+variation of the sample mean, meaning\par
+that in the 1,000 samples we carried out\par
+using computer simulation, the viability\par
+between different samples runs from 4 to 8,\par
+mostly concentrated at 6.\par
+We are close to where the true population mean is.\par
+You can see that the sampling variation depends\par
+on the population variation of the variable of interest\par
+in the population.\par
+So now let's see what happens when we choose pieces randomly\par
+by hand.\par
+For each of the two populations, we\par
+carry out five random samples.\par
+I illustrate them using vertical bars in this plot.\par
+You can see that for Population A, we should have five samples.\par
+You see four bars because two of them\par
+have exactly the same value for the sample mean,\par
+and you can see that they are scattered widely\par
+within the range of the sample distribution of the sample\par
+means.\par
+For Population B, we also have five samples.\par
+Here you see three bars.\par
+We actually have five samples, but the reason why you only\par
+see three is their overlap.\par
+You can see that the variation difference between samples\par
+is much smaller, and they also, by chance, all fall\par
+down on the same side of the population mean.\par
+We can study this behavior later using see another plot.\par
+So you can see that in practice, we only have one real sample,\par
+and using computer and mathematical tools,\par
+we can derive the sampling variation in the sampling\par
+distribution, and such knowledge will assist us\par
+in creating better estimation of the population mean,\par
+to have better coverage of the population mean in our results.\par
+So we saw some sampling estimates\par
+from the previous slide, and we realize\par
+that they all have variability due to random sampling.\par
+We know that estimates based on samples differ from the truth.\par
+What's more important to that sampling variability ability\par
+is to award sampling bias or selection\par
+bias in observed values based on a random sample.\par
+Such bias occurs when the probability\par
+of an individual being selected is associated\par
+with variable's value.\par
+Here consider three examples.\par
+One example is if you want to study the education\par
+level of the entire population using an internet survey.\par
+The probability of a highly educated individual\par
+being selected in your sample is higher than the individual\par
+with less education.\par
+Another example would be to gauge the political opinions\par
+of the population by doing a survey on social media.\par
+This contains sampling bias, because people\par
+who use social media are different from people\par
+who do not.\par
+Therefore, whenever possible, we want to understand and model\par
+the selection process using statistical and analytic tools\par
+to understand the sampling bias in addition\par
+to sampling variability.\par
+Using such understanding, we can create corrections\par
+to the sampling bias to derive more reliable results.\par
+Here we'll see an animation about how\par
+we can derive knowledge from the population to sample.\par
+This is an example for sampling.\par
+In this example, we discuss random sampling and statistical\par
+inference.\par
+First we use this rectangular area\par
+to indicate a large population of interest.\par
+There are two types of individuals in this population.\par
+For example, the crosses are those\par
+who think it is a good time to find a job,\par
+and the circles are those who think\par
+it is a bad time to find a job.\par
+In the population, the proportion of circles is 50%.\par
+We cannot always observe the population directly.\par
+Using random sampling, we draw a small set\par
+of individuals from the population,\par
+with both types observed.\par
+So here is our sample.\par
+In this sample, we have 43% circles.\par
+The proportion of circles in the population, the 50%,\par
+is a truth we care to find out.\par
+The 43% from the sample is our estimate.\par
+If we repeat the entire process and randomly sample another set\par
+of individuals and count the number of crosses and circles,\par
+we may reach a different estimate,\par
+say 57% in this particular example.\par
+Both samples we have seen so far were sampled\par
+from the same population.\par
+The estimates were calculated in the same way,\par
+yet they give different numerical values.\par
+What is happening?\par
+There is only one truth in the population.\par
+Estimates based on different random samples\par
+vary due to chance.\par
+This variability is due to chance\par
+during the sampling process, known as sampling variability.\par
+The probability model can be used\par
+to describe the randomness due to sampling variability.\par
+In practice, we do not see multiple random samples.\par
+We only have one sample from a population and one estimate\par
+calculated using this sample.\par
+Assisted by the probability model for the sampling\par
+variability derived using statistical theory,\par
+we can carry out statistical inference\par
+regarding the population truth.\par
+For example, we can create an interval for the population\par
+truth using the sample estimate plus and minus\par
+the estimated margin of error.\par
+The margin of error is decided using both data variability\par
+we observe in the sample and the probability model\par
+for sampling variability.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

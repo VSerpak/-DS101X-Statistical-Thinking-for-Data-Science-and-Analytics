@@ -1,0 +1,194 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So let me describe the OMOP experiment.\par
+And this experiment was conducted over a three year\par
+period.\par
+There was a large number of people involved in this.\par
+And so this picture here explains\par
+the sort of overall layout of the OMOP experiment.\par
+But let me explain it piece by piece.\par
+So we did the following.\par
+The first thing we did was we acquired 10 different data\par
+sources.\par
+So 10 large scale patient level databases.\par
+Some of these are claims databases and some of them\par
+were electronic health record databases.\par
+Together, the union of these databases\par
+contained about 200 million lives.\par
+So this is large scale data.\par
+And in each case, there were complete medical records.\par
+So we had a record of multiple years, in most cases.\par
+Multiple years of medical records for each patient\par
+covering their conditions, drugs, diagnosis, and so on.\par
+I'll get into this in a little more detail in a second.\par
+We then took these databases and we mapped them\par
+to a common data model.\par
+And this is the so-called OMOP Common Data Model.\par
+And it's open source.\par
+It's available on the web.\par
+It's now in Version 4.\par
+And in fact, quite a large number\par
+of databases now around the world\par
+have been mapped-- of the order of 50 or 60 databases\par
+have been mapped to the OMOP Common Data Model.\par
+So the basic idea is you take the 10 databases, which\par
+in this experiment, we took these 10 databases which\par
+are all using different dictionaries\par
+and different formats and different schema and so on,\par
+and mapped them to a single common data model.\par
+So a common nomenclature for conditions and for drugs\par
+and so on.\par
+And a common database schema.\par
+So I'm not going into this in any great detail,\par
+but there's a schematic of what I just described.\par
+So take the different databases in their different formats\par
+and map them to a common format so\par
+that we can conduct an analysis across all\par
+of the databases seamlessly.\par
+This is a schematic of the OMOP Common Data Model.\par
+So just to give you an idea of some of the details.\par
+And there is, for example, a Person table.\par
+It's is a relational database.\par
+There's a Person table in the OMOP Common Data Model.\par
+And there's a key for that table, which is the Person ID.\par
+And then in that table we store gender, year of birth,\par
+month of birth, and so on and so forth.\par
+So basic demographic information about each person\par
+in the database.\par
+There's another table.\par
+This is the Condition Occurrence table.\par
+So when you have an encounter with the medical system using\par
+an outpatient context or an inpatient context,\par
+you may or may not receive some diagnosis,\par
+have some conditions diagnosed.\par
+When that happens, and in this table,\par
+we have the Condition Occurrence ID.\par
+That's the key into the table.\par
+And then the Person ID that links it to the person.\par
+And then the concept idea of that condition and so on.\par
+Some basic information about the condition\par
+that has been diagnosed.\par
+Similarly with drugs.\par
+This is a Drug Cost table.\par
+And that stores information on the costs\par
+associated with drugs.\par
+So not going into great detail here, but the point is we\par
+mapped these very diverse databases\par
+to a single common data model in a way\par
+that the intention is to be as high fidelity as\par
+possible, to maintain the integrity of the original data.\par
+But the crucial thing is, once you've mapped these databases\par
+to the common data model, you can then\par
+use the same analysis tools across all of the databases.\par
+So the last piece of the-- or I suppose\par
+second to last piece of the experimental setup\par
+is we then implemented, in software-- mostly\par
+in SAS, but also in ORA, and there's some C implementations\par
+and what have you-- essentially all of the standard methods.\par
+The standard analytic methods that\par
+are in use, in the literature on observational studies in health\par
+care.\par
+So for example, we implemented a new user so-called inception\par
+cohort design using propensity scoring.\par
+We implemented a variety of case control methods.\par
+We implemented a number of methods\par
+that used high dimensional logistic regression, and so on.\par
+So all told, we actually implemented\par
+14 different classes of methods of epidemiological designs\par
+that were intended to cover essentially all of the methods\par
+that one finds routinely in the literature.\par
+And they're mostly standard approaches, like cohort\par
+methods, case control methods, self control case series.\par
+And then some other methods that are statistical approaches\par
+and pharmacovigilance approaches that are\par
+adapted for longitudinal data.\par
+So we implemented in software.\par
+It's all open source.\par
+It's available on the OMOP website, omop.org.\par
+Implemented all of these methods.\par
+And they are designed to run against the OMOP Common Data\par
+Model.\par
+So they're designed, in every case, to estimate effect sizes.\par
+So to estimate the effect size of a-- relation\par
+to a drug and a condition.\par
+We then ran all of these methods set up\par
+in a variety of different ways.\par
+All of these methods come with parameters or analytic choices\par
+that are encoded in software.\par
+So we ran all of the methods with essentially\par
+all possible settings of these analytic choices against all 10\par
+of the databases for, in the case\par
+of the first round of the OMOP experiments,\par
+against a set of controls.\par
+And that's what's represented in the matrix here at the bottom.\par
+So let me just explain this a little bit.\par
+So along the top, you can see 10 drugs.\par
+And these are older drugs for which\par
+there's a fairly good understanding\par
+of how these drugs work and what they do.\par
+So these are drugs like the ACE inhibitors and Amphotericin B,\par
+and so on.\par
+And on each row is an outcome, an adverse effect, if you will.\par
+And then the cells in this table are color coded as follows.\par
+So the red cells are what we refer to as positive controls.\par
+So as you can see, for ACE inhibitors and angioedema,\par
+in the top left corner, that's a red cell.\par
+And what that indicates is that we believe that ACE\par
+inhibitors cause angioedema.\par
+That there's a positive association between ACE\par
+inhibitors and angioedema.\par
+This is derived from extensive literature from data\par
+and clinical trials and so on.\par
+So we're very confident that there is an association there.\par
+So that's a positive control.\par
+And right below that, we have a blue cell for ACE inhibitors\par
+and aplastic anemia.\par
+And that's a negative control.\par
+Meaning we do not believe that ACE inhibitors\par
+cause aplastic anemia.\par
+So there is no evidence of any sort\par
+in the literature, any sort of a powered observational study\par
+or a randomized trial, that would\par
+suggest that ACE inhibitors cause aplastic anemia.\par
+So we believe the true effect size, in this particular case,\par
+is one, is unity.\par
+Taking ACE inhibitors does not make\par
+it more likely or less likely that you will\par
+experience aplastic anemia.\par
+Now this is, of course-- there's some uncertainty associated\par
+with these classifications.\par
+We're very confident that there is no association in this case,\par
+and that there is one for ACE inhibitors and angioedema.\par
+But some of the methods that we worked on at a later stage\par
+tried to take into account the possible uncertainty\par
+about the status of these controls.\par
+But in any event, for now, what we're working with here\par
+is a set of positive controls and a set of negative controls.\par
+And the basic idea of this experiment\par
+was to see how well do the standard methods that\par
+are in use in the health care literature,\par
+how well do the standard methods do\par
+at discriminating between positive controls\par
+and negative controls?\par
+So adequately powered studies in these large databases\par
+ought to return a null estimate for the blues.\par
+If we conduct a study in one of these databases\par
+of ACE inhibitors and aplastic anemia,\par
+we do not expect to find a significant effect.\par
+And similarly, if we conduct a study of ACE inhibitors\par
+and angioedema, then we would expect to find an association\par
+when we conduct a study.\par
+So that's the basic setup.\par
+For the white cells in the table,\par
+there there's too much uncertainty.\par
+So there's conflicting evidence in the literature\par
+as to whether there is or is not an association.\par
+So they're omitted from this experiment.\par
+And the couple of green cells are positive associations,\par
+which we, in this particular experiment,\par
+we were focused on adverse effects of drugs\par
+rather than positive effects.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

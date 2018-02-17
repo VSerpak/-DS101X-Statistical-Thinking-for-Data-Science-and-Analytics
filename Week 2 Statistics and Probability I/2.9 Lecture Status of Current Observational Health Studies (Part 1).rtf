@@ -1,0 +1,285 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Very large scale health care data\par
+has become available to researchers.\par
+And there's a lot of excitement about the potential\par
+for these data to improve the way we deliver health care\par
+and understand the effects of health care interventions.\par
+Just to illustrate the change that's\par
+taken place, consider a drug, that drug called Metformin.\par
+So Metformin is a widely used medication for diabetes.\par
+Metformin has been on the market for several decades.\par
+And when the drug was approved some decades\par
+ago by the Food and Drug Administration,\par
+there was a pivotal, so-called pivotal randomized clinical\par
+trial that was the primary evidence that\par
+led people to the drug.\par
+And in that clinical trial, there\par
+were a grand total of 141 patients exposed to Metformin.\par
+So a concern is suppose there is a somewhat rare side\par
+effect that is associated with Metformin, some bad thing that\par
+happens to a small percentage of the patients who\par
+take Metformin.\par
+Well, there's a very good chance that it was never\par
+seen in that randomized trial, because there\par
+were only 141 patients.\par
+Flash forward to today, we now have large scale patient level\par
+databases, health care databases,\par
+that we as researchers have been using,\par
+in which, the particular databases we use,\par
+there are actually over a million new users of Metformin.\par
+So these are observational data, meaning\par
+these are not the product of designed experiments.\par
+Rather, these data are gathered as a byproduct of health care\par
+practice.\par
+And some of the databases in particular, the ones I'm mostly\par
+going to focus on, are so-called administrative claims\par
+databases.\par
+So these are generated because of financial transactions\par
+in the health care system.\par
+There are also electronic health record systems which\par
+record primary medical records.\par
+But in any event, the databases that I'm going to focus on here\par
+say there are over a million users of Metformin.\par
+So the idea, excitement here and the idea and the hope\par
+is that with that much data, with that many users\par
+of Metformin, surely we can figure out\par
+what good things and bad things this drug is causing.\par
+We would like to do causal inference\par
+using these databases to infer downstream effects,\par
+good and bad, of Metformin.\par
+So that's the idea.\par
+Now let me show you some examples\par
+of what these data look like in a sort of cartoon version.\par
+These are real data.\par
+These are not real patients whose pictures\par
+are on the slides.\par
+But this is a typical data record\par
+for a particular patient.\par
+So what you see on the horizontal axis is time.\par
+So I'm showing you here about two years worth of data\par
+for this particular patient.\par
+And then there are different kinds\par
+of data that we're showing here for this patient.\par
+So on the top are visits that this patient made,\par
+be that to primary care doctor or an emergency\par
+room or an inpatient visit or whatever.\par
+These are procedures this patient had\par
+at different points in time.\par
+And we know what each of those procedures are.\par
+And these are drug exposures where we\par
+have a notion of a drug year.\par
+So we know, for this patient, when\par
+they were prescribed a certain drug\par
+and for the duration of that prescription.\par
+And if they repeat the prescription,\par
+we can construct these eras during which\par
+we believe the patient was consuming a drug.\par
+We also have conditions recorded for this patient.\par
+So these are diagnosis that this patient had.\par
+And finally we have observations.\par
+These are basically lab values.\par
+And for this patient we only have one set of lab values.\par
+So you can see from this patient's record,\par
+obviously this patient was having an encounter\par
+with the health care system at the beginning of the two year\par
+period.\par
+And there's quite a lot of activity\par
+in the middle of the period.\par
+And then the patient is taking some drugs, essentially,\par
+throughout the period.\par
+So that's what these data look like.\par
+So in the case with Metformin, I can hand you one million\par
+of these, of objects that look like this.\par
+And the task that we are engaged in,\par
+we and hundreds or thousands of researchers around the world,\par
+is can we use these data to infer the effects of Metformin?\par
+Now that's one patient.\par
+And that's a pretty standard, typical patient\par
+and a modest amount of interaction\par
+with the health care system.\par
+Here's a different patient.\par
+Again, these are real data.\par
+So here this patient has rather a lot more\par
+interactions with the health care system.\par
+And in particular, as you can see,\par
+this patient is taking quite a few drugs\par
+throughout the two year period in this particular case.\par
+Here's yet another patient.\par
+And alas, there are actually many patients\par
+like this in these databases.\par
+This is a patient who obviously has had many interactions\par
+with the health care system, lots and lots of visits,\par
+many procedures, many drugs, and lots of different diagnosis\par
+that this patient has had.\par
+So the point of this is, and this might sound simple.\par
+I give you the data for a milliion patients.\par
+And you're just trying to figure out what Metformin causes.\par
+But just glancing at these records,\par
+I think it's sort of intuitive that maybe this isn't\par
+so simple.\par
+So look at this third patient here.\par
+Supposing one of those drugs is Metformin, well,\par
+and let's say, a potential side effect of Metformin, let's say,\par
+it's a concern about some form of cancer,\par
+is one of those conditions that appears\par
+later on in this patient.\par
+Well, it's going to be pretty tricky to figure out\par
+was it the Metformin that caused that?\par
+Or was it something else, some other drug that caused that?\par
+Or was it something not drug related at all?\par
+So that's the challenge here is can we\par
+come up with methods, statistical and machine\par
+learning methods, to figure out real,\par
+basically to distinguish between real causes\par
+and spurious associations.\par
+That's the objective here.\par
+Now as a matter of fact, many researchers\par
+are conducting these kinds of studies\par
+in these kinds of databases.\par
+And medical journals are full of studies using these databases.\par
+Here's a typical one.\par
+This is an article that appeared a few years ago\par
+in the British Medical Journal, a very\par
+prestigious medical journal.\par
+And this is a very standard type of paper.\par
+Pick up any issue of any major medical journal.\par
+And you will find papers just like this one.\par
+So this particular paper concerns\par
+a class of drugs called oral bisphosphonates.\par
+These are drugs that are prescribed\par
+to patients with osteoporosis.\par
+And so brand names that you might have seen ads for\par
+are drugs like Fosamax and Reclast and so on.\par
+There are several of them.\par
+This paper is about oral bisphosphonates,\par
+this class of drugs, and the risk\par
+of cancer of the esophagus I'm going to focus on here.\par
+And so they're going to use, in this case,\par
+it's an electronic health record database.\par
+They're going to use a large scale database\par
+like the cartoons we were just looking at to try and make\par
+inference about a potential causal association\par
+between oral bisphosphonates and cancer of the esophagus.\par
+Basically we want to know, do these drugs\par
+cause cancer of the esophagus?\par
+In this particular case, this is actually September 2010,\par
+this is the conclusion that they reached.\par
+In this large, nested case control study,\par
+so there they're describing the design of the study\par
+that these authors conducted in the database,\par
+it's a very standard type of study,\par
+in this large, nested case control\par
+study within a UK cohort, United Kingdom-based data,\par
+it's a database called the General Practice Research\par
+Database.\par
+The authors concluded, we found a significantly increased risk\par
+of esophageal cancer in people with previous prescriptions\par
+for oral bisphosphonates.\par
+Now you'll notice that they're not\par
+using the word cause in there.\par
+They're just saying they found a significantly increased risk.\par
+But in actual fact, what we care about, of course, is causation.\par
+We want to know is it these drugs\par
+that caused the esophageal cancer?\par
+And alas, unhappily, these authors\par
+have concluded that yes.\par
+Apparently these drugs do.\par
+They found a significant increase\par
+to the risk of esophageal cancer.\par
+I should perhaps put this in context.\par
+These authors are conducting this study for a reason.\par
+There is a concern with these drugs\par
+that they might cause esophageal cancer.\par
+This concern has arisen from many different sources.\par
+But there are a number of cases that have been\par
+reported in the literature.\par
+There are also so-called spontaneous report databases\par
+where we have found reports of patients\par
+on bisphosphonates subsequently having\par
+diagnosis of esophageal cancer.\par
+So this study, there's a context to this study.\par
+It's not completely out of the blue.\par
+In any event, large electronic health record\par
+database focusing on a particular causal association,\par
+bisphosphonates and esophageal cancer,\par
+and concluding that there is a risk.\par
+That's September 2010.\par
+And right about the same time, actually the month before,\par
+in JAMA, the Journal of the American Medical Association,\par
+a paper appeared with a very similar title,\par
+"Exposure to Oral Bisphosphonates and the Risk\par
+of Esophageal Cancer".\par
+So these authors basically studying the same issue.\par
+And here's the conclusion that they drew.\par
+Among patients in the UK General Practice Research Database,\par
+the use of oral bisphosponates was not\par
+significantly associated with incident esophageal\par
+or gastric cancer.\par
+So the opposite conclusion in other words.\par
+One paper concludes that there is an association.\par
+There's a significantly increased risk.\par
+Watch out.\par
+We better be careful.\par
+The other paper concluding that there is not\par
+a significant association between them.\par
+Relax.\par
+We don't have to worry about it.\par
+The kicker here is, as you can see from the papers,\par
+both sets of authors used the same database.\par
+So two well regarded sets of researchers and analysts\par
+analyzing the same data, focusing on the same issue,\par
+and arriving at opposite conclusions.\par
+So this is obviously quite a concern.\par
+And one wonders if there's some fundamental flaw in the way\par
+that we're conducting these studies that\par
+could lead to this kind of a mess,\par
+basically, where we've got conflicting\par
+conclusions, in this case, using the same data.\par
+So one might think that I chose this example\par
+because it's unique in the history of science.\par
+And I'm just using it to make a point.\par
+And in actual fact, this is a very common phenomenon.\par
+So I just show a set.\par
+Very quickly, I've run through a set of other examples\par
+of the same phenomenon.\par
+And these are three or four examples\par
+out of dozens or perhaps hundreds\par
+that I could have chosen to make the point here.\par
+Here's a paper in JAMA, very prestigious journal,\par
+oral fluoroquinolones, this is a class of antibiotics,\par
+and the risk of retinal detachment.\par
+Same basic kind of issue.\par
+We want to know do fluoroquinolones\par
+cause retinal detachment.\par
+And these authors used a large scale observational health care\par
+database to examine this issue.\par
+Paper published in August 2012.\par
+And they concluded patients taking oral fluoroquinolones\par
+were at higher risk of developing retinal attachment.\par
+So these authors are saying there is an association.\par
+Same journal, sometime later, same question,\par
+different conclusion.\par
+Oral fluoroquinolone use was not associated with increased risk\par
+of retinal detachment.\par
+I will go on.\par
+Pioglitazone and bladder cancer.\par
+This is an important public health issue.\par
+Pioglitazone is a widely used diabetes medication.\par
+And some evidence has emerged that these drugs might cause,\par
+that this drug might cause bladder cancer.\par
+This paper appeared in the British Journal\par
+of Clinical Pharmacology.\par
+In this study population, pietism\par
+does not appear to be significantly associated\par
+with an increased risk of bladder cancer.\par
+Round about the same time, a paper\par
+appeared in the British Medical Journal,\par
+the use of Pioglitazone is associated with an increased\par
+risk of incident bladder cancer among people with type 2\par
+diabetes.\par
+Opposite conclusions.\par
+End of transcript. Skip to the start.\par
+ Status of Current Observational Health Studies\par
+}
+ 
