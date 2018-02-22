@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Regression analysis also provides\par
+a way of looking at the variability in the data,\par
+and to attribute the variability of y variability\par
+to different sources.\par
+This is the same exercise we had, previously\par
+known as analysis of variance, where\par
+we look at a continuous quantitative variable\par
+versus a categorical variable.\par
+Here, instead, we look at both y as a quantity variable\par
+and x as quantity variable.\par
+Consider I have as an example when\par
+you look at x variable being working experience of employees\par
+in a company, and the y-axis is a salary earned\par
+by individuals in this company.\par
+And here, you have a data set of points.\par
+And as you can notice that, here, we\par
+have individuals with the same amount of work experience\par
+before joining this company, and in this hypothetical example,\par
+I consider six levels of working experience.\par
+And in linear regression model, we're\par
+treating this variable as a quantitative variable,\par
+so we are going to fit a regression line.\par
+So this is the regression we fit,\par
+and it's decided by two coefficients, or two\par
+parameters--\par
+y equal to b0 and b1x.\par
+So here, this is y equal to b0 plus b1x.\par
+OK, so this is a regression line that we're looking at.\par
+So the regression line, when combined\par
+with this six levels of x variable,\par
+will provide you with expected value on the line.\par
+So for example, here you will have the expected value\par
+for people with one year of experience in salary.\par
+And on this point, you will have the expected salary\par
+amount for people with two years of working experience.\par
+And let's consider two scope of individual--\par
+the individual with one year of working experience,\par
+and the individual with five years of working experience.\par
+So here, consider looking at the variability\par
+along the regression line-- the y equal to b0 plus b1x.\par
+Then the line suggests that if you're\par
+an individual with more working experience, five versus one,\par
+you are expected to have this much difference\par
+between their salary.\par
+So this jump is a jump in the value\par
+of y expected by the regression line-- suggested\par
+by the regression line.\par
+That is a variation explained by the regression line,\par
+because the regression line suggests\par
+that there is association between salary and the working\par
+experience, and it suggests a positive linear relation\par
+between these two variables.\par
+According to the line, if your work experience change from one\par
+year to five years, you are expected\par
+to see this much variation--\par
+this much change.\par
+And however, what is not accounted for by the regression\par
+line is, given the same value of x that you can still\par
+observe variability among individuals\par
+with the same working experience.\par
+So this also represents variability in y,\par
+and this variability in y is not accounted\par
+for by the regression line.\par
+So consider the scatter plot.\par
+If we go back several clicks, we see all the points.\par
+And we can have all the points being pushed to the y-axis,\par
+and form a histogram, or a density plot\par
+to suggest variability in y.\par
+That's a total variability in y.\par
+The regression line partitions that variability\par
+into two parts.\par
+The variability along this regression line due to x,\par
+or explained by x, and the variability that is isogonal\par
+to the regression line-- not isogonal in the mathematical\par
+sense, but isogonal in the statistical sense--\par
+that it is independent and correlated\par
+with the regression line.\par
+That is a variation not explained\par
+by the regression line.\par
+So this provides another way of looking\par
+at the fit of a regression line to scatter points.\par
+For a regression line, that analysis of variance\par
+will also use three sum of squares,\par
+similar defined as previously.\par
+So we first consider the error sum squares.\par
+So here, SSE stands for error, and SSR is for regression,\par
+and this SSTO stands for total.\par
+So it's sort of similar.\par
+Previously, when you have a categorical variable,\par
+we do not have a regression line.\par
+So this part was named as group.\par
+For the regression that we use regression line\par
+to account for some of the variability in y.\par
+Therefore, that the sum squared would be five\par
+is called regression sum square.\par
+As you can see, the error sum squares\par
+look at individual value of yi and is predicted\par
+by the accordance regression line\par
+to see what are the variability not being accounted\par
+for by the regression line.\par
+So if we go back to this plot, the error regression--\par
+error sum squares-- really look at the departure of the point\par
+from the center suggested by the regression line.\par
+So it's the amount of variability\par
+along this direction.\par
+And if you look at the second line of this definition of sum\par
+squares-- that's a regression sum squares--\par
+so look at the sum over o value of y--\par
+but we look at the y hat instead the yi.\par
+So this is a predictor value.\par
+So if we flashback to the previous slide and look\par
+at the individual predicted value of those crosses--\par
+here you have a cross, and here a cross-- so you\par
+have six levels of x value.\par
+So you should have 6 of yi hat here,\par
+and then individual value of yi hat,\par
+but you actually have the same number of y hat as y.\par
+Because for every observed value of y,\par
+you have a corresponding y hat.\par
+So you have n y hat.\par
+But they're defined along the regression line.\par
+You look at how the value along the question line\par
+differs from the center of y, so which is y bar.\par
+So the second is look at how the variability\par
+along the regression line can be measured using a sum square.\par
+So these two sum squares captures the variation,\par
+cannot be explained by the regression line,\par
+and can be explained by the regression line.\par
+And their sum adds up to the total sum squares--\par
+the total variability in y, which is defined as how yi\par
+distributed around the center of the observed y values.\par
+Using the sum of squares, we define\par
+a value called r square, which is\par
+a ratio of the regression sum squares and total sum squares.\par
+It measures the fraction of variation y\par
+can be explained by the regression line.\par
+In nearly all statistical packages\par
+r square is included as a standard output\par
+in the regression analysis, because it's\par
+a simple statistic that summarizes how much\par
+variability--\par
+how much variation in y-- has to be\par
+accounted for using the regression model\par
+you just fitted.\par
+However, no matter how large the r square is,\par
+it still does not necessarily suggest causation.\par
+Because a strong association can be suggested by r square.\par
+So r square simply suggests a strong linear correlation\par
+or linear association.\par
+It does not prove that the relation between x and y\par
+is a causation, even though in the language of regression\par
+analysis we use the word variation explained\par
+by x or accounted for by x, it does not\par
+translate to that the variation is actually caused by x.\par
+In statistics, we also want to understand\par
+the theoretical properties of the model we considered.\par
+One way to understand regression models\par
+is to give explicit assumption on the error assumed\par
+for the regression model.\par
+One of such model is called normal error regression\par
+model, where it is a probability model for linear regression.\par
+You have the same form as before.\par
+That y is considered to have a linear trend defined\par
+by x, and the parameter for this regression relation,\par
+and the random noise.\par
+Different from previous general discussion,\par
+here for this random noise, we assume a normal distribution\par
+model with a constant variance.\par
+In other words, we assume that the error being a random error.\par
+So it will have zero mean, indicating\par
+I have same chance of being positive or negative,\par
+and it has a variabilty--\par
+sigma square-- that is not dependent on the value\par
+of x and other things related to x and y.\par
+So it's an independent constant variance random noise.\par
+Given this probability model for the noise,\par
+we're able to establish that the least square regression\par
+estimate we just discussed also maximizes the likelihood\par
+function.\par
+The likelihood function is a function for candidate models.\par
+It calculates the probability for the observed\par
+data and their specified model.\par
+So it is a probability computed on a set of candidate models.\par
+So it's a function for model, and using observed data\par
+to gauge the consistence between observed\par
+data and candidate model.\par
+In other words, that under the assumption of normal error\par
+regression model--\par
+under the assumption that the random error\par
+we have for the regression analysis\par
+follows normal distribution--\par
+we establish that a least square regression estimates\par
+is known as maximum likelihood estimate in statistics.\par
+That possesses a lot of good properties.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

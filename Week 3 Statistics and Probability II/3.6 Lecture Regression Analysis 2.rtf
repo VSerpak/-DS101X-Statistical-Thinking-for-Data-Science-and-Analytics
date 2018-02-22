@@ -1,0 +1,217 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 We just discussed wanting to fit a good line to a scatter plot.\par
+So how do we evaluate the fit?\par
+How do we decide how good any particular line\par
+is to a scatter plot?\par
+The data we have, as we have seen in the previous slide,\par
+are the coordinates of the point, which\par
+are the observed pair of values for the x variable and the y\par
+variable.\par
+And remember that the letter n, in statistics,\par
+always refers to the sample size.\par
+So you have a sample of n pairs of points,\par
+observed on n individuals.\par
+For each individual, you have x variable and the y variable.\par
+The joint value of x1 and y1 decides\par
+the position of the first individual on the scatter plot.\par
+So you have this collection of data,\par
+and then you consider a candidate.\par
+The candidate is a regression line.\par
+Its mathematical equation is y equal to a plus bx.\par
+So here, I was using the Greek letter notation\par
+for the regression model, Because I\par
+want to indicate that this is an [INAUDIBLE] candidate\par
+line you can consider to fit through a scatter of points.\par
+So here, consider you have a candidate regression line.\par
+And how do we compare the points you have here\par
+and the mathematical equation?\par
+So, the points create a scatter plot that looks like this.\par
+So they do not fall on a straight line.\par
+And the mathematical equation, that arbitrary equation,\par
+may actually suggest a straight line through x and y.\par
+So you can have y equal to a plus bx.\par
+So how do we compare the points with this line?\par
+So in regression, we're trying to see\par
+how we can predict y using x.\par
+That is why x is referred to as explanatory variable y is\par
+referred to as response.\par
+So here, we are more concerned about how well this candidate\par
+regression line allows us to predict the value of y.\par
+So here, given a line, then we can\par
+consider a particular x value, for example x1.\par
+And, we see that according to x1, the point on this blue line\par
+is y hat equal to a plus bx1.\par
+Because it is for x1, we will use notation y1 here.\par
+And here, what you have is this level is y1.\par
+So this y1 is the actual observed value\par
+for y of the first observation.\par
+And, given x1, and given the regression model,\par
+you can calculate the first predictive value\par
+for the first observation.\par
+So then, this is for the first pair of observations.\par
+Then we consider the next value, x2, and we do the same thing.\par
+And then, the line suggested a possible response value.\par
+We don't know how good it is, we just say,\par
+for the regression model let's compute the y hat according\par
+to the regression line.\par
+Then, we also look at the actual observed y2.\par
+So, you do this whole thing over and over\par
+for the entire collection of n points,\par
+then you create a comparison.\par
+After this computation, you create actually a whole array\par
+of prediction values for comparison.\par
+So, our data looks like that you have y1 to yn.\par
+And the y1 to yn are not independently observed\par
+on their own.\par
+They're actually paired with observations\par
+of x, so you have x1 to xn.\par
+And then, here you have the model\par
+that you want to consider.\par
+So the model is y equal to a plus bx.\par
+So, using the model, and using the value here,\par
+then go through the model using this.\par
+Then you are able to create y1 hat, y2 hat to yn hat.\par
+OK?\par
+These values fall on this straight line\par
+because they're computed according to this candidate\par
+model.\par
+So here I just want to make sure that we are clear that this\par
+is only a candidate.\par
+Because the model is now represented\par
+by the predicted value, we can carry out\par
+a meaningful comparison between the model and the data\par
+through the predictive value.\par
+So here, the model has been represented\par
+by its prediction and the values where you\par
+have observations in the data.\par
+So you have the actual observed data for y,\par
+and you have the predicted value.\par
+And then, you evaluate the model by comparing these two\par
+sets of values, the actual observed\par
+values then the predicted values.\par
+So put this together, for any given\par
+value of x, the regression line suggests\par
+the predicted value for y.\par
+Then, using this predicted value,\par
+we will calculate the prediction error.\par
+Using this prediction error, we will\par
+compute the sum of square prediction errors between yi\par
+and the predicted value.\par
+So here, the value here, we have is yi hat equal to a plus b xi.\par
+So here, this part is being used in this equation.\par
+So that's why you have yi minus a minus b xi.\par
+So it's nothing but the same as yi minus y hat.\par
+Because this value can take both positive values\par
+and negative values here, therefore we\par
+need to use these prediction errors more or less equally\par
+in the sum of squares.\par
+So therefore we square the prediction errors\par
+to make them all positive and add it across\par
+to have a summary of how far away the observed data is\par
+from a particular candidate model.\par
+The least-square regression is then\par
+carried out to find the best regression\par
+line that is the minimizer of this defined criterion.\par
+It is, in a way, according to this definition\par
+of comparison, the closest fit to the observed points.\par
+The method of least-square regression\par
+finds all possible linear regression\par
+models between x and y, and identifies\par
+the minimizer of this defined sum of square prediction\par
+errors.\par
+It identifies the values for a and values\par
+for b that will attain the minimum value\par
+of this sum of square prediction errors,\par
+given the particular set of data that we're analyzing.\par
+So here, the estimate of the least square regression,\par
+is really to find a combination of a and b that work the best.\par
+Remembering the previous slide, I defined the regression model\par
+using the Greek letter beta 0 plus\par
+beta 1 x and plus some random error terms.\par
+So this is the definition of a regression model, assumed\par
+model between x and y.\par
+And here, this represents the theoretical value\par
+that we're trying estimate.\par
+So these are called the parameters\par
+in a regression model.\par
+In least square regression, we assume\par
+that the relation between x and y\par
+assumes such a form that the expectation of y\par
+is a linear function of x, and the actual observed value of y\par
+is the expectation plus a random error.\par
+Using observed data-- so we have data that looks like x1,\par
+y1, xn, yn.\par
+We try to identify this combination of value a and b,\par
+and it will be denoted as b0 and b1.\par
+So here, you have candidates of regression lines.\par
+So the value of any combination of values\par
+a and b give you a candidate model to consider.\par
+Out of all the models you can consider,\par
+your consider the one that minimizes the sum\par
+of square prediction errors.\par
+Once you identify that, this is the identified minimizer.\par
+And we call this the least-square estimate,\par
+or the least-square regression model\par
+identified from a set of data.\par
+So here, the combination of b0 and b1,\par
+identifying the least-square regression,\par
+is really intended to estimate their corresponding parts\par
+in the model assumed between x and y.\par
+So b0 is trying to estimate beta 0,\par
+and b1 is trying to estimate beta 1.\par
+And the regression estimate, naturally is\par
+y hat equal to b0 plus b1 x.\par
+So this will the obtained least-square regression\par
+line through the least-square regression method.\par
+And b0 is called the intercept, is the predicted value\par
+for y at x equal to 0.\par
+So if you have this y hat equal to b0 plus b1 x,\par
+and then you assume x equal to 0,\par
+you will have y hat equal to b0.\par
+So b0 is that intercept for this mathematical equation,\par
+indicating what it is the predicted y\par
+value at x equal to 0.\par
+X equal to 0, for some applications\par
+has a specific meaning.\par
+For others, it doesn't.\par
+The intercept is really an incorporated part\par
+of the regression line.\par
+It should be interpreted in the context of the data,\par
+in combination with other information you\par
+have in the regression line such as b1.\par
+b1 here is the slope, which estimates the increment of y\par
+when x increases by 1 unit.\par
+And here, let's consider an example,\par
+that we can consider y being the price for an apartment, that\par
+is the sales price for a particular apartment\par
+on the market.\par
+And x is the size of the apartment.\par
+So, if we have a set of data and we estimate\par
+that y hat is equal to $100,000 plus 200 times the size\par
+of the apartment.\par
+This 200 value is the b1.\par
+That is the slope.\par
+That is the incremental rate of the price\par
+of an apartment when the size of the apartment\par
+increases by 1 unit.\par
+So here, given this example, of this 200 value,\par
+is the unit price for one square foot.\par
+In this example, that the intercept is estimated\par
+as $100,000, you can say that is the price of an apartment when\par
+x is equal to zero.\par
+Here, because we're talking about price of an apartment\par
+as y, then when x is equal to 0, that's\par
+an apartment with no footage, which is quite a silly example.\par
+So, we really shouldn't interpret\par
+that $100,000 is the expected the price of an apartment\par
+with no footage at all.\par
+It rather is, interpreted as a baseline price for apartments\par
+in a certain city that is relatively\par
+unrelated to the size of the apartment.\par
+It's some kind of set value for the price of apartments\par
+in a population we're interested in.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

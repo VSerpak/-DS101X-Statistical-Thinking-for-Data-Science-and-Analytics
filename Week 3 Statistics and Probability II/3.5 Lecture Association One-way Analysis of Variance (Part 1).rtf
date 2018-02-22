@@ -1,0 +1,213 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 This segment we will discuss a measure\par
+called analysis of variance in the application\par
+of studying association between a categorical variable\par
+and a quantitative variable.\par
+Let's go back to the example we discussed\par
+in the previous module when we have a discussion on how\par
+we display and summarize association\par
+observed between a categorical variable\par
+and a quantitative variable.\par
+Here the categorical variable is the education received\par
+by survey respondents, or in this matter is the individuals\par
+studied by a survey conducted by the Bureau of Labor Statistics.\par
+The quantitative variable is the weekly income.\par
+In this plot, we created and discussed\par
+in the previous module we displayed\par
+the mean weekly income from each of the educational category.\par
+So that's one way of showing the distribution of the difference\par
+of the quantitative variable between different categories\par
+defined by the categorical variable.\par
+So in studied association between a categorical variable\par
+and a quantitative variable, we're\par
+concerned about how the distribution of income\par
+changes or varies from one category to another.\par
+And these categories are defined by this categorical variable.\par
+Here, let's think about this example.\par
+These will be simplified by considering only five\par
+observations from three categories.\par
+So now let's consider a look at three educational categories--\par
+people who didn't finish high school,\par
+people who have a high school diploma,\par
+and people who received more education than high school.\par
+For each of those category, I simulated five individuals.\par
+And also I simulated income levels\par
+for these five individuals.\par
+Actually to help us with our discussion on analysis\par
+of variance, I created the following simpler example\par
+motivated by the example we just saw on the previous slide.\par
+So here we consider only three categories on education--\par
+the less than high school or the people\par
+who didn't receive a high school education,\par
+who didn't finish high school, people\par
+who have high school education, and people who have more\par
+than a high school education.\par
+For each of the categories, I simulated five individuals.\par
+And basically I simulated their weekly income levels\par
+within each category according to the mean of that category.\par
+And I assumed that these individuals\par
+have similar variability within the category.\par
+One thing that we can see that if we do not\par
+look at a category, meaning that we ignore the education level\par
+information, it is equivalent to say that let's\par
+line the points together and look at how\par
+they distribute on the y-axis.\par
+So we see a lot of variation here.\par
+If we actually put them into categories\par
+and only look at within categories--\par
+here you have five individuals here, five individuals here,\par
+and five individuals here.\par
+The reason why you don't see five points\par
+is sometimes they overlap when the points are\par
+too close to each other.\par
+So here you can see that the variability\par
+within each category is much smaller than when\par
+you put all of the points back to the y-axis.\par
+So the contract is here.\par
+You ignore the education information\par
+and only look at overall viability in y\par
+or the variability in the weekly income along the y-axis.\par
+This plot shows that if you look within each category\par
+and look at the variability within each category,\par
+you see less variation within.\par
+The other thing you see from this second plot\par
+is the categories demonstrate a different trend\par
+in the center of the distributions.\par
+So you would not only have variability\par
+within each of the categories between individuals that\par
+received the same level of education,\par
+you also have that the center, the mean,\par
+of the distribution within the category of less\par
+than high school education, lower than high school\par
+education, the center of this distribution\par
+is much lower than that of the individual who received\par
+a high school education.\par
+And the mean of this distribution\par
+is also lower than the mean of the individuals who\par
+received higher than high school education.\par
+So this is one way analysis of variance trying to study.\par
+They're trying to study how much the variability in y,\par
+how much variability in this quantitative variables\par
+can be explained by between group differences\par
+and within group differences.\par
+So analysis of variance concerns the total variation\par
+in y, the quantitative variable.\par
+So want to understand the sources of variation\par
+contributed to one variable that we're particularly concerned\par
+about.\par
+To explain the variation in y, we consider a variable x.\par
+Here the variable x is a categorical variable.\par
+We'd like to know how much variation in y\par
+can be explained by x.\par
+Here, this is something that we say\par
+a lot in statistical analysis is the variation\par
+y be explained by x?\par
+And here I can illustrate a little bit more\par
+using the plot we just saw.\par
+Before we go on, I just emphasize on one thing,\par
+that we're trying to study how much variation in y\par
+can be explained by x.\par
+What we do not mean by this statement is even\par
+when the variation in y can be well explained\par
+by x, that still does not lead to the establishment\par
+of a causal relation between y and x.\par
+Here, what we can conclude is our y and x are associated.\par
+The knowledge of x can help us predict y better.\par
+So now what do we mean by explaining variation,\par
+or another way, predicting y?\par
+So let's just say here we have variable y.\par
+We want to be able to predict the weekly income\par
+of a random individual sampled from population.\par
+We collect information of 15 individuals.\par
+Before we have knowledge about their education level,\par
+before we can utilize the information provided\par
+by education level, all the information we have\par
+are these 15 values we collected.\par
+So this is our random sample.\par
+If here comes a random individual in the population,\par
+one who gives the best prediction we can have\par
+for this future individual using the information we have\par
+on this observed individual, the best thing we can try\par
+is the mean of these individuals,\par
+which is around here.\par
+So that's where our best fit is given these 15 individuals.\par
+If we actually have the information about x--\par
+so now our question is, how can we predict y given x?\par
+Given x means that we want to constrain our attention\par
+or focus on our contention within the categories defined\par
+by x.\par
+So same thing as when we discuss the conditional probability.\par
+Given x mean you consider individuals fall withing\par
+each of these categories.\par
+If this future individual will have knowledge\par
+about his education level, we then\par
+can put this individual in one of those categories\par
+according to that value.\par
+So assuming that this individual actually\par
+have high school education, we will focus on this category.\par
+And our best prediction using data available to us\par
+will be based on those five observations instead\par
+of these 15 observations, because now we\par
+have more information concerning this individual.\par
+And we know that this individual is\par
+more similar to an individual in this group\par
+because they have the same education\par
+level than to this two group of individuals,\par
+because they have different education levels.\par
+So our prediction will be the mean\par
+of these five points for individual\par
+with more than a high school education here,\par
+for individual with high school education,\par
+and here for individual with less than high school\par
+education.\par
+If these 15 points can help us learn about predicting y,\par
+we can see here, this is the best prediction\par
+we can have for any individual if we do not\par
+use education information.\par
+So you can see that there are a lot of prediction errors\par
+as defined as difference between the actual observed value\par
+and the predictions.\par
+So here you can see these points,\par
+that they all individually different, due to random error.\par
+And they have higher difference to this line\par
+than what we will see for the inference conditional x.\par
+So now we have information from x.\par
+Then the prediction errors for this exercise\par
+is the difference you can see from here\par
+to the center of this category, or of this point to the center\par
+of this category, of this point to the center of this category.\par
+Well even though I do not do the actual numerical calculation\par
+here, but I'm very confident that the prediction errors are\par
+much smaller in scale than the prediction error\par
+we can see in this plot.\par
+So this would mean that the variation\par
+in y, the departure from the center of the distribution\par
+observed in y are reduced by considering variation only\par
+within the categories.\par
+The informational acts explained the difference\par
+between categories.\par
+So that means that the education level can be used to explain,\par
+not in a causal way, but can be used\par
+to estimate the difference, on average, between the people who\par
+receive less than a high school education and people\par
+who receive a high school education.\par
+So it explains why this group of people\par
+is making more income on a weekly basis than individuals\par
+in this.\par
+So the education level explains that difference.\par
+And also here.\par
+What the educational level cannot explain,\par
+what the variation cannot be explained by x is the variation\par
+within.\par
+Because if you look within the category,\par
+individuals here all have the same education level.\par
+So whatever variation they have in this category cannot be\par
+explained by the education level.\par
+So this analysis of variance separates the source\par
+of variation, separates the part of variation in y into two\par
+parts, the parts between groups and the part within groups.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

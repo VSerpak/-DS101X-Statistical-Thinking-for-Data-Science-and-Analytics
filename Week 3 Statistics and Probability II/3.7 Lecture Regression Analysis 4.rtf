@@ -1,0 +1,256 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 In the following, let's consider a real data example\par
+using Manhattan condo apartment prices.\par
+This data set is from the New York City open data portal\par
+and for the year 2009, we'll look\par
+at the condo buildings with elevator\par
+and the sale price from three--\par
+3,553 apartments.\par
+When we first look at the data, we look at the x variable\par
+being the square footage of a condo apartment\par
+and the sale price of apartment.\par
+So this is the first data set that we'll\par
+take a look after downloading the data\par
+from the online website.\par
+We notice that after plotting the scatter plot\par
+there is a cluster of points in the plot\par
+that, corresponding to zero square foot and the zero price,\par
+so it's indicating that in the data\par
+there is sort of coding indicating that there\par
+is no information about the size of the apartment\par
+and the sale price of those apartments.\par
+This teaches us a lesson that it's\par
+important to make a visualization of your data\par
+so that you can spot some misinformation in your data\par
+very easily.\par
+After removing this point, this is\par
+the data we're going to use for this analysis.\par
+So you can see that we remove this cluster of points\par
+that we do not have information about the size and the sales\par
+price.\par
+And this gave us a much cleaner scatterplot.\par
+A quick calculation gave us the correlation\par
+between the x variable and the y variable is about 17.79.\par
+That's a quite strong linear-- positive linear association\par
+between the size of apartment and the sales price.\par
+Then we run the least square regression\par
+and you can see that this red regression line captures\par
+the linear, positive association between the x variable\par
+and the y variable very nicely.\par
+The regression line, if fitted, have a negative intercept\par
+and a very strong positive slope.\par
+So here the intercept for this particular example\par
+does not have explicit meaning because we will not\par
+discuss the sales price of an apartment\par
+with zero square footage.\par
+Rather this intercept gives us the line\par
+that have a minimum price for a small apartment around here.\par
+So if here is approximately, maybe, 200 to 300 square\par
+foot-- square feet here, so if you\par
+plug-in the number that give you a positive price\par
+for that small apartment.\par
+We'll also look at our square of this regression.\par
+That is 63%.\par
+It indicating that for this data set of Manhattan condo\par
+apartment building in the year of 2009\par
+the variability in the sales price of all\par
+the condo apartment that were considered,\par
+63% of this variability can be explained by the x variable\par
+by the size of the apartment.\par
+We can also use this example to see\par
+how something in our variability contributes\par
+to regression estimates.\par
+We use all these points as our population.\par
+So we can say we have a population of about\par
+3,553 apartments and we are not going\par
+to use all the information.\par
+Instead, we will sample randomly 20 apartments.\par
+So this red line we fitted on the previous slide\par
+represents the true population linear association\par
+between x and y and the population\par
+differs from the red line due to other random factors.\par
+We sample 20 random apartments and these 20 random apartments\par
+will give us another regression line.\par
+The blue line is fitted using the square\par
+to these 20 blue points.\par
+It differs from the red line due to random\par
+sampling because you are using a part of the population.\par
+Try to estimate the trend in the population.\par
+Using inferential twos, we're able to create 95% confidence\par
+in bend for the regression line.\par
+So here the dash line surrounding the blue line\par
+is the confidence region for the regression line.\par
+The confidence bend is centered at the sample estimate\par
+and it represents interval estimate for the regression\par
+line.\par
+And other influence on regression estimate\par
+can also be carried out to indicate\par
+that sample in variability we have using sample data.\par
+The estimate of the least square regression function\par
+tells us the effect estimated from the x variable on the y\par
+variable.\par
+The regression function also allows\par
+us to give out predictions.\par
+So given a particular value of x,\par
+the predicted value is defined as the value\par
+given by the least square regression line.\par
+We call it y hat.\par
+It is an estimate for the mean--\par
+the average value of y given x value.\par
+So you can see what-- if we go back to the previous slide,\par
+that the y hat is the point that will go on the blue lines.\par
+And here-- it is estimate for the mean value of y given\par
+x values.\par
+So most of the time the prediction\par
+will be different from what is actually observed.\par
+There are two differences.\par
+So one is if we draw-- if we draw illustration here--\par
+so you have x and y and from the previous slide\par
+we have the populations.\par
+For example, a lot of dots and you\par
+have a red line that indicating this\par
+is a true relation in the population.\par
+Using a sample you observed, you have\par
+a subset of the population which gives you--\par
+for example, here I have seven points--\par
+these seven points-- adjusted a different line.\par
+So here when I use this fitted regression\par
+line to give predictions--\par
+for example, for an observation that's\par
+at this particular x value--\par
+and I have two differences to consider.\par
+One is the difference between a particular observation here,\par
+a true observation that is here is how this true observation\par
+randomly differs from the mean response to expected\par
+value under the true.\par
+So here this is the true regression\par
+relation and this blue line is the estimated.\par
+The second error is between the mean of y\par
+at the particular value of x and how\par
+it's different from the estimated one.\par
+So this is-- this part is y hat and this part is the mean of y.\par
+OK.\par
+And you can see that these two errors occur separately.\par
+This error occurred due to random sampling\par
+and this error occurred due to other independent random\par
+factors that are unique for this particular observation.\par
+So, therefore that, when we make predictions\par
+we need to be aware of this true source of random departures\par
+and when you have more and more information in your data\par
+this random departure can be reduced\par
+while this will remain because this corresponding\par
+to random factors that are all occurring\par
+and the future that you have no control or no information\par
+about in your sample data.\par
+In prediction, one thing to be very cautious about\par
+is extrapolation.\par
+That is the practice of giving predictions on values\par
+of x outside the data range.\par
+So here is an example.\par
+Assuming that you have a sample data set--\par
+now this is the range of the x variable\par
+where you have observation.\par
+So you observed a whole bunch of points\par
+that exhibited an association between between x and y.\par
+So you fit a linear line here.\par
+So in this-- in the red in this example within a range of data,\par
+linear model is a good summary of the relation between limits\par
+x and y.\par
+Here, within the set of data you can\par
+claim that the association between the x and y\par
+is approximately linear within the range of data.\par
+And the linear model is probably giving a very good prediction\par
+within the range of data.\par
+But that does not indicate that the relational will remain\par
+to be linear outside the range.\par
+It could be the case that the true relation that is\par
+a non-linear one--\par
+that within range of the data the linear approximation works\par
+well, but the outer range of the data--\par
+the outer range of the x variable,\par
+you have little to no information\par
+about what is the true relation between x y is, especially\par
+the form of it.\par
+So extrapolation corresponds to that--\par
+you extend the fitted regression beyond the range of the data\par
+and use the linear regression fitted to make predictions.\par
+So if the true relation deviates from--\par
+from linear relation outside the range of your x variable,\par
+this will create a large bias in your estimate that you cannot\par
+really correct because you do not have the proper information\par
+in your in your training model and your training set.\par
+So, therefore, that extrapolation\par
+should be avoided in practice because it\par
+can give misleading results in prediction.\par
+In regression, we also consider the model\par
+called multiple regression.\par
+That is between a simple y response\par
+with multiple x variables.\par
+Using the same example of condo sales price\par
+from Manhattan in the year of 2009,\par
+we fitted multiple regression between the price\par
+of a condo apartment at sale, with two x variables.\par
+The first x variable is age of the condo apartment\par
+or the building where the condo apartment is located\par
+and the size of the apartment, or the square footage\par
+of the apartment.\par
+This is the predictive model that we use two x variables\par
+to predict the price of a condo apartment.\par
+When you have multiple x variables sometimes\par
+it is interesting to consider their interactions.\par
+Mathematically, interactions are defined\par
+as the product of two variables being included\par
+in our regression model.\par
+Here if you look at this numerical equation\par
+it looks like a lot of things going on\par
+and that makes it very hard to interpret it.\par
+So one thing to interpret it is to arrange the equation\par
+in the following way.\par
+That our first group that intercepts with the term\par
+that including age.\par
+Then the second set of the numbers--\par
+the term including the square footage and the interaction\par
+term.\par
+So what this gave me is an age dependent regression model\par
+between the price of an apartment\par
+and the footage of apartment.\par
+So indicating that the regression relation\par
+between the price and the square footage\par
+depends on the age of the apartment.\par
+And also, another way to put it is age multiples\par
+the regression relation-- the association\par
+relation between the price of an apartment\par
+and the size of an apartment.\par
+In this plot we create is three regression relations according\par
+to that interaction model are fitted\par
+on the previous slide for apartment that\par
+are 10 years old, 50 years old, and 100 years old.\par
+As you can see that these three regression relations differs\par
+in both their intersection--\par
+where they intercept there with--\par
+with the x equal to zero line.\par
+And also, they have different slopes\par
+indicating that the effects of the age of the apartment\par
+multiples how the price of the apartment\par
+changes with the size of apartment.\par
+For older apartments that the price increases slower as\par
+the apartment become bigger.\par
+And for a new apartment the price\par
+climbs steeper when the apartment getting bigger.\par
+Another way to look at it is, that for bigger apartment\par
+that as apartment age, the deprecations happen more\par
+quickly as the apartment age.\par
+And, therefore, smaller apartments--\par
+the depreciation occurs slower.\par
+So this may be due to some factors that relate\par
+to the size of apartment.\par
+If the apartment is too big, the maintenance, the up--\par
+the up-keeping of the apartment is more expensive so\par
+therefore that the bigger apartment\par
+depreciates faster as they age.\par
+End of transcript. Skip to the start.\par
+Downloads and transcripts\par
+Handouts\par
+}
+ 

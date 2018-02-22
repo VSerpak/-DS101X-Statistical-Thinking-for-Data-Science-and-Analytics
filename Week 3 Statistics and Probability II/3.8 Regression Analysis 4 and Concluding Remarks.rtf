@@ -1,0 +1,223 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 There are other considerations that\par
+are important in regression analysis\par
+and we may not have time to discuss them fully\par
+in this module.\par
+Here we're just going over them very briefly.\par
+Sometimes in regression analysis we\par
+need to watch out for outliers and influential observations.\par
+These are the points that are far away\par
+from the rest of the points that sometimes tend\par
+to influence the regression line estimates\par
+more than other observations.\par
+We can have a more robust procedure\par
+for regression analysis that makes this estimate more\par
+stable in the presence of outliers and influential\par
+observations.\par
+In regression analysis because we have a lot of x-variables\par
+that we can consider lodged in a set,\par
+we need to be especially careful in terms of model evaluation\par
+and comparison.\par
+In the module on machine learnings in course two\par
+we will have more discussion on this\par
+in terms of how we choose the right metric\par
+to evaluate models, and how we compare\par
+them taking into consideration sampling variability.\par
+Then this leads to, consider the model evaluation and comparison\par
+choices we make in our data science project, that\par
+leads to how we can select the best\par
+model for the task involved for the predictive analysis\par
+for the estimation of effects.\par
+And this involves the choice of evaluation method, comparison\par
+method, and search method.\par
+It will also be more fully discussed\par
+in the machine learning module.\par
+Another interesting thing when we consider multiple regression\par
+is that sometimes we carry out extrapolation\par
+without realizing it.\par
+Because extrapolation involves that we make predictions\par
+outside the range of data when you have multiple x-variables,\par
+it is possible that a future observation\par
+is within the range of individual x-variables,\par
+but is quite far way if you take consideration of a combination\par
+of x-variables.\par
+One possible explanation is if you think about\par
+that you have x1 that is age of the apartment, x2 that\par
+is the size of the apartment in terms of a square footage,\par
+and then imagine in a city where age and the square footage\par
+are associated.\par
+Meaning that in a certain period of time\par
+you have a lot of small apartments\par
+that tend to be younger and then the older apartments\par
+tend to be bigger.\par
+So you have this cluster of points\par
+where the age and the size are associated.\par
+Where you have this in your observed set\par
+of data this means that the x1 and x2 are associated--\par
+correlated with each other.\par
+And here if you consider a new observation\par
+that you want to make a prediction of it's price,\par
+which falls here.\par
+So it is acquired a new combination.\par
+It's a new apartment that also tends to be on the bigger side.\par
+And you can see that this observation is\par
+within the range of the size of apartment considered\par
+in your data set, is also within the range in terms of age\par
+in the set of data points you considered.\par
+However it is quite far away from all the blue\par
+dots you used in fitting the multiple regression.\par
+This will be regarded as a hidden extrapolation,\par
+meaning that this point will still\par
+be considered as outside the range of data used\par
+to fit the regression model.\par
+Therefore the same danger of extrapolation\par
+applies, that the prediction on this pin point\par
+will not be very reliable because you have no evidence\par
+to check whether the model assumption you made using\par
+the blue dots here in your data still applies where\par
+you want to make a prediction, which\par
+is where this purple dot is.\par
+The last topic that we need to be very careful about when\par
+we consider multiple regression, the other statistical procedure\par
+considering multiple variables or multiple tasks of inference,\par
+is multiple testing or multiple comparison.\par
+This occurs when you consider multiple inferential tasks\par
+using the same set of data.\par
+And due to the motivation for statistical inference\par
+procedures, such as confidence interval and probability\par
+significant test where we use predicted value\par
+to quantify the level of uncertainty\par
+we have in our data, when we derive the numerical procedure\par
+to achieve that we only consider one such instance.\par
+So if you have multiple testing, we\par
+need to adjust our probability distribution\par
+to reflect that you actually consider multiple such tests\par
+all together.\par
+For example, if you are running significant tests\par
+on the relation between a y-variable and an x-variable,\par
+then you derive a significant test\par
+to evaluate the significance of association between y and x.\par
+Now you consider an increase in the number of x-variable to 20.\par
+And you originally have significant level at 5%,\par
+or meaning that if there is no departure\par
+from the null hypothesis 5% of the time,\par
+you will reject the null hypothesis\par
+due to random chance.\par
+If you consider 20 such tests, you\par
+will expect to have at least one false positive out of these 20\par
+tests due to the random chance of probability.\par
+So, that needs to be accounted for in your calculation\par
+and to adjust for multiple testing\par
+so that you have better control of false positive.\par
+You do not want to report more false positive simply\par
+because you are running more tests.\par
+You still want to establish the true significance\par
+of the inference you're doing, even when\par
+you're running a lot of tests.\par
+So there are several procedures that\par
+can be done to achieve that.\par
+Linear regression are very important models\par
+to consider when studying association between y and x.\par
+But not all associations are linear.\par
+So it's very important to consider ways\par
+of extending beyond linearity.\par
+One way to extend beyond linearity\par
+is to consider transform variables, such as x squared\par
+or a log transformation y.\par
+A simple transformation of this kind\par
+will take advantage of the existing\par
+tools of linear regression, but fit a non-linear regression.\par
+Other ways of consider non-linear regression include\par
+the generalized linear model which the set of models\par
+designed for a situation where the variation in y cannot be\par
+assumed to be normally distributed,\par
+such as in the case of a categorical variable\par
+as the response variable.\par
+As a non-model based approach, or we\par
+call a non-parametric approach, we\par
+can also consider local regression\par
+where we apply linear regression or averaging using observations\par
+close to individual x values.\par
+This is very interesting--\par
+local regression can be used as a very important\par
+exploratory tool to explore the relation between y and x\par
+because it does not make model assumptions.\par
+Use this neighborhood of x-values\par
+to select observations to apply a local regression,\par
+and this local regression will capture the trend locally.\par
+And when you move from one local neighborhood to a next,\par
+the trend tends to move which will\par
+lead to a smooth non-linear overall trend between y and x.\par
+Regression models have also been extended\par
+to more complex types of variables\par
+where y may not be a simple observed value.\par
+It could be a vector of y-values.\par
+It could be time to an event, time to an observed event\par
+variable.\par
+The y-variables can be a time series of observations\par
+taken over time.\par
+So your regression model has also\par
+been proposed to capture the association\par
+between such y-variables with x-variables.\par
+In this module we have considered association.\par
+Association patterns are everywhere.\par
+We have considered association pattern\par
+between categorical variables, association pattern\par
+between a category of variables and quantitative variables,\par
+and we consider regression analysis\par
+for quantitative variables.\par
+They represent information that we\par
+can utilize to explain the relation between y and x.\par
+We want to estimate the relation between y and x\par
+to derive knowledge.\par
+And also, that when you have a regression\par
+model or association patterns derived from data,\par
+we can take advantage of such association patterns\par
+to make better predictions.\par
+Association does not equal causation.\par
+This is one of the most important messages\par
+one needs to remember when doing data science.\par
+No matter how strong an association pattern is,\par
+the simple fact that x and y are strongly associated cannot be\par
+used to derive causation.\par
+We need other evidence to support a cause effect\par
+relationship such as experimental study\par
+or causal analysis.\par
+The next take-away message that is important\par
+when considering association is when\par
+you have a single set of data and you look at the association\par
+pattern between a certain y-variable\par
+with a large number of quantitative variables\par
+this can be dangerous because if you do not\par
+control for the multiple testing or the inflated type of error\par
+due to multiple testing, you will report\par
+a lot of false positives.\par
+This is because when you use a single set of data\par
+and you have 5% type of error rate for a significant test\par
+procedure, for example, then it is expected that even when\par
+there is no true association between y\par
+and any of the variables considered,\par
+you will still find a significant result\par
+about 5% of the time.\par
+So this is a very important thing\par
+to keep in mind when you deal with a big set of data.\par
+The final message we have for the discussion of association\par
+is that for association we sometimes consider models.\par
+And those models when used correctly\par
+can be very useful in terms of explaining association,\par
+estimating association, and using association\par
+to make future predictions.\par
+The context module following this module\par
+on statistics and probability will\par
+be given by my colleague Professor Lauren Hannah.\par
+She will be discussing descriptive analytics of text.\par
+In her module she'll be discussing\par
+how we can process text data to generate numerical features.\par
+Also, she will illustrate how we can use modeling\par
+to reveal interesting patterns in the text data.\par
+End of transcript. Skip to the start.\par
+Downloads and transcripts\par
+Handouts\par
+}
+ 

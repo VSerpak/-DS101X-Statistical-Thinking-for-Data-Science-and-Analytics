@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So if we apply pointwise mutual information\par
+to our FOMC corpus-- we have all these labels\par
+from our topic model-- well, we end up\par
+getting some really weird labels.\par
+So I didn't strip all of the numbers\par
+when I was cleaning this text, because in this setting,\par
+numbers have a fair amount of information.\par
+So in topic 24, we have 3:15.\par
+That has the most pointwise mutual information\par
+for that one, along with "library,"\par
+which surprisingly only happened once in that corpus.\par
+For topic 42, we have "tuesday-wednesday."\par
+For topic 32, we had some OCR issues, Optical Character\par
+Recognition issues.\par
+So there was a "this" blank "you."\par
+And then that got written as one word, obviously\par
+that only happened once, and some other words\par
+like "importantive," that pretty obviously don't\par
+happen too much.\par
+And I have no idea what "providei" really\par
+means in topic 10.\par
+However, if you go through with pointwise mutual information,\par
+these words only occur once.\par
+But they always occur-- I always see the given topic,\par
+since they only occur once.\par
+So I like to view pointwise mutual information\par
+as the hipster of selection metrics.\par
+It's like, yeah, I got this word.\par
+You probably haven't heard of it.\par
+But it always implies this certain label.\par
+Mutual information is a way to generalize\par
+pointwise mutual information to having an event rather\par
+than a specific outcome.\par
+So what mutual information does is it averages\par
+over all the possible outcomes.\par
+So in our context, the mutual information between a word w\par
+and a label l, well, when we look at all possible outcomes,\par
+we could have word w versus any word that is not w and label\par
+l versus any word that is not any label that is not label l.\par
+So what we're going to do is sum over all the possible word\par
+outcomes.\par
+So we're going to say that this temporary value is r.\par
+It can be a word w or not word w.\par
+And then we're going to look at the probability of seeing\par
+that word r.\par
+Then we multiply this by-- well, we're going to sum over labels.\par
+So our label could be l or not l.\par
+And then we want to look at the probability of our label given\par
+our word.\par
+And then we multiply by the pointwise mutual information.\par
+That is probability of m given r-- whoop-- divided\par
+by the probability of m.\par
+So notice in this bracket we have our four\par
+possible outcomes.\par
+So we can have r equals w and m equals l.\par
+And we have the probability of seeing the word w and label\par
+l times the pointwise mutual information between those two.\par
+Or we could have the probability of seeing the word w\par
+and label not l multiplied by the pointwise mutual\par
+information between those two.\par
+And we can do the same thing with any word that's\par
+not w-- so the probability of seeing that and label l times\par
+the pointwise mutual information and the probability\par
+of seeing a word that's not w and a label that's not l.\par
+So we have the joint probability of those two\par
+times the pointwise mutual information between those two.\par
+So what this does is it gives you a much more robust setting.\par
+So if we have four terms here, the term\par
+that's going to dominate is actually\par
+going to hopefully be the probability of word w and label\par
+l times the pointwise mutual information between label l\par
+and word w plus what we have here\par
+is the probability of not w and label l times\par
+the pointwise mutual information.\par
+And then we have two more terms down here--\par
+times the probability of w and a label other than l times\par
+the pointwise mutual information and then\par
+this other term for not our label and not our word.\par
+So let's break this down.\par
+This number here should be pretty big.\par
+Most of the text is not the word that you care about.\par
+Most the labels are not the one that you care about.\par
+However, in that case, given all those other words,\par
+the distribution of the labels shouldn't change very much.\par
+So this term here should be close to 0.\par
+This term here, where we have our word w and not our label l,\par
+well, hopefully, by design, if we're\par
+w tells you a lot about label l-- it occurs a lot in label\par
+l-- this should be fairly small.\par
+And again, this term should be pretty close to 0.\par
+So this term is all of the other words other than w in label l.\par
+So this might not be a huge number, but it's nontrivial.\par
+However, if you have all the other words aside from label l,\par
+well, there shouldn't be much of the change in the probability\par
+of seeing your labels, because you basically\par
+have the entire corpus with this little, itty bitty bit removed.\par
+And that shouldn't change your probability\par
+of label 1 versus label 2 too much.\par
+So that should be very close to 0.\par
+And the term that should dominate\par
+should be this term here.\par
+So if we look at this, this is our pointwise mutual\par
+information, that says that I really, really, really want\par
+words that occur only in this topic\par
+and then tell me a lot about the topic or the label multiplied\par
+by the probability of seeing that word and the label.\par
+So what will happen in this, if you were just\par
+comparing across a certain label,\par
+is the label part goes away.\par
+And you're effectively multiplying by the probability\par
+of seeing a word.\par
+So this weights your term much more heavily\par
+towards words that occur a lot in a given label.\par
+So let's what happens when you use mutual information, rather\par
+than pointwise mutual information or counts\par
+on this FOMC data set.\par
+So the words chosen by mutual information\par
+are much, much more common than those\par
+chosen by pointwise mutual information.\par
+However, unlike straight probabilities,\par
+really, really common words that occur in a lot of topics\par
+are screened out.\par
+So I just trim down to the first five words\par
+likely for each topic in probability.\par
+Those are given in the non-bold terms and mutual information\par
+in the bold terms.\par
+So you can see for a lot of topics, the topic 0 and topic\par
+1, you don't have too much of a change.\par
+And in other topics, like topic 2 and topic 49,\par
+you end up with more of a change.\par
+However, when you're using simple words,\par
+it tends not to be that big of a difference.\par
+So metrics have meaning.\par
+If you're trying to summarize the information within a label,\par
+no matter which model you're using,\par
+you are selecting a metric.\par
+If you're just using the probability vectors that\par
+come out of a topic model, you are\par
+selecting a probability metric.\par
+If you want to do post processing and use\par
+something like mutual information\par
+or pointwise mutual information, you\par
+are selecting another metric.\par
+Metrics always have a point of view.\par
+They're just like human writers.\par
+Probability goes through and says,\par
+I like really common words.\par
+Pointwise mutual information says, I like really, really,\par
+really discerning words.\par
+I don't care how common they are.\par
+And mutual information is sort of a balance between the two.\par
+So if you are using any sort of automatic way\par
+to summarize your model-- and I highly\par
+suggest you do, by the way, because if you have humans\par
+involved in that as well, you do get label from your model,\par
+but you are importing other sorts\par
+of bases-- you must be really, really deliberate in which\par
+metric that you choose.\par
+Know what your metric means.\par
+It has a point of view.\par
+So let's put this all together on a corpus.\par
+So we've been using this FOMC corpus.\par
+So the first thing we're going to do\par
+is run it through Latent Dirichlet Allocation.\par
+And we're going to use that to label our text with topics.\par
+So each of the text-- in this case, I took all the FOMC data\par
+and I treated each utterance as its own text--\par
+it will have a probability distribution over topics.\par
+So each of those text is going to have multiple labels.\par
+And then what I'm going to do is scan the entire corpus\par
+for collocations and do some statistical testing\par
+to see their phrases.\par
+So I'm just going to go through and say,\par
+which words happen together fairly often\par
+much more often than would be expected by chance.\par
+And then instead of just using single words\par
+in my description, as I've been doing previously,\par
+I'm going to feed these phrases into my mutual information\par
+metric.\par
+So it turns out, when you start feeding phrases rather than\par
+single words into these metrics, they\par
+become much more sensitive.\par
+And whatever habits they have, tend to get magnified.\par
+So if you use probability, it goes through\par
+and tries to select single words,\par
+because single words happen a whole lot more than phrases.\par
+If I go through and use pointwise mutual information,\par
+well, it goes through and selects a very long phrase\par
+that happen once in one topic.\par
+And it turns out that in this setting, mutual information\par
+itself tends to produce much better results.\par
+So I'm going to use LDA to label my data.\par
+But I am not terribly satisfied with the summaries generated\par
+strictly by the LDA model.\par
+So I'm going to try to generate my own summaries\par
+and use these to describe the topics.\par
+So let's see what we get.\par
+So for the same first topic, well, I get terms.\par
+So I end up with inflation expectations, output gaps,\par
+more inflation expectations, key issue, bottom line, et cetera,\par
+et cetera.\par
+For topic one, I have explicit numerical specification.\par
+I've removed stop words, so this is probably\par
+of price stability, again, numerical definition, probably\par
+of price stability, numerical specification of price\par
+stability, definition of price stability,\par
+and explicit numerical objective.\par
+For topic two, I might have exigent circumstances\par
+and this wonderful phrase "moral hazard."\par
+I love that.\par
+Vice Chairman Geithner, and there's moral hazard.\par
+Financial system, price discovery, et cetera, et\par
+cetera.\par
+And then we get to the topic 49.\par
+And we end up with something that is much, much different\par
+than you would really expect when you're reading\par
+the words in that topic.\par
+So it turns out that most of the words\par
+that are highlighted with this topic or things\par
+like 50 basis point cut, 20 basis points today,\par
+50 basis points meeting, move 25 basis points, et cetera,\par
+et cetera.\par
+So this phrase is really often used\par
+in settings where you have-- this topic is really often used\par
+in settings where they're discussing basis point\par
+movements.\par
+And likewise with topic two, it turns out\par
+that if you go through and scan the text,\par
+it's used in a lot of settings where they're\par
+talking about unusual exigent circumstances,\par
+or language where they decide whether they\par
+want to use unusual and exigent along with circumstances.\par
+And this is the Feds.\par
+They actually spend a very long time discussing that.\par
+And when you use these sorts of metrics,\par
+along with phrases and whatnot, you\par
+can end up with much more detailed and nuanced\par
+descriptions of your labels.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

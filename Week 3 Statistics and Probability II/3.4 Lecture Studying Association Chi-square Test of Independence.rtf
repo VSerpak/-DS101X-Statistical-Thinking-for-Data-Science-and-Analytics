@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So how do we compare the patterns suggested\par
+by the probability model of the independence\par
+and the actually observed data in our table?\par
+The test statistic for this chi-square test\par
+is defined as a chi-square statistic\par
+that takes sum over all the cells in the table.\par
+So here, let's just assume that we have a small table here.\par
+In our case, it's a three by two table.\par
+Well, there are a total of six cells.\par
+So one, two, three, four, five, and six.\par
+So for this example, we have six cells.\par
+For each of the cells, we define an observed O1\par
+and the expected value, E1.\par
+And we can do this for the rest of the table.\par
+Within each cell, we compare the observed value, OI,\par
+which is the value we have in the table\par
+generated using real data, minus the expected value, EI.\par
+And here, the expected value of EI\par
+also uses information from real observed data.\par
+But only through the marginal distribution of the tables.\par
+We compare their difference using their squared difference,\par
+because the difference is on a scale of data.\par
+So you can you imagine that for a cell that\par
+is high in probability, then the observed value will be large,\par
+the expected value will also be large.\par
+It's on the same scale as the size of the cell.\par
+We want to normalize that so that the information\par
+from different cells are used more or less equally.\par
+So that normalization is done by putting the expected value\par
+on the denominator.\par
+There is a certain mathematical foundation for doing this.\par
+Doing this will give us a very easy to work with distribution.\par
+So we will not discuss the entire detail\par
+how we derive this equation, but the purpose\par
+of having EI on the denominator is trying to make information\par
+from different cells more or less contributing more or less\par
+equally.\par
+So here, this is the information we can summarize\par
+from individual cells.\par
+We combine the information from different cells into a sum.\par
+So here I will use number a C indicating the number of cells.\par
+And this gives us the chi-square statistic.\par
+So we know here it's very easy.\par
+We know that how to get the observed one.\par
+So this will be, for example, the first cell, we have 48.\par
+OK.\par
+That's the number of individuals in the age group between 18\par
+and 29 and use the internet.\par
+And how do we get the expected value then?\par
+From our real data, we estimate here the margin\par
+of distribution.\par
+The margin of distribution will help us\par
+in deriving the expected value for this equation.\par
+Recall that from our real data, we\par
+estimated that the proportion in the population for age 18 to 29\par
+is approximately 17%.\par
+So this estimate is derived from the two-way table\par
+in the marginal distribution of age group.\par
+It is also derived that the probability\par
+of use internet or the population\par
+proportion of individuals who use internet is 85%.\par
+Combining these two values, we have the probability\par
+of 18 and 29 and use internet, the joint probability\par
+will be 0.17 times 0.85.\par
+Given the joint probability estimated\par
+and their independence, how do we get the expected value?\par
+The expected value is actually we\par
+take the number of individuals, the letter n, the sample size--\par
+that is the total number of occurrence\par
+we observe in our data--\par
+and multiply it by a probability of a cell.\par
+And here the probability of a cell\par
+is estimated using independence model.\par
+Therefore, we have 0.17 and 0.85.\par
+And n here, from the previous two-way table, equal to 300.\par
+So this calculation will give us the expected value\par
+for the cell.\par
+It equals 42.5.\par
+The observed value is 48 from the data.\par
+Under the model of independence, and utilizing\par
+the marginal distribution from the data and the sample size\par
+from the data, we calculated the expected number\par
+under independence is 42.5.\par
+We can compute its difference using this equation.\par
+And this information will be contributed to the calculation\par
+of the chi-squared statistic.\par
+And we'll repeat this whole process throughout the table\par
+to gauge the overall evidence in support of association\par
+against the independence.\par
+So we repeat the same calculation for every cell,\par
+and that will give us the expected\par
+value under independence.\par
+One thing I would like to point out here\par
+is that if you look at the number here,\par
+the first thing you notice is that they do not necessarily\par
+need to be integers or rounded up numbers as observed values\par
+from real data.\par
+The reason is that this is the expected value\par
+from the probability model estimated under independence.\par
+Therefore, it does not have to equal to a real number\par
+because it is an average taken over every possible occurrence\par
+under the probability model.\par
+The second thing we notice is that the values\par
+within the same row add up to the same marginal\par
+distributions.\par
+And the values within the same column\par
+also add up to the same marginal distribution.\par
+This is due to the computation we carried out\par
+given the marginal distribution, because we generated\par
+this value assuming the marginal distribution\par
+as a true probability model for the individual variables\par
+in the rows and in the columns.\par
+And because of that, the expected value\par
+calculated using the joint probability\par
+will give you the same marginal distribution.\par
+Then we calculate the difference between expected and observed.\par
+Here, 48 is observed minus expected.\par
+93 minus 85 as expected.\par
+And one thing you can see that the expected value for use\par
+internet from these two age groups are the same.\par
+They're both 85.\par
+This is because the modern distribution\par
+that we had here from the previous slide are the same.\par
+They're both 100.\par
+So if there's independence between age and internet use,\par
+you have 100 individuals between 30 and 49 years old,\par
+you have 100 individuals between 50 and 64,\par
+the expected number of internet users within these two age\par
+groups will be the same, equal to the percentage\par
+of internet users in the entire population,\par
+which is 85% from the previous slide.\par
+So you have 85 here.\par
+The real data departure from the pattern\par
+that there are more individuals between age 30 to 49 that use\par
+internet than those from 50 to 64, indicating an association.\par
+So the difference really captures\par
+evidence about association.\par
+Then we take these differences, and you\par
+can see that some cells are positive,\par
+indicating that the real value, the observed value,\par
+have indicated more occurrence in the cell\par
+under the assumption of independence.\par
+Some cells indicate negative values.\par
+That is, the observed value is much lower than\par
+expected under independence.\par
+So in this case, is the 18 to 29 age group,\par
+there are more internet users than expected under randomness\par
+while for the older group, the 65 plus group,\par
+the actual number of internet users\par
+is lower than if the internet user is randomly distributed\par
+in all the age groups.\par
+So this is sort of complying with our understanding\par
+of internet use distributed in age group.\par
+Combining all this, we have a chi-square statistic\par
+equal to 38.34.\par
+This is to show you how it is done so you can actually\par
+use your calculator to verify these results\par
+from the previous table.\par
+But 38.34 will be a meaningless number\par
+if you do not know how it should be compared to.\par
+In the chi-square test, this value\par
+should be compared to a chi-square distribution.\par
+The chi-square distribution is derived\par
+for this type of statistic under the null hypothesis.\par
+Assuming the null hypothesis is true,\par
+assuming there actually is independence between the two\par
+variables, and the values can still\par
+depart from the independent pattern due to chance,\par
+some cells have positive departures,\par
+some cells have negative departures.\par
+We studied the probability distribution\par
+of these departures, and we also studied how these departures\par
+contribute to the chi-square statistic, which\par
+is the sum of the square departures normalized\par
+by the expected value.\par
+Combining all this information together,\par
+we derive the chi-square distribution\par
+for chi-square statistic under a null hypothesis.\par
+So this is the distribution that we\par
+will use for this particular example controlled\par
+by the size of the two-way table.\par
+And here you can see that under the independence probability\par
+model assumed between age group and internet use,\par
+the value of the statistics should concentrate around\par
+this area.\par
+So you have most of the occurrences observed\par
+between 0 and 10 with a tail that goes down vertical to zero\par
+as to the value of the statistic increases.\par
+So the x-axis is the possible value\par
+of the chi-square statistic under the null hypothesis\par
+of independence between two variables.\par
+Now, we think about we have 38.34\par
+for this particular example, and which is approximately here.\par
+And you can see that if it is indeed that age and internet\par
+use are independent, it is quite unlikely for us\par
+to observe what we have observed in this distribution.\par
+So this is a true distribution for the chi-square statistic\par
+if the two variables are indeed independent from each other.\par
+Given the sample size, given the marginal distribution,\par
+we have this distribution for the statistic.\par
+The actual statistic computed on real data\par
+indicates that it is quite unlikely for us\par
+to have observed such a large value under this distribution.\par
+This will be used as evidence against independence\par
+and suggests association.\par
+Now we have a significant result from a chi-square test\par
+of independence.\par
+The next question is, how much is the association?\par
+What is the level of association between the two variables?\par
+These are important questions, because as a we have discussed\par
+in the previous module, having a significant test result\par
+does not indicate a strong departure\par
+from the null hypothesis.\par
+This is because the result of a significant test\par
+depends on the sampling distribution of the test\par
+statistic decided by the true size of the effect\par
+and the sample size.\par
+And here, given the joint probability model\par
+between x and y, given the true association between x and y,\par
+the test statistic center actually\par
+moves with sample size.\par
+So the more information you have,\par
+the more observations you have, the more likely\par
+you're going to also detect an association.\par
+The p value or the association test statistic\par
+will not tell you the extent of the association\par
+between x and y.\par
+The true level of the association\par
+is only decided by the probability\par
+relation between x and y and does not depend on sample size.\par
+So this creates a contrast between the test\par
+statistic, here, and the true level of association.\par
+To gauge the true extent of association,\par
+we can use other statistics such as odds ratio,\par
+as we have discussed previously, to show\par
+the extent of association.\par
+They estimate the level of association\par
+defined by the statistics.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

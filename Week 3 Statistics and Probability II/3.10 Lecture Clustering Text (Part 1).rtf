@@ -1,0 +1,187 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Descriptive analytics for text involves text pre-processing.\par
+This first involves removing stop words.\par
+So stop words are simple words, usually conjunctions--\par
+and, but, or-- prepositions-- in,\par
+on, to-- and any other words, such as articles--\par
+A, B, and, et cetera, et cetera-- that tend\par
+not to carry much information.\par
+Secondly, words are stemmed, or trimmed to their roots.\par
+This is so that you can gather similar terms\par
+without having to worry about verb conjugations or noun\par
+declensions.\par
+So let's begin with a piece of text, one that you've seen.\par
+This text has capital letters, punctuation, and a large number\par
+of stop words.\par
+So first, let's remove stop words.\par
+So notice that we've gotten rid of in, on,\par
+and, et cetera, et cetera.\par
+We've also de-capitalized everything\par
+and removed all punctuation.\par
+So stemming involves removing ends of words,\par
+usually to deal with verb conjugations.\par
+So in this case, we've gone from particularly\par
+to particular, construction to construct,\par
+et cetera, et cetera.\par
+So once we have pre-processed our text,\par
+we can compute simple metrics.\par
+So these might be word counts-- we'll\par
+take our pre-processed text and create a document term matrix.\par
+Perhaps we want to generate entities or match entities.\par
+So in this case, I want to match all occurrences of Chairman\par
+Greenspan with Alan Greenspan with Greenspan,\par
+since these all talking about the same person, Alan\par
+Greenspan.\par
+Collocations.\par
+These are words that tend to occur together.\par
+We can generate phrases from these\par
+or possibly gain other information about the text.\par
+So if we look at our trimmed text\par
+here, if I want to do word counts\par
+I can make a document term matrix.\par
+If I want to find entities, I might\par
+go through and say President Moscow, that is an entity.\par
+And I might go through the rest of my text\par
+and find other areas where I see Moscow\par
+and link those to the same entity.\par
+And for collocations, I might go through\par
+and check and see thank you.\par
+Those two words might occur fairly commonly together,\par
+so I might decide that those are a viable collocation.\par
+So the next bit of processing that we can do is clustering.\par
+So with clustering we start with a set of texts\par
+and we assign each of these a label.\par
+So what this does is it organizes documents.\par
+If every document has label 7, we\par
+can say that all of these documents are similar.\par
+And conversely, if every document has label 3,\par
+all the documents of label 3 are similar.\par
+And then given labels, we would like\par
+to summarize what's in the documents with the same label.\par
+And perhaps we can use these labeling to create futures\par
+for other things that we might want to study,\par
+such as classification or regression.\par
+So sometimes our labels are given.\par
+This is an example for Google News,\par
+and every news story here is given one label.\par
+In this case, we have Cleveland Cavaliers news stories.\par
+You also have Jurassic World, Twitter,\par
+Dominique Strauss-Kahn, et cetera, et cetera.\par
+In this case, you're very lucky.\par
+Use those labels.\par
+Sometimes and most often, your labels are not given\par
+and you need to infer them.\par
+So we are just given a big pile of text,\par
+we pre-process it, and then want to use that pile of text\par
+to figure out labels.\par
+So for example, I can take that same pile of text\par
+and say that well, the first text\par
+has a pretty high probability of being in the yellow cluster.\par
+Second and third text, a pretty high probability\par
+of being in the orange cluster.\par
+Fourth text has a high probability\par
+of being in the gray cluster, and the fifth text\par
+has a high probability of being in the blue cluster.\par
+So how does one do this?\par
+The most common method is going to be k-means.\par
+So first, we specify k, the number of groups\par
+that we wish to see.\par
+In this previous example, it would be four.\par
+And then, for each group we're going\par
+to find the mean-- I'll talk about what\par
+that means in a second-- or basically\par
+the center of the group.\par
+Then given these centers, we re-label our data.\par
+So we're going to assign the cluster to the closest center.\par
+So the most common way to find these groupings\par
+is through something called k-means.\par
+So k-means as an iterative process.\par
+So let's say we have data points x1, x2, x3, x4, and x5.\par
+I start by randomly assigning these a group.\par
+So let's say I want to pick k-- I have\par
+to do that, I pick k equals 3.\par
+I say group 1, group 1, group 2, group 2, group 3.\par
+So now each of these have a grouping,\par
+and I use my data to find the center--\par
+or mean-- for each grouping.\par
+So for group 1 I've got these two guys,\par
+and if these are real data, I say that mean 1\par
+is 1/2 x1 plus x2.\par
+And for group 2 I say that mean 2 is 1/2 x3 plus x4.\par
+And group 3 is a singleton, so the mean for group 3\par
+is just the value of that singleton.\par
+All right, fantastic.\par
+So in round two, I get rid of my labels for now.\par
+Great, and then I use the distances between my data\par
+points and the mean to figure out which\par
+group these guys should be in.\par
+So I figure out distance between x1\par
+and mean 1, and let's say that's 5.\par
+I find the distance between x1 and mean 2,\par
+and I say that is 7.\par
+And I find the distance between x1 and mean 3,\par
+and let's say that's 2.\par
+I go through my pile of distances,\par
+I look for the smallest one-- in this case, that's mean 3--\par
+and I give this now label 3.\par
+And I do the same thing with all of my other distances.\par
+So I do this for point 2, and let's say that my distance here\par
+is 1, my distance here is 3, and my distance here is 3.\par
+So this goes to group 1, I do the same thing with x3--\par
+let's say that this goes to group 1, this goes to group 1,\par
+and this goes to group 2.\par
+All right, so given these new groupings--\par
+I don't need my distance computations right now--\par
+I update my means again.\par
+So mean 1, while I take all the points in group 1-- 1,\par
+2, 3-- it's going to be 1/3, x2, plus x3 plus x4.\par
+Mean 2, there's only one point in that, x5.\par
+And I do this with mean 3, and there's\par
+only one point in that, x1.\par
+Then given these new means, I update my groupings.\par
+Blah, blah, blah.\par
+And I keep iterating between updating means\par
+and updating groupings until my groupings don't\par
+change two times in a row.\par
+And this is guaranteed to happen because there's\par
+only a finite number of ways I can label my data,\par
+and each update makes my labeling a little bit better.\par
+So I keep going and going, and usually this\par
+will happen in about 10 steps.\par
+You converge, and now you have an updated grouping\par
+for all of your data.\par
+So this is a very simple, fast, easy way to cluster even fairly\par
+large data sets.\par
+So if we go back and figure out centers,\par
+I might figure out orange center, the yellow center,\par
+gray center, and blue center, and then\par
+I compute the distances.\par
+So given center 1, I have the distances--\par
+doc 1 and center 1-- and let's say that is 7.\par
+And then for center two, let's say that is 9.\par
+I can go through and do this for centers 3 and 4,\par
+and let's say that this is 8 and the distance\par
+between doc 1 and center 4 is-- let's say-- 27.\par
+So given these distances, I go through\par
+and see which one is the smallest.\par
+In this case, 7 is the smallest so I now\par
+assign doc 1 to group 1.\par
+And then I do the same thing with document 2,\par
+and I might go through and say the distance between document 2\par
+and center 1 is-- let's say-- 18.\par
+The distance between doc 2 and center 2 is 11,\par
+the distance between doc 2 and center 3 is 38,\par
+and the distance between document 3 and center 4 is 21.\par
+So now given these new distances,\par
+I assign document 2 to group 2.\par
+So since we are doing a hard assignment of each\par
+of these groups, all of our probabilities in this picture\par
+are going to be either a 0 or 1.\par
+So you're not going to have any partial probabilities\par
+like you have there or there.\par
+End of transcript. Skip to the start.\par
+Downloads and transcripts\par
+Handouts\par
+}
+ 

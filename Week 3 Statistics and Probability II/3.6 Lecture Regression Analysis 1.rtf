@@ -1,0 +1,207 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 In this segment, we'll look at linear regression\par
+as another way of studying association between variables.\par
+The word regression comes from the phrase, "regression\par
+towards the mean," that is a phenomenon people observed when\par
+they first started to look at the relation between two\par
+related quantities.\par
+For example, that we may be interested in looking\par
+at the relation between a father's height and the son's\par
+height as two related quantities,\par
+because we know that the biological basis of height\par
+are shared between father and son.\par
+So we make some simplified assumptions\par
+for the following example.\par
+First, we suppose that the father and the son\par
+share the genetic basis for the trait height,\par
+so that they have the same expected height.\par
+So if they're living in the same environment,\par
+eating the same food, and everything\par
+controlled with no random noises,\par
+they should grow to the same height.\par
+The second assumption we make is that because they\par
+grow in environments and do different things,\par
+then the actual height of these two related individuals\par
+will differ from the expected value randomly.\par
+That the random departure is due to factors such as diet,\par
+exercise, et cetera.\par
+Given these two assumptions, let's look\par
+at a hypothetical example.\par
+In this plot, we use x-axis for father's height\par
+and the y-axis for the son's height.\par
+According to the first assumption,\par
+the expected value of the x and y fall on this line,\par
+meaning that if both father and son grow\par
+in identical environments their height would be the same, which\par
+creates a point on this line.\par
+In reality, random factors cause departure from this line.\par
+So if a point falls here, that means the father is taller.\par
+If a point falls here, that means the son is taller.\par
+We also assume that the probability distribution\par
+of the height have a normal shape here,\par
+like this, concentrated at a center,\par
+with smaller probability for extremely high value\par
+for the height and extremely low value for the height.\par
+And the same distribution can be assumed for father.\par
+So now we observe a tall father.\par
+And here we'll assume that this father is tall\par
+because random chance gave him a higher than expected height.\par
+So here, this blue line indicates where\par
+the expected value should be.\par
+So intersect with the y equal to x line.\par
+So this point, the intersect point,\par
+is where the expected height for both the father and son\par
+under discussion.\par
+And for the son, we have the same expectations.\par
+So we drew another blue line to indicate\par
+that this is what the son's distribution looks like.\par
+So it's centered at the y equal to x line, with random chance.\par
+So in this example, we'll assume that for this pair of father\par
+son, the point here on this y equal to x line,\par
+was intersection of the blue line,\par
+is where the theoretical genetic height is for both father\par
+and son.\par
+And the father happened to be taller due to random noise.\par
+And that random noise--\par
+the factor that creates this high value\par
+for height for the father, departure from the center--\par
+will not be inherited by the son.\par
+Because it's something random that occurred to the father.\par
+So the son will still follow the same distribution\par
+given the expected values.\par
+So the son's height follows random variation\par
+along this distribution.\par
+So now we look at where the father is.\par
+So the father's height is here.\par
+And now you go up to the y equal to x line.\par
+So if the son has height at this level,\par
+he will be as tall as his father.\par
+But you look at how this dotted line-- this broken line,\par
+this dashed line--\par
+intersects with this blue bar here.\par
+The amount of variability the son\par
+has due to other random factors.\par
+You can see that only in a small interval\par
+here will the son be taller than the father.\par
+For the most of the possibility--\par
+for most the variation possibility,\par
+the son is actually shorter.\par
+So here, the son is more likely to be shorter than his father\par
+because they have a shared theoretical height,\par
+and the father happened to be taller due to chance.\par
+And because of that, the probability\par
+that the son will actually beat the height of the father\par
+is quite small.\par
+So here, this creates a dot that actually observe here.\par
+Because of this probability joint distribution\par
+of father and son that have a central trend,\par
+and have random departure from the line,\par
+you have more points observed here.\par
+Where, for tall fathers, you have shorter sons.\par
+And we can do the same exercise on this end.\par
+We can see that for shorter fathers\par
+we tend to have taller sons.\par
+So you tend to have points that is here instead\par
+of on the y equal to x line.\par
+So theoretically, we're expecting to this--\par
+that it will be identical for the father and son.\par
+And then we tend to have this regression\par
+movement towards the center of distribution.\par
+So the movement is called regression\par
+towards the mean, which later was\par
+used to coin the whole exercise of fitting a straight line\par
+to an observed set of points.\par
+So here, the first method that we're going to discuss\par
+is a simple linear regression for quantitative variables.\par
+The variable we discussed on the previous slide--\par
+the height of father and the height of son--\par
+are both quantitative variables we can observe\par
+in a sample of individuals.\par
+Here, we consider x variable.\par
+In regression analysis, x variable sometimes\par
+is called the explanatory variable--\par
+or, in mathematics, sometimes referred to\par
+as an independent variable.\par
+Also, in regression, we have the y variable.\par
+The y variable is sometimes called response,\par
+or dependent variable.\par
+So, the regression model we're going to consider is of this\par
+form-- is y equal to a Greek letter beta--\par
+beta zero, and beta 1x, plus error or random noise.\par
+Here, this function is called a linear function in mathematics.\par
+So therefore, that model is regarded as linear regression\par
+model.\par
+And it is also defined that this error is an additive error.\par
+And it is assumed that this error--\par
+the variability of error--\par
+does not depend on the value of x, or this function\par
+value of this linear equation.\par
+And it has constant variability across the value of x.\par
+And it's also, for different value of x,\par
+or different observations error terms\par
+independent from each other.\par
+Consider the model we see on the previous slide.\par
+It basically boils down to that we\par
+want to fit a straight line to a scatter of points.\par
+So how do we fit a line to a scatter plot?\par
+Let's consider a simple example, where you have only one dot.\par
+If you have only one dot, it's very easy to fit a line.\par
+So you just go to the dot, and then\par
+you can draw any line that goes through the point,\par
+and that will give you the same fit.\par
+So any line that goes through the point\par
+will have the same fit to this single point.\par
+Which indicates that we really cannot find a linear regression\par
+model using only one observation.\par
+How about we have two observations?\par
+So if you have two observations, you have point one\par
+defined by x1, y1.\par
+So that's the first pair of observations.\par
+And you have second pair of observations,\par
+and you want to fit a line here.\par
+So you find the first dot, and then you\par
+connect to the next dot.\par
+So this line fits these two points perfectly.\par
+And that seems to be too good to be true.\par
+So actually, because our discussion on the previous\par
+slide, that the linear regression model should\par
+consider some random errors and central trend of the random\par
+phenomenon, when you have two points in your data set,\par
+that you really cannot distinguish between the central\par
+trend and random noise.\par
+So now we should have more points.\par
+So here is where it looks more realistis--\par
+like a scatterplot.\par
+You have a scatter of points defined by the observed\par
+value of the two variables.\par
+So here I still label the two observation--\par
+the first and second one, for example.\par
+But all this set of points in the scatter\par
+are defined by the values observed in your data set.\par
+So now the question is, how do we fit a line\par
+to this scatter plot?\par
+And you can try as hard as you can,\par
+but I assure you that there's not a single straight line that\par
+can go through all the points.\par
+So we need to decide how we can fit\par
+a line to this set of points.\par
+And we will discuss in more detail later,\par
+but the idea that we can all agree on\par
+is we want a good line that fits to this scatter points--\par
+will be a line that is close to all the observations presented\par
+in the scatter plot.\par
+Something like this.\par
+So you can see that we feed a straight lines\par
+in through this point, and this line does not\par
+go through all the observations, but it is close to many\par
+of the observed points in this scatter plot.\par
+So this is what we intend to do in regression analysis,\par
+is to find a mathematical model, or a mathematical equation that\par
+describes the overall trend in the data, and try to be as good\par
+a fit to the data point as possible.\par
+End of transcript. Skip to the start.\par
+Downloads and transcripts\par
+Handouts\par
+}
+ 
