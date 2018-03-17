@@ -1,0 +1,213 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 A further advantage of dashboards\par
+that I discussed in the introduction\par
+was that particularly for exploratory analysis,\par
+we can look at how statistical models can\par
+be influenced by particular parameters,\par
+be they input variables or be they things such as constants.\par
+I just want to give you a very simple example\par
+of how dashboards can be used in this context.\par
+Usually when we're doing a statistical analysis,\par
+we get all our data, our information,\par
+we run the analysis, we get the results.\par
+But often cases, especially with an exploratory type analysis\par
+such as the example I'm showing you here,\par
+which is factor analysis, we may want to iterate that process\par
+and do it a few times in different ways,\par
+and we would be justified in this sense\par
+because this is an exploratory type analysis.\par
+Using a dashboard with interactive capabilities\par
+can be a very, very useful, quick, and effective way\par
+of doing that.\par
+What you can see up here are the results of a factor analysis\par
+that we have dictated that there are three factors that we want\par
+to see how each variable-- such as driving accuracy, which\par
+is driving percent here, driving average, green in regulation\par
+percent, et cetera-- how they all are related to one another.\par
+And so what the factor analysis is doing\par
+is saying that these variables load onto factor one, factor\par
+two, or factor three, and the loading score\par
+is giving us some information as to how strongly each variable\par
+is loading onto each factor.\par
+And so what I've done with this table is\par
+I have listed the loadings of each variable,\par
+but I've also color-coordinated it such that in red you\par
+are seeing the ones that are the most strongly associated\par
+with a particular factor.\par
+So for instance, let's just look at factor one.\par
+We can see here that driving percent is negatively\par
+loaded, 0.57, whereas driving average is incredibly\par
+positively loaded, 0.96.\par
+This means that driving average really contributes strongly\par
+to this factor one.\par
+Going for the green percentage, 0.87 is high,\par
+but then with the red coloring, we can see that par 4, par 5,\par
+30% are also strongly linked to factor one.\par
+This is a fair and fine way of visualizing the data.\par
+However, it can also be a little bit atypical.\par
+Often people will drop the scores that are too low.\par
+So I have given the dashboard the option of doing that.\par
+So low loadings, let's remove them.\par
+And now it becomes a little bit more\par
+easy to see the results of the factor analysis.\par
+And this is a great thing to do in a dashboard,\par
+is that we can identify key parts of the data\par
+more effectively through filtering.\par
+So here we can now see that actually the factor two appears\par
+to be related more to putting and scrambling\par
+and sand save percent scores, which is effectively golfers\par
+that are good about getting out of trouble\par
+and then their putting game saves them\par
+from getting to a better score.\par
+The other thing we can do with an exploratory analysis\par
+such as this is that we can change\par
+how loaded, how strongly a variable is\par
+loaded onto a factor.\par
+We can filter them.\par
+So at the minute, this is set to 0.3,\par
+which means that it's highlighting\par
+all the variables that load onto a factor at minus 0.3 or lower,\par
+or 0.3 and above.\par
+But we may want to be more stringent with our factor\par
+analysis and change this, for instance,\par
+up to maybe something like 0.5.\par
+Is that 0.56?\par
+And you can see that it's actually\par
+removed some of the ones that are now\par
+not as strongly associated, and it gives us\par
+a much clearer perspective on which variables load onto\par
+which factors.\par
+And we can roughly determine from looking at this\par
+that factor one really is about being a long hitter of the golf\par
+ball, even if you're not that accurate.\par
+Factor two is really about being very good at putting,\par
+and factor three appears to be just [INAUDIBLE]\par
+related to this green in regulation.\par
+So green in regulation may be a factor that's\par
+more really about you get to the green in the correct number\par
+of strokes, but you might get there\par
+in different ways, i.e. you just get there through power\par
+or you may get there through accuracy.\par
+It's about getting there in the fewer strokes.\par
+That's the most important thing.\par
+You will also notice that down here we\par
+have this box called proportion of variance explained,\par
+and we can see here that factor one explains\par
+26% of the proportion of variance in the data\par
+that we inputted into the factor analysis.\par
+Factor two has 21%, and factor three has 14%.\par
+And this is a factor analysis that we\par
+did when we included all of the variables, but like I said,\par
+the advantage of a dashboard is that we\par
+can change our model to adjust parameters dynamically.\par
+So one thing we could do would be\par
+to remove certain variables that we no longer think\par
+are that interesting.\par
+Let's remove, for instance, sand save percentage,\par
+and you'll notice when I remove it\par
+that the proportion of variance explained and the loading\par
+scores will all change.\par
+So they have changed, but it hasn't really\par
+changed the overall underlying message of this analysis.\par
+Another thing that changes dynamically\par
+is this plot over here.\par
+This is the individual scores plot.\par
+What we have here, I have simply just plotted\par
+the scores of each individual for factor one and factor two.\par
+So an individual's factor one score\par
+can be considered as an underlying\par
+proxy of an aggregated variable of all\par
+of these different variables.\par
+So you would imagine from looking at the loadings\par
+that somebody who has a high factor one score\par
+is going to be a very, very long hitter of the golf ball.\par
+If we hover over the points, and that's confirmed.\par
+Bubba Watson, Dustin Johnson, Jason Day--\par
+all of the long hitters of the golf ball.\par
+And factor two, if we look at our loadings,\par
+we can see that somebody who has a negative putting\par
+average score, which means that they are very good at putting,\par
+they have low scores, factor two should be related to that.\par
+So if we look at some of these golfers,\par
+we will notice that the ones who are scoring\par
+the lowest are actually not very good putters,\par
+and the ones who are scoring the highest--\par
+Jordan Spieth, probably the best putter of last year--\par
+has the highest scores.\par
+So the really useful thing about the dashboard\par
+is that we can look at the loadings, the visualization.\par
+We can adjust our parameters on the fly,\par
+but we can also do some other things to tweak\par
+the visualization dynamically.\par
+For instance, we can add some gridlines.\par
+This now enables us to see that individuals\par
+in this quadrant, individuals who are both very good\par
+putters of the golf ball and they also\par
+hit the ball a fairly long way, above average, more or less,\par
+whereas individuals down here are both not hitting the golf\par
+ball very far and they're also not very good at putting.\par
+An additional change we can make to this individual scores plot\par
+would be to plot factor three.\par
+Now, as you can see, it's a scatter plot\par
+what we have two variables, x and y, factor one and factor\par
+two.\par
+But we can change this scatter plot into something\par
+that's called a bubble chart, and what that means is\par
+that we will add a third variable, the z variable, which\par
+will be factor three, but we'll adjust the size of the dot\par
+with the size of that dot representing the third factor.\par
+So individuals that have a very large dot\par
+will have a high factor three score.\par
+Individuals with a small dot will now\par
+have a low factor three score.\par
+So let's change that, and we can do that dynamically.\par
+So now we can see the change in the dot size.\par
+And over here, Jordan Spieth's dot\par
+is very, very, very large, meaning he has a high factor\par
+three score, which means that he is also\par
+exceptionally good at getting on the green in regulation.\par
+Whereas some individuals down here,\par
+for instance, Geoff Ogilvy, has a low factor one, two,\par
+and three score, which is obviously not very good.\par
+Another way in which we can use this dashboard interactively as\par
+well as changing the input parameters\par
+to get different information about individual scores, plots,\par
+loadings, and proportion of variance\par
+is we can actually change the input data set.\par
+So in this example, I'll just change the year.\par
+So here's 2013.\par
+These are now the plot scores of all the individual scores\par
+in 2013, and we also see the loadings\par
+and the proportion of variance explained, et cetera.\par
+So dashboards are a really useful tool\par
+for being able to interact with our data.\par
+The final series of plots I have here\par
+are looking at how each factor correlates\par
+with scoring average, and these plots are down in the bottom.\par
+Here is factor one and scoring average,\par
+and I will scroll down.\par
+Here is factor two and factor three.\par
+So just an eyeballing of this information\par
+is that we can see that factor one seems\par
+to be incredibly strongly related to scoring\par
+such that individuals who score highly on factor one, which we\par
+are seeing is a proxy for hitting the ball really far,\par
+they score the lowest scores, meaning\par
+the best scores, in this sense.\par
+Factor two and factor three are also related to low scores,\par
+but less strongly than factor one.\par
+Hopefully I have demonstrated that dashboards\par
+are an effective visualization tool.\par
+They enable us to interact with our data\par
+in multiple different ways.\par
+We can adjust parameters, adjust inputs,\par
+use multiple different data sets,\par
+and link charts, tables, and exploratory analyses\par
+together such that we are able to extract\par
+multiple pieces of information from multiple data sets\par
+dynamically.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

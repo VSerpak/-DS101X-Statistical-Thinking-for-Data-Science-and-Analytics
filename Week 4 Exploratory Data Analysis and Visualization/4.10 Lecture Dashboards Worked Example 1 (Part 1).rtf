@@ -1,0 +1,286 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So this is the example that I'm going\par
+to use to illustrate how a dashboard can be used\par
+for both exploratory analysis-- mainly\par
+exploratory analysis in this example,\par
+but also communicating a narrative.\par
+This is a huge table full of numbers.\par
+It's almost impossible to navigate or to detect\par
+any interesting relationship.\par
+What we're looking at here are various measures\par
+of attributes of golf players.\par
+These are all golf players that have played\par
+on various PGA and other tours.\par
+They span from the year 2004.\par
+This is the first entry-- the golf player Fred Funk, 2004.\par
+And you can see across the top, we\par
+have various different categories\par
+of how good he is at different things.\par
+So for instance, this column here is called Drive Percent.\par
+Its value is 77.2.\par
+That means that in 2004, this golfer, Fred Funk,\par
+he drove the golf ball off the tee-- 77% of the time\par
+he would hit the fairway, and the other percent of the time,\par
+he would miss the fairway.\par
+We have other variables in this data set.\par
+For instance, this cell here, the value is 65.5%.\par
+That's GIR, which stands for Greens In Regulation, which\par
+means that on a par four, for instance, he\par
+would have got to the par four's green in two shots\par
+65% of the time.\par
+He would have got to a par five's green in three shots\par
+65% of the time.\par
+We have numerous different golf variables.\par
+I think there are about 15 or 16 different variables,\par
+maybe slightly more or slightly fewer.\par
+They refer to the ability of golfers to drive the ball,\par
+to recover from rough, to recover\par
+from sand bunkers, how good they are at putting,\par
+all of these different variables.\par
+And we have them for all players from 2004 up to 2014-15 season.\par
+What we want to know with this data\par
+is which one of these variables, or which two,\par
+three, four, five, six of these variables,\par
+might be the most useful metric to discover which players score\par
+the best scores-- which in golf, is actually the lowest scores.\par
+And from this table, it's almost incomprehensible.\par
+So what we're going to do is build a dashboard that\par
+allows us to explore each of these variables,\par
+to explore whether individuals that drive the ball further--\par
+are they more or less accurate than those individuals that\par
+drive the ball less distance?\par
+Are good putters-- do they school\par
+lower rounds than bad putters, which\par
+the obvious answer is yes.\par
+But are good putters plus good sand players\par
+better than bad sand players and good putters, for instance?\par
+We're going to find out all of those relationships,\par
+and the easiest way to do that would be to build a dashboard.\par
+So this is step one in our dashboard.\par
+And as you can see, we have main content\par
+in the middle of the dashboard.\par
+We have here four different panels, of which\par
+one of the panels has a graph.\par
+Another panel has some text, and the other two panels, for now,\par
+are hidden.\par
+They are drop down menus.\par
+Over on the right-hand side over here,\par
+we have a tab called Options.\par
+And there's various different options underneath,\par
+which I will explain what this means in a moment.\par
+And we have a left panel over here\par
+that has various other tabs.\par
+And these tabs are to get to different visualizations,\par
+different types of analyses.\par
+And we're on the very first tab that has data\par
+in it called Distributions.\par
+So this dashboard-- behind this dashboard\par
+is that very huge spreadsheet of golf statistics.\par
+And I have linked this dashboard,\par
+through writing some code, to be able to produce visualisations\par
+that we can dynamically change.\par
+Let's look at the first visualization.\par
+This is just a histogram showing the distribution\par
+of driving distances of every single player\par
+across all different years.\par
+So this is driving distance in meters.\par
+We can see there is some individuals that\par
+almost get to 325 meters.\par
+There are some individuals who are\par
+over 310 meters in average driving distance in a season.\par
+But the mean, as we can see here--\par
+I've said compute the mean-- the mean is at 289 meters.\par
+There's some individuals who are very, very low.\par
+This is obviously a normal distribution,\par
+but we could also test for that and have\par
+the result show up down here.\par
+Now, this is all data over all years.\par
+We know it's driving distance because it\par
+says it's driving distance.\par
+If we wanted to change that, we could change it\par
+with this dropdown menu.\par
+I've inputted the different columns that I'm interested in.\par
+And we can have a look at anything we want to look at.\par
+So let's just look at driving accuracy.\par
+This is what percent of time they reach the fairway\par
+off the drive.\par
+And we can see here that it varies between a low end, 40%,\par
+and a high end around 80%.\par
+But the mean here is at 62.6%.\par
+Now, because some histograms are going to have different bin\par
+widths, I've actually added a little slider\par
+up here which enables us to adjust the bin widths to make\par
+the graph more readable so that the bins\par
+between different units are shorter\par
+so that we can see more effectively what\par
+we're looking at.\par
+I've also got a hidden panel here,\par
+which when I drop this down, it will\par
+show a box plot of the driving accuracy by year.\par
+So we have plotted 2004, 2005, 2006, 2007, all the way up\par
+to 2015.\par
+What you're seeing here with the box plot is\par
+that the black line in the middle-- I'll\par
+hover over it here-- this is the median driving accuracy.\par
+So in 2004, the median was just under 65%.\par
+It's dropped nearer 60% in 2012.\par
+And all of these dots are showing, effectively,\par
+the distribution.\par
+So up to here is at the 95% confidence intervals,\par
+and there's a couple of outliers.\par
+You can actually hover over the data points\par
+to get more information about the data points.\par
+So this is an outlier in 2015.\par
+Francesco Molinari is the most accurate player,\par
+and he's an outlier here.\par
+Let's just change this back to driving distance.\par
+People that actually follow golf might not\par
+be surprised to know that the outlier in 2015\par
+is Dustin Johnson.\par
+He drives the ball by far the furthest of any player.\par
+So we can interact here.\par
+We can also use this dropdown menu.\par
+If we're not just interested in all scores,\par
+we could just look at the 2015 data.\par
+And here it looks slightly less attractive.\par
+But we could change our bin width\par
+to make it look more attractive if we wished.\par
+And when I say "more attractive,"\par
+I'm essentially meaning to communicate more effectively.\par
+Another feature I have added here-- let's\par
+just change this back to All Years, which with my menu\par
+is-- I have another box down here.\par
+This is essentially just a short list.\par
+It's a top five individuals.\par
+So we can see over all years, the individual who\par
+drove the bull the furthest was Bubba Watson in 2006.\par
+His score was 319.\par
+And then we have some other individuals here.\par
+This is JB Holmes.\par
+Here's Dustin Johnson, 2015.\par
+If we wanted to look at the top 15 individuals,\par
+I could change this number to 15.\par
+And now the dashboard is returning the top 15\par
+individuals in that time.\par
+And we can have a look at who else.\par
+Bubba Watson appears almost every single year.\par
+Another thing I would highlight about this,\par
+is just as a slight caveat, I've added this pink shading\par
+to the Value column, which is just highlighting--\par
+enabling people to see more effectively the degree\par
+of difference in these scores.\par
+So rather than this just being a boring table,\par
+we can actually see more effectively\par
+the degree of difference between the different scores.\par
+So this is the very simple first page of our dashboard.\par
+It's really, in essence, a way of just getting\par
+to know the different variables in the data set.\par
+We can play around with them at will.\par
+I've really just looked at driving distance.\par
+But we have goes for green, which\par
+is individuals who take risks to try and get\par
+to the green in fewer shots.\par
+Sand Save is how good they are at getting out of the bunker\par
+effectively.\par
+Scrambling, how good they are at getting out of rough.\par
+And there's some various other putting statistics.\par
+Let's have a look, for instance, at putts average.\par
+And that histogram does not look like a histogram\par
+that we would expect.\par
+But if I change the bin width all the way down,\par
+we're now seeing it's also normally distributed.\par
+So on average, the professional golf player\par
+is taking 29 and a little bit putts per round.\par
+So this is just a very effective way\par
+of interacting to get to know our variables.\par
+And in the next step of this dashboard,\par
+we're going to look at how these variables interact with one\par
+another little bit more.\par
+So again, thinking in terms of information hierarchy--\par
+i.e. which charts do we want to present first\par
+in our dashboard-- the first charts I wanted to present\par
+were just the distributions of the data\par
+so that the viewers could get to know the data.\par
+The second step I want people to follow\par
+is which variables are related to which other variables.\par
+To do that, I've simply just plotted\par
+some scatter plots, xy plots of driving distance\par
+against-- in this case, we have scoring average,\par
+and on the right-hand side, we have driving accuracy\par
+against scoring average.\par
+So lowest scores in golf mean that you're a better golfer.\par
+Let's look at this left-hand panel here.\par
+This is a graph of driving distance in meters\par
+again scoring average.\par
+And we can see that there are some players down here that\par
+drive the ball a very, very, very long way,\par
+and they have low scores on average.\par
+And we can actually hover over these points.\par
+You'll notice that they go red, get a little bit bigger.\par
+And he's a famous golfer-- Tiger Woods.\par
+He's down here.\par
+This is also Tiger Woods, 2007.\par
+This is Tiger Woods in 2009.\par
+And if we go a bit further over here,\par
+this is Tiger Woods in 2005.\par
+And that's Bubba Watson in 2015.\par
+So we can see this relationship.\par
+Certainly, it looks from the scatterplot\par
+that it's a small effect, but significant.\par
+And down in this box here, we actually do have a correlation.\par
+This is just a Pearson's correlation\par
+showing that it's a small effect, but highly significant.\par
+That's not surprising.\par
+We have a very, very large sample size.\par
+We could break this down by year.\par
+So let's just look at 2015.\par
+And we see this scatterplot.\par
+We get the information about the correlation coefficient.\par
+Here, it's minus 0.33.\par
+Again, there are some outliers-- the individuals who\par
+drive the ball a huge distance.\par
+They're actually scoring very highly.\par
+But there's also this player here-- Jordan Spieth,\par
+I believe-- who drives the ball an average distance, yet he\par
+has a very low score.\par
+On the right-hand side, here we have driving accuracy.\par
+And we can see from this value here that there is also\par
+a very slight relationship such that individuals\par
+who drive the ball more accurately-- they have scores\par
+in the 70%, 75% range-- are scoring, on average, better\par
+golf scores, lower golf scores.\par
+Let's go back to All Years just to be\par
+able to look at the visualisation more effectively.\par
+Another thing that I have added with this dashboard\par
+is the ability to change the opacity of the dots.\par
+By doing something such as this, we\par
+can actually fade out some of the dots,\par
+meaning that we can see how heavily laid\par
+on top of each other lots of different data points are.\par
+That can be a very useful technique\par
+for understanding where the concentration of dots are.\par
+There are other techniques that we could employ to do that.\par
+But just in this exploratory sense, this is a useful one.\par
+And the purpose of this dashboard\par
+is really for the user to start interacting with it to find out\par
+about relationships.\par
+So let's just look at driving distance against driving\par
+accuracy.\par
+This is this graph here.\par
+We can see that this now is a very, very\par
+significant relationship.\par
+It's great to be able to be accurate.\par
+It's great to be able to drive the ball a really long way.\par
+But it's actually hard to do both simultaneously.\par
+Individuals who drive the ball a very, very long way\par
+are much less accurate than individuals who\par
+don't drive the ball very far.\par
+They tend to be more accurate.\par
+But obviously, if they weren't very accurate\par
+and they didn't drive the ball very far,\par
+they wouldn't be playing on the PGA tour.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

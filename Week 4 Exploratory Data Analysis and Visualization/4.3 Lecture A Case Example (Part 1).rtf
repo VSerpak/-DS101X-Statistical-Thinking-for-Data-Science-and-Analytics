@@ -1,0 +1,190 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 In our next example, we're going to demonstrate\par
+how a combination of statistical modeling\par
+and statistical graphics can help us learn and explore\par
+a data set.\par
+The example appeared in the press recently.\par
+It was a study reporting a unique turnaround in increase\par
+in mortality of middle-aged, white, non-Hispanic men\par
+and women.\par
+We're going to start with the raw data,\par
+then do some adjustments, then do some further adjustments\par
+to see how each step, the adjustment changes our story.\par
+At the end, we've actually learned something\par
+beyond what was originally reported\par
+in the scientific journal and in the popular press.\par
+We're going to follow the published paper\par
+and focus on mortality-- that is death\par
+rates-- among non-Hispanic white Americans\par
+between the ages of 45 and 54.\par
+These data are available from the website\par
+of the Center for Disease Control, and you or anyone else\par
+can easily download them and analyze them.\par
+I'll start with the raw deaths.\par
+The data that we can easily grab start in 1999\par
+and go until 2013.\par
+During this period, we show the deaths each year\par
+among this age group.\par
+It started out at about 110,000, and then increased fairly\par
+steadily all the way until about 2009,\par
+and then decreased after that.\par
+So this seems worth reporting first-- a seeming epidemic\par
+of increased deaths, and then good news after 2009.\par
+But this isn't really the thing that we should look at.\par
+This is the number of deaths, but we need the denominator.\par
+We need to know how many people were in that age group who were\par
+eligible to die, as it were.\par
+We can look up those data, too.\par
+And you see almost the exact same pattern.\par
+There's an increase of the number of non-Hispanic whites\par
+in the 45 to 54 age bin from 1999 to about 2009, and then\par
+a decrease thereafter.\par
+Why is this happening?\par
+In the post-war period in the United States,\par
+there was a baby boom.\par
+A lot of people were born between 1946 and 1964.\par
+That baby boom moves through the demographic distribution,\par
+and by the time we hit the 2000s,\par
+the baby boomers are middle aged.\par
+And so what we're seeing here is the passing\par
+of the baby boom through the 45 to 54 age group.\par
+And we clearly need to adjust for this.\par
+It's pretty meaningless to say that the number of deaths\par
+is increasing if, at the exact same time,\par
+the number of people in the denominator is increasing, too.\par
+So we'll divide.\par
+This is the raw death rate from 1999 to 2013.\par
+We see a steady increase in the death\par
+rate among middle-aged non-Hispanic whites.\par
+I'm not going to show you here the data in other countries,\par
+the data for blacks, the data for Hispanics,\par
+but the other groups showed a decrease in mortality rate\par
+during this period.\par
+So it was very notable that middle-aged whites\par
+were dying at a higher rate, and this got a lot of press.\par
+But we have to think about this one more carefully, too.\par
+Because what's happening between 2002 and 2013\par
+as the Baby Boomer generation is moving through the 45 to 54\par
+age group?\par
+The average age of 45 to 54-year-olds is going up.\par
+In 1999, the average 45 to 54-year-old\par
+was on the young side, because the baby boom generation was\par
+just entering this group.\par
+And by 2013, the typical 45 to 54-year-old was a bit older.\par
+So during this period, the people in this age category\par
+were getting older.\par
+And given that they're getting older,\par
+you might expect that their death rate would be increasing\par
+over time just from that, because older people are\par
+more likely to die in any given year than younger people are.\par
+So we're going to look at the data now on age.\par
+This graph shows the average age in the 45 to 54-year-old\par
+age group from the same CDC data that we\par
+had before for each year starting in 1999\par
+and going to 2013.\par
+And indeed, the average age goes up.\par
+It's a steady increase.\par
+This actually looks a little weird\par
+that there's a big jump in 2001.\par
+What's going on there?\par
+I'm going to actually check another data source.\par
+I'm going to get some other data from the web about the age\par
+distribution and see what they say, too.\par
+So I'm going to plot that overlaying it.\par
+And the other data set extrapolating from the census\par
+shows something similar.\par
+It turns out there really was a spike in births many years ago.\par
+And as a result, you see this spike in the 45 to 54\par
+age group echoing from the spikes in births\par
+many decades earlier.\par
+So it's not an artifact of the data.\par
+There really seems to be this pattern of increasing\par
+average age in this bin.\par
+Now let's look at the numbers.\par
+The bin is from 45 to 54.\par
+The average age increases from about 49.3 to 49.7.\par
+That's not a huge difference, but it's something.\par
+So the next question is, is this difference\par
+enough to explain the increase in mortality that we saw?\par
+And in this analysis, what I'm really demonstrating\par
+is not just data exploration, not just graphs,\par
+but the interplay between analysis and graphics.\par
+We saw a graph that showed a striking pattern,\par
+and then we thought, maybe it's just\par
+explainable by an increase of population,\par
+so we looked at that.\par
+Then we took the ratio, which is an analytical step.\par
+We have the graph of increasing death rates.\par
+And then we said, but look, the average age is going up, too.\par
+We did a calculation.\par
+Now we have to do further calculations\par
+to try to assess whether the average age going up\par
+is enough to explain the mortality rate going up.\par
+We go back and forth between analysis and graphs.\par
+We can map this average increase in age in this population group\par
+to an expected increase in mortality,\par
+because we know the mortality rate\par
+for 45-year-olds, 50-year-olds, 55-year-olds,\par
+and every age in between.\par
+Mortality actually increases by about 8% per year of age\par
+during this period.\par
+Each year, you're about 8% more likely to die\par
+than you were the year before.\par
+We can map those numbers into the age distributions\par
+that we have.\par
+We do a calculation.\par
+And as a result, we get an expected increase\par
+in mortality rate just from the population aging alone.\par
+And here it is.\par
+Just from the population aging, we'd expect the mortality rate\par
+to be increasing at this rate.\par
+It goes up, and then it should go down,\par
+then it should keep going up again.\par
+How big is this increase?\par
+To understand this, let's overlay this\par
+with the increase of actual mortality\par
+that we saw in the data.\par
+So there it is.\par
+If nothing was happening in the population\par
+except that the average age of the people in the 45\par
+to 54-year-old group was going up,\par
+we would expect to see the blue line.\par
+What we really see is the white line.\par
+So what's the difference?\par
+About half.\par
+About half of the increase in mortality\par
+is explained just by an increase in average age.\par
+And the other half, apparently, represents a true increase\par
+in mortality, not a statistical artifact.\par
+Now, to better understand this, in this graph,\par
+I've anchored the two points at 1999.\par
+I'm going to show you another graph where I\par
+anchored the two lines at 2013.\par
+This graph shows what would have happened given the mortality\par
+rate by age in 2013 if we track backwards-- just again,\par
+the blue line showing what would have happened\par
+had there been a shift in average age.\par
+And this shows that the changes since about 2004, 2005\par
+are entirely explained-- almost entirely explained--\par
+by changes in average age.\par
+So what's actually happened in the population?\par
+There was an increase in death rate-- a sharp increase\par
+in death rate-- from 1999 to about 2004, 2005,\par
+than a steady pattern since then.\par
+The apparent increase after 2005 is a statistical artifact.\par
+It's a delusion caused by the increase in average age.\par
+This graphical analysis allows us to very clearly see\par
+that the big changes were happening\par
+between 1999 and 2005.\par
+And it makes it clear that what happened\par
+after 2005 was explainable more by the age shift.\par
+It would be hard to see this with a table of numbers,\par
+because the white lines, as you can see, are very jumpy.\par
+So if you did a simple comparison of one year\par
+to the next, it might be hard to see the pattern.\par
+With the entire graph, the overall picture is clearer.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

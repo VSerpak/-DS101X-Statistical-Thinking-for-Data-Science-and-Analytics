@@ -1,0 +1,217 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 In this lecture, I'll talk about how\par
+we use graphs to learn from data,\par
+how we act as data scientists asking questions and forming\par
+hypotheses.\par
+This is important in your work, whatever it may be.\par
+You'll want to use data not just to back up\par
+the decisions you've already made, but to learn and explore.\par
+You'll want to be able to graph data yourself\par
+and to interpret the graphs made by others.\par
+Here's an example, a forecast of traffic volume produced\par
+each year from the United States Department of Transportation.\par
+They compile projections given to them by the 50 states.\par
+Each line in the graph shows the forecast\par
+made in a different year.\par
+The first line on top shows the forecast from 1999.\par
+It starts in 1999 and then increases linearly from there.\par
+The next line shows the forecast in a different year,\par
+and so forth.\par
+In each year the forecast continues linearly,\par
+but each year they ignore the problems\par
+with the earlier forecasts.\par
+So as you can see, the actual data,\par
+indicated by the solid line, don't\par
+look like any of the forecasts that came before, especially\par
+in the recent years.\par
+I don't blame the Department of Transportation\par
+for making forecasts that don't work out.\par
+Nobody has a crystal ball.\par
+Errors are inevitable.\par
+But I do fault them for not going back to check,\par
+for being willing to make the same mistake over and over,\par
+ignoring the evidence that was right in front of them.\par
+The message is you have to check your data, look at your data,\par
+and understand the models that you're using.\par
+How much can we learn from a simple graph?\par
+A few years ago I was teaching introductory statistics.\par
+The final question on the midterm exam I had was,\par
+guess your score on the exam excluding this question.\par
+You get five extra points on the exam\par
+if your guess is within 10 points of the actual value.\par
+The purpose of this question was to get\par
+the students to look back and check their work,\par
+but I was curious at how accurate their guesses were\par
+so I took a look myself.\par
+Here's a plot showing the data.\par
+Each dot on this graph shows a student in the class.\par
+In this graph, the open circles are men\par
+and the closed circles are women.\par
+The question mark is a student of unknown sex.\par
+That's real data for you.\par
+In this case, the student had dropped the class\par
+and I couldn't figure out if it was a man or a woman\par
+from the name.\par
+In this graph, I'm plotting the students\par
+guessed score and their actual score on the exam.\par
+The solid line on the graph shows y equals x.\par
+That would correspond to perfect predictions--\par
+if their guessed score and the actual score were identical.\par
+The dotted line is the regression line\par
+showing the best prediction of actual score given guessed\par
+score.\par
+What can we learn from these data, from this graph?\par
+It turns out, most students were overconfident.\par
+We can see that because most of the points are below the line.\par
+That is, their actual score was typically lower\par
+than their guessed score.\par
+An extreme example is the open circle\par
+on the bottom of the graph.\par
+That was a student who guessed 85 but actually only scored 21\par
+on the exam.\par
+What else do we see in this graph?\par
+There's lots of variation.\par
+It was hard for many students to guess their scores.\par
+What else?\par
+We see no strong pattern of men being more overconfident\par
+than women, something that you might expect to see,\par
+but we don't seem to see that in the data\par
+and we'll return to this in a bit.\par
+But first, how can we understand the concept of overconfidence?\par
+Let's go back to the data.\par
+This new graph shows the actual minus predicted\par
+score for each student plotted versus order of finish,\par
+from the first students to hand in the exam to the last.\par
+Again, the men are open circles on this graph.\par
+The women are closed circles.\par
+The students who finished early, on the left side of the graph,\par
+were more likely to be overconfident in their guesses.\par
+Maybe they should have spent more time on their exams.\par
+The message from this example so far,\par
+no need to stop with just one graph.\par
+Keep going deeper in examining the data in different ways.\par
+The next time I taught this class,\par
+I gave the students the graphs I had just made,\par
+then I put the same question on their exams.\par
+What happened?\par
+The graph shows the results.\par
+The dots show the data from the previous class.\par
+In this case, I'm not distinguishing men and women.\par
+I just have all the students in the previous class as dots.\par
+The stars show the students in the new class.\par
+Did my intervention work?\par
+Were the students less overconfident\par
+after being warned?\par
+Yes.\par
+They really were less overconfident.\par
+The stars are closer to the line than the dotted points are.\par
+Students' guesses were closer to their actual scores.\par
+I did an intervention.\par
+I told students what happened before and it worked.\par
+They were no longer overconfident.\par
+But let's be careful in interpreting\par
+this graphical result. I had no control group.\par
+It could just be that the students in the second class\par
+were more sensible or more careful\par
+than the students in the first class.\par
+There were two classes in two different years.\par
+To make a causal statement, we must\par
+compare to a control group.\par
+In this case, the control group is\par
+the class from the previous year but this might not\par
+be such a good control.\par
+In any sort of summary of data, you always\par
+have a control group explicitly or implicitly.\par
+Before leaving this example, I want\par
+to zoom in on one particular thing\par
+we looked at-- the comparison of overconfidence\par
+of men and women.\par
+I said there was not much difference between the sexes,\par
+but now let's look at the question more carefully.\par
+This is part of exploratory data analysis.\par
+Sometimes we stop and do a formal comparison.\par
+Let's compare men to women.\par
+First, we need a measure of overconfidence.\par
+And we're going to just take a simple measure\par
+of the difference, the guessed score minus the actual score.\par
+A positive number indicates overconfidence,\par
+if your guessed score is higher than the actual score.\par
+The average overconfidence for men was 12.4.\par
+That is, the male students' guesses\par
+are 12.4 points higher on average\par
+than their actual scores.\par
+The average for women is 10.6.\par
+The female students' guesses are on average 10.6 points higher\par
+than their actual scores.\par
+Both men and women tend to be overconfident on average.\par
+But how much more overconfident are men compared to women?\par
+Let's take the difference.\par
+12.4 minus 10.6 is 1.8.\par
+Men's guesses are on average 12.4 points too high,\par
+women's are 10.6 points too high.\par
+Men are on average 1.8 points more overconfident than women.\par
+In the data, men are more overconfident\par
+than women but not by much.\par
+1.8 points is not a lot.\par
+How can we assess this?\par
+Is the difference statistically significant?\par
+What does that even mean?\par
+In this sort of study we have a population and a sample.\par
+Here, the 52 students in the class are the sample.\par
+The population is-- well, it could be different things.\par
+It could be all people, all students, all statistics\par
+students, all the students who might\par
+have taken introductory statistics at this institution.\par
+The average overconfidence is 12.4 for men\par
+and 10.6 for women in this sample.\par
+What can we say about average overconfidence\par
+in the population, which is what we care about?\par
+To assess the evidence in the data\par
+we need a measure of uncertainty.\par
+Think of the observed data as one possible sample\par
+we could have seen.\par
+It's like a poll of 52 students.\par
+We won't worry, here, about adjustment.\par
+We'll just consider the 52 as a random sample\par
+from the population.\par
+This is a bit of circular reasoning,\par
+which is standard and, in fact, often\par
+necessary in empirical work.\par
+Again, average overconfidence in this sample is 12.4 for men\par
+and 10.6 for women, a difference of 1.8.\par
+To assess our uncertainty in this number,\par
+we'll use the standard deviation.\par
+The standard deviation of an estimate\par
+is a measure of its uncertainty.\par
+The idea is we have this random sample of size 52, 34\par
+men and 18 women, and we think of it\par
+as a random sample of size 52 from a larger population.\par
+In this case, we observed a difference of 1.8.\par
+Men were slightly more overconfident than women,\par
+on average, in our sample.\par
+But what if the sample had been different?\par
+Then our observed difference would have been different, too.\par
+We would have seen different students.\par
+And there's no reason the difference in overconfidence\par
+between men and women in this other sample\par
+would have been exactly 1.8.\par
+No.\par
+There's some uncertainty about what it would have been.\par
+And some statistical theory we're not\par
+discussing right here, estimates the standard deviation\par
+to be 5.0.\par
+5.0 is our estimate of how variable the estimate would be,\par
+given that all we've seen is this one sample of 52 students.\par
+Theory also tells us that our uncertainty, corresponding\par
+to the fact that we have just this one sample,\par
+can be approximated by a normal distribution,\par
+that bell-shaped curve that you've heard about.\par
+The observed difference is small, only 1.8,\par
+and the variation is large, 5, which\par
+suggests that it's not strong evidence for a larger\par
+pattern in the population.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

@@ -1,0 +1,203 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Now I'll tell you a more involved story\par
+from my own research.\par
+My colleagues and I use graphs to pull together\par
+information from many sources to get a better understanding\par
+of American politics.\par
+The underlying question, why is it\par
+that rich states, such as New York and California,\par
+vote for candidates on the left while the poor states\par
+in the South vote for candidates on the right?\par
+This makes no sense.\par
+You'd expect rich areas to be conservative and poor areas\par
+to support redistribution.\par
+This map shows an example from the 2004 vote.\par
+Other recent elections look similar.\par
+Perhaps the pattern in the map is just\par
+an artifact, something to do with the visual image\par
+of the large, low population states taking up\par
+so much space on the map.\par
+No, it's not an artifact.\par
+Let's do some exploratory analysis\par
+by looking at the data a different way.\par
+Look at the scatter plot.\par
+Each of the 50 states is shown, plotting vote share\par
+for George W. Bush in 2004 versus the average income\par
+in the state.\par
+Poor, conservative states are in the upper left and rich,\par
+liberal states are in the lower right.\par
+The poorest states all voted for George W. Bush,\par
+and almost all the richest states\par
+voted for his democratic opponent.\par
+So what's going on?\par
+Are rich people suddenly voting for the Democrats?\par
+No.\par
+Here's another source of data from public opinion polls.\par
+The richer you are, the more likely\par
+you are to vote Republican.\par
+The higher your individual income, the higher the vote\par
+share for George W. Bush.\par
+And this is true in different parts of the country.\par
+This graph shows survey data from congressional elections.\par
+Each line shows a different region of the country\par
+and each line shows Republican share\par
+of the vote as a function of income.\par
+In every part of the country, richer people\par
+are more likely to vote Republican.\par
+To resolve the paradox, to understand how rich states vote\par
+for Democrats while rich people vote Republican,\par
+we need a more complicated graph.\par
+This graph shows Mississippi, the poorest state\par
+in America, Ohio, a middle income state, and Connecticut,\par
+the richest state, and our estimate of George Bush's vote\par
+share in each state by income in the 2000 presidential election.\par
+The graph is complex.\par
+I'm showing it to you to demonstrate the power\par
+of exploratory analysis.\par
+When we did the study in 2008 it was new to people.\par
+People felt it was important.\par
+I'm to explain this to you not because you\par
+need to understand this level of detail in American politics,\par
+but to give you a sense of how we\par
+use statistical models and graphical analysis\par
+to learn about complex social phenomena.\par
+You should be able to do similar things in your own work,\par
+not to immediately fit models of this complexity,\par
+but to be able to visualize subtle, seemingly contradictory\par
+patterns and data.\par
+Now back to the graph.\par
+For each state, the line shows the probability\par
+of voting for George W. Bush in 2000\par
+as a function of individual income.\par
+In Mississippi, rich people are much more Bush-voting\par
+than poor people.\par
+In Ohio, rich people voted for Bush slightly more\par
+than poor people.\par
+In Connecticut, there is essentially\par
+no relation between income and how you vote.\par
+The size of each open circle displays the size\par
+of the group in the population relative to the country\par
+as a whole.\par
+Mississippi has a large circle of the low-income category\par
+and a small circle of the high-income category indicating\par
+that relative to the country, Mississippi has relatively\par
+more low-income people.\par
+The five circles in Ohio are roughly the same size,\par
+indicating that Ohio's income distribution is similar to that\par
+in the nation as a whole.\par
+Whereas Connecticut has the largest circles\par
+in the high-income category, indicating that Connecticut\par
+has more high-income people.\par
+The solid circles show the average income\par
+and the average probability of voting\par
+for Bush among each state.\par
+As you go from Mississippi to Ohio to Connecticut\par
+the solid circles show that you're going from low-income\par
+to high-income state, while the probability of voting for Bush\par
+is going down.\par
+So this graph shows how within each state\par
+richer people can be more likely to vote for George W. Bush,\par
+but between states, the richer states\par
+are more likely to vote for the Democrat.\par
+This work is important.\par
+It helps us understand political polarization in America,\par
+and, of course, American politics\par
+affects people around the world.\par
+The differences between conservative and liberal\par
+America, between red America and blue America,\par
+are concentrated in the upper half of the income\par
+distribution.\par
+And you can see this in the graph.\par
+At the lower end of the income distribution\par
+you see people in Mississippi, Ohio, and Connecticut\par
+voting similarly, but when you go to higher income voters\par
+you see a much greater geographic differences\par
+in how they vote.\par
+Poor Americans are not politically divided\par
+by geography in the same way as rich Americans.\par
+Income predicts Republican voting\par
+in poor states such as Mississippi,\par
+but not in rich states such as Connecticut.\par
+The message to you is that the real world is complicated\par
+but we can learn by careful study of data.\par
+We'll wrap up our class with an example\par
+that you can do yourself in R using publicly available data\par
+that you can download and analyze.\par
+These are the kinds of analyses that you\par
+can be doing right away.\par
+We'll explore data from the Fatal Accident Reporting\par
+System, which is described as a nationwide census regarding\par
+fatal injuries suffered in motor vehicle traffic crashes.\par
+You can download the data and look at crashes by date,\par
+hour of day, type of crash, and many other factors.\par
+We're using it as an example of how you can learn\par
+from exploring a data set.\par
+In your own work, you'll have access\par
+to data sets large and small and you'll\par
+have to do the exploration yourself.\par
+At this point I've shown you some complicated stuff.\par
+Now, here's some simple but open-ended data exploration\par
+you can do yourself.\par
+I'll quickly go through the data set\par
+and demonstrate some of the things you can do.\par
+We'll start by downloading a year's worth of data\par
+and plotting by day of week.\par
+More people die on Friday and the weekends.\par
+You can see that in the graph.\par
+The total number of deaths in the year\par
+is approximately 5,000 times 7, or 35,000.\par
+Next we look at hour of day-- lots\par
+of deaths in the afternoon and early evening\par
+and then another peak around 2 in the morning.\par
+If you break it up by day and hour,\par
+you see lots of deaths on Friday and Saturday nights.\par
+Was the driver drunk?\par
+Most of the time, not.\par
+This is what the graph tells you.\par
+Drunk driving deaths are concentrated on the weekends.\par
+Other deaths are spread out during the week.\par
+And we used R to break up the data\par
+and graph them in this way.\par
+Or we can break things up by state.\par
+Here are traffic deaths plotted vs population for the 50\par
+states.\par
+Bigger states have more deaths, no surprise.\par
+Let's redo this.\par
+We're going to redo and plot deaths per million people.\par
+Now we see that the states with the highest deaths per million\par
+people, Wyoming, Mississippi.\par
+And then at the other end, D.C., Massachusetts, Rhode Island,\par
+New Jersey, some of the more urban states\par
+have lower rates of traffic deaths.\par
+So you can learn something by cleaning up your data\par
+a little bit before graphing.\par
+Now we'll try another graph, plotting deaths\par
+per billion miles traveled.\par
+So now it's not deaths per population,\par
+but deaths per mile, and we see a slightly different pattern\par
+this way.\par
+We could do other things, for example,\par
+comparing drunk and sober deaths by state.\par
+Here we see, for example, that Wyoming has\par
+a lot of deaths of both types.\par
+Montana has relatively more drunk driving deaths,\par
+whereas a state such as Iowa has relatively few drunk driving\par
+deaths and more deaths from sober drivers, and so on.\par
+We can look at all sorts of patterns in the data.\par
+The sky's the limit.\par
+You can play with this data yourself.\par
+You can load in the data, take a look at the numbers,\par
+and pull out different variables.\par
+You can plot different outcomes as a function of date, time,\par
+state, and other variables.\par
+It's open-ended what you can do.\par
+There's no script.\par
+This is exploratory data analysis.\par
+We don't want to tell you what to do.\par
+We want to give you the tools so that you can decide yourself\par
+what to look at and how to explore.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

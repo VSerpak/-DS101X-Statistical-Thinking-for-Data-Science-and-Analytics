@@ -1,0 +1,311 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So in this section, we're going to talk\par
+about why to visualize data.\par
+The first reason is because large data sets\par
+are very hard to interpret just by visual inspection\par
+of the raw data alone.\par
+It can be incredibly difficult to try and interpret meaning\par
+from our data if we're just looking at the raw numbers,\par
+or even in many cases the summary of the raw numbers.\par
+The second reason is because we want\par
+to communicate and narrate information\par
+quickly to our audience.\par
+It's far easier to get information from a chart\par
+than it is from a table or from the raw data.\par
+But in order to communicate efficiently,\par
+we need to choose the correct chart,\par
+and we can use things like highlighting or annotations\par
+to get the message across more fluently.\par
+The next reason we might want to visualize data\par
+is to discover novel patterns and relationships\par
+between variables.\par
+We might have a very large data set and have some a priori\par
+ideas about what relationships exist,\par
+but until we start really examining\par
+what variable is related to which other variable,\par
+we won't really get to the very, very interesting questions.\par
+So we can discover novel things by just visualizing our data.\par
+The final reason to visualize data\par
+is so that we can interact with the data.\par
+This is for ourselves so that we can quickly\par
+facilitate many, many charts at the click of a button,\par
+but it's also so that we can communicate this information\par
+to others so they can play around\par
+with the data themselves.\par
+So in this section, I'm going to use a worked example data set.\par
+We're going to look at the New York City temperature\par
+data from 1950 to 2014, and we're\par
+going to compare that to the San Francisco temperature data set\par
+from the same period of time.\par
+The reason I'm using this example\par
+is because it can highlight how we can address a raw data set\par
+with a good workflow.\par
+So the worked example we're going to go through\par
+is the New York City and San Francisco temperature\par
+data set where we have daily temperatures for each city\par
+going from 1950 to 2014.\par
+The reason we're going to use this data set\par
+is because it highlights the workflow\par
+that I want you to take forward with analyzing data.\par
+So the first thing we have is raw data.\par
+With this raw data, we can then start to ask questions\par
+that we have of the data set.\par
+So we have our initial questions.\par
+For instance, a question we might have with this data set\par
+might be over time from 1950 to 2014,\par
+has it got warmer in New York City on average?\par
+Has it got warmer in San Francisco on average?\par
+After we formulate these initial questions,\par
+we can start to visualize the data.\par
+So this is our initial visualization.\par
+We can use a combination of static charts.\par
+These are charts that are just two-dimensional,\par
+a simple graph.\par
+Or we can use interactive charts,\par
+and I'm going to show you some examples of interactive charts.\par
+Once we visualize, we start to realize\par
+that maybe we need to ask our questions in a different way,\par
+so we start to refine our questions.\par
+We might realize that we were looking at it in slightly\par
+the wrong way, we need to improve\par
+the way we look at things, or completely\par
+novel questions might come up that we hadn't even\par
+imagined beforehand.\par
+Once we start to do this process over and over again,\par
+we start to develop understanding\par
+of what's going on.\par
+Once we understand our data set more fully\par
+and we realized the relationships that\par
+exist between variables and the questions\par
+that we can answer with that data set,\par
+we can then communicate that information.\par
+And again, we can communicate that information\par
+with visualizations, and these visualizations\par
+can be static visualizations or they can\par
+be interactive visualizations.\par
+So if the visualization process is at two points,\par
+it's when we use our initial analysis\par
+to see what do we have with these data, what\par
+questions should we be answering,\par
+and it's also at the final stage when\par
+we want to communicate the information to our audience.\par
+So here is the data set that we're going to be using.\par
+Across the top are the column names.\par
+As you can see, in this column, this is the date.\par
+And so the very first entry in the data set\par
+is the 1st of January, 1950, and we have three columns\par
+here showing the temperature.\par
+So we have in Fahrenheit, we have a maximum temperature\par
+on that day, the average, the mean temperature on that day,\par
+and the minimum temperature on that day.\par
+And this happens to be the temperature on January the 1st\par
+for New York City, and these three columns\par
+are just spelling out January the 1st in month, year, and day\par
+format.\par
+We have the same data for every day for New York and San\par
+Francisco, and it's a very, very large data\par
+set because it goes all the way down here to around about\par
+47,000 rows of data.\par
+So I'll go back to the top.\par
+From this, we could probably scroll through\par
+and try to find some patterns in the data.\par
+We might, for instance, want to look at all of the January 1sts\par
+and get the data ordered in a way\par
+that we could see if there were any patterns across time,\par
+but this would be a very, very laborious process\par
+and not very enjoyable.\par
+We could potentially use summary tables,\par
+but even with 12 months or summarizing it down\par
+to just years, that's going to be a lot of data\par
+and very hard to process immediately.\par
+So this is a perfect data set where it makes far more sense\par
+to visualize the data and interact with the data\par
+so that we can get a sense of what's\par
+actually going on with the temperatures\par
+in each city across time.\par
+So now we have our data.\par
+We can start formulating our initial questions.\par
+And with this data set, a very simple question\par
+is, is it getting warmer in recent years in New York City,\par
+and/or is it getting warmer in San Francisco?\par
+Are they both getting warmer, are neither getting warmer,\par
+or is just one of the cities getting warmer?\par
+So one way we could do this is just pick one day of the year\par
+and look at the temperature changes from year\par
+to year on that day.\par
+So here I've graphed the temperature\par
+on July the 1st in New York City.\par
+So you're seeing a graph.\par
+On the bottom axis is the year 1950 all the way up to 2014,\par
+and on the y-axis you can see the temperature,\par
+and you're seeing three different lines.\par
+The top line, the red line, is the maximum temperature\par
+on each day going across that time period.\par
+And the bottom line, the blue line,\par
+is the minimum temperature.\par
+And the line in the middle, the darker line,\par
+is the average temperature, the mean temperature.\par
+So we just picked one day, July 1, in the middle of the year,\par
+and we can see it's relatively warm in New York in July.\par
+It's around about 80 degrees Fahrenheit.\par
+We can see that in the '50s and the '60s,\par
+it was slightly higher on average than in the '70s, '80s,\par
+and then it seems to have rebounded somewhat\par
+and got a bit warmer '90s and 2000s.\par
+We can also see that there's some individual variation.\par
+For instance, 1989 or '88 looks like there was a big dip\par
+and it was a particularly cold July day, whereas there\par
+are some days where it's particularly warm,\par
+such as in 2011, 2012.\par
+This is fine.\par
+It doesn't really answer our question.\par
+We've just picked one random day of the year.\par
+And so a better way to go about this\par
+might be to try and develop an interactive visualization where\par
+we can pick days at will and see how has temperature changed\par
+over the entire time point on any day that we choose.\par
+Here we have an interactive graphic.\par
+This is the same chart that we just saw on the previous slide,\par
+but this time we can actually interact with the data\par
+and we can request of this interaction any day of the year\par
+that we want.\par
+I happen to have made this particular graphic using\par
+a programming language called R, but there\par
+are numerous different programming\par
+languages this can be done in.\par
+It can even be done with customized software.\par
+So we have drop-down menus here on the left-hand side.\par
+This is 1st of July.\par
+This is our chart.\par
+We can pick any date.\par
+So for instance, let's pick the 1st of December,\par
+like in the wintertime.\par
+We get the temperature on that day across time.\par
+And as we can see, initial look at this chart\par
+tells us that this there's much more variability in temperature\par
+in December.\par
+We can see these spikes where the temperature max, min,\par
+and mean is much higher than average,\par
+and here where it's lower than average.\par
+So it's very, very variable in December.\par
+Back to our original question, is it getting warmer?\par
+It's not that super obvious that there's any clear trend here\par
+on December the 1st.\par
+Let's pick another day.\par
+For instance, let's pick December the 25th.\par
+We can go to that day, have a look\par
+at the temperature on that day.\par
+Again, a lot of variation.\par
+We can see that there's a lot of variation\par
+in a very short period of time in the early 1980s here,\par
+but it doesn't look that there's much difference in time\par
+in an increase in the average temperatures over time\par
+in New York.\par
+So let's pick another month.\par
+We could pick, for instance, let's pick April, a spring\par
+month, and here's the graph for that day.\par
+Again, we can see that there was a very hot day\par
+in the early 1960s-- in fact, a couple of years in a row where\par
+there was very hot days.\par
+We had another very hot spike on this particular day\par
+in the early 2000s.\par
+So this is a great way of interacting with data, being\par
+able to formulate ideas about the data,\par
+discovering new relationships, new patterns.\par
+We're taking our original raw data, we're filtering the data\par
+and producing the same chart over and over again.\par
+This would be incredibly laborious\par
+if we were to do this just with a static chart.\par
+But by interacting in a browser like this,\par
+we can get so much more information much more quickly\par
+that can either reject hypotheses, confirm hypotheses,\par
+or tell us perhaps we should look at this relationship\par
+in more detail.\par
+Here is another line chart that I have made,\par
+but this time we're comparing New York's weather\par
+to another city's weather-- in this case, it's San Francisco.\par
+Again, what we have on the x-axis\par
+are the years going from 1950 to 2015\par
+that we have data available for, and on the y-axis\par
+we have temperature, again in Fahrenheit.\par
+When comparing two lines like this,\par
+it's very easy to make inferences immediately\par
+about the difference between the two cities.\par
+So here we can see that the darker red line\par
+is New York and the lighter, paler line is San Francisco.\par
+And it's quite clear that on July\par
+the 1st, the day from which these data come from,\par
+that there is typically very, very clear differences.\par
+New York is a lot warmer in the summer than San Francisco.\par
+If we were interested in trying to get some more\par
+information about our question of interest, i.e.\par
+is it getting warmer in more recent years,\par
+time series such as these are very useful.\par
+We can see here that looking just at the New York line,\par
+there doesn't seem to be any trend.\par
+If anything, the average mean temperature\par
+was getting a little bit less in the 1980s.\par
+If we look at the San Francisco line,\par
+perhaps very moderately there is a slight upward trend.\par
+We could go into more statistical analyses\par
+to tease this out, whether there is\par
+an upwards slight increase in mean temperature from 1950\par
+to 2010.\par
+But what this interactive chart enables us to do\par
+is play around with the data and look on other days of the year.\par
+For instance, here is December the 1st,\par
+and immediately we can see that San Francisco tends\par
+to be warmer than New York in the winter, in December.\par
+We can also see that there's so much for fluctuation\par
+in the daily temperature in New York, when\par
+it's cold in the winter than there is in San Francisco.\par
+When we look at December the 1st,\par
+we might actually form an inference\par
+that perhaps the average temperature\par
+is getting a little bit warmer in New York over time.\par
+The average temperature perhaps is getting slightly above 40,\par
+where it was below 40 prior to 1980.\par
+There doesn't seem to be much variability in San Francisco's\par
+weather except perhaps there is this uptick after around 2011.\par
+It seems to getting a little bit warmer.\par
+So looking at these charts in different ways\par
+on different days of the year give us different pieces\par
+of information.\par
+The other useful thing about interactive charts\par
+are that we can start to change the y-axis dynamically.\par
+For instance, let's look at the maximum temperature\par
+on each day.\par
+Again, there is not much variation on December\par
+the 1st across years in the maximum temperature\par
+on each day in San Francisco, but we see a similar pattern\par
+to the average temperature with New York.\par
+There seems to be an increasing number\par
+of high maximum temperatures over time.\par
+The problem with this kind of interactive chart,\par
+though, is that we have to manually look\par
+at one day at a time.\par
+And there's a lot of variability inherent in just looking\par
+at one day of the year at a time, so we need to come up\par
+with some other charts and other ways of analyzing\par
+and visualizing the data to refine our questions\par
+and to start looking in more detail as to whether there\par
+is this change over time.\par
+So after our initial analysis of these data,\par
+we have found for there are patterns between years,\par
+there are temperature changes perhaps over time.\par
+We've also seen that New York and San Francisco have very\par
+different temperature dynamics.\par
+But the problem with the data that we've been looking up\par
+thus far are that we're looking at one day at a time\par
+and it's very, very messy.\par
+There's lots of variability.\par
+So perhaps we need to refine our question.\par
+We still are interested in is it getting warmer\par
+in recent years in New York or San Francisco,\par
+but let's not look at daily averages.\par
+Perhaps we should use monthly averages.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 
