@@ -1,0 +1,342 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So let's jump to the final business\par
+example of this module.\par
+In the previous one with museum, we introduced the fact\par
+that we can model individual-level decisions,\par
+just individuals with probabilities of,\par
+for example in that case, renewing the contract or not.\par
+What I want to introduce in this new business example\par
+is also the reality--\par
+which is very, very common--\par
+which is we don't only observe one behavior per person.\par
+Many times, we observe multiple things.\par
+In the case of the museum, it could be-- well,\par
+the museum observes if you renew or not.\par
+But they also observe, for example,\par
+if you donate some extra money at the moment of renewal.\par
+So when you have multiple outcomes that you observe,\par
+nothing stops you from just modeling them all together.\par
+And, actually, the Bayesian plot line\par
+is a very good framework to actually\par
+be able to model multiple behaviors together.\par
+And this is an example in which I'm\par
+going to show you how, in this case, I did it.\par
+So let's think about a business that sells online.\par
+And what they do is every day they send you\par
+an email with multiple deals in it.\par
+You can click and buy some of it.\par
+The very, very big example is Groupon.\par
+Groupon is a company that's exactly that.\par
+You have also LivingSocial, Gilt,\par
+and many, many other websites.\par
+So let's think about that company and the data they have\par
+and what they could be interested in figuring out\par
+from those data.\par
+So, in this example--\par
+let's say, for example, think of Groupon.\par
+What the manager really wants-- the goal of this modeling\par
+exercise is going to be--\par
+the manager at the end of the day,\par
+she wants to increase purchases.\par
+She wants people to click on more deals\par
+and to buy more things.\par
+What does she observe, though?\par
+So, here, because this interaction\par
+is generally, very easy to see behaviors online.\par
+So I'm going to assume here they have some summary data, summary\par
+because they are not going to be modeling\par
+every single click of the person, though they could.\par
+What I have put here is I've put here a semi-clean data set\par
+from one of these companies.\par
+It's a real company.\par
+And I put here a semi-clean data set\par
+that includes the following:\par
+Each day, the manager observes a few things.\par
+One is the deals they show.\par
+I know exactly my product offerings on that day.\par
+So they know what is the price or what is the discount;\par
+where it is located; whether its sports, bars,\par
+travel, et cetra-- a lot of characteristics of the deal.\par
+The company also knows many characteristics of the person.\par
+Sometimes when you sign up for the service,\par
+you tell them where you live.\par
+You tell them, for example, your gender, your age,\par
+your interests.\par
+So these would be pieces of information\par
+that I use for specifics.\par
+Those things could change over time\par
+or could not change over time.\par
+And then, very interestingly, what the company observes\par
+is what happens when they send you an email.\par
+And this activity is the activity the manager's\par
+is interested in mainly.\par
+Why?\par
+Because, if at the end of the day\par
+she wants to increase purchases, what she's going to do\par
+is she's going to model clicks, which\par
+is where the purchases happen.\par
+What I'm going to do in this example--\par
+I'm going to illustrate how instead of just focusing\par
+on clicks, I'm going to model all the other behaviors that\par
+also happen per individual which will help me understand\par
+all this clicking behavior.\par
+So how am I going to look at this?\par
+Let's start by looking briefly at just one kind of the data.\par
+What I have here is, I have the same person,\par
+the same ID multiple times which importance\par
+is that each day this person has received an email.\par
+So individual one receives an email on January 1.\par
+What do I observe as a manager?\par
+I observe whether she opens, whether she clicks,\par
+and whether she unsubscribes or opts out from the service.\par
+Other things I know-- the same as I described before.\par
+For example, in this example, I know\par
+the location of individual.\par
+I know exactly the coordinates when the person signed up\par
+because I got that set from the computer.\par
+And I have many other characteristics.\par
+And among the deals, also I know I send you an email.\par
+So I can easily compute as a manager,\par
+what is the average discount of that email?\par
+Or what would be the maximum discount?\par
+I can have all sorts of characteristics\par
+that I observe because it's my product offering.\par
+So now let's think about how one could\par
+model this data to give insights to the manager\par
+as to how to increase sales.\par
+I'm going to start with the most simple.\par
+The most simple approach could be, well, purchases\par
+are our clicks, correct?\par
+So what I can do is I can say, look, I observed\par
+whether a person clicked.\par
+Person i, clicks on day t.\par
+So I can say, look, I'm going to observe\par
+this for many, many days.\par
+So my assumption is going to be, somebody's\par
+going to click or not also by flipping a coin.\par
+It's the same as the museum but different.\par
+So I'm going to flip a coin.\par
+I'm person i on day t.\par
+I'm going to decide whether to click or not on the email.\par
+So I assume there's going to be a probability that makes me\par
+click or not.\par
+Now, I could be a person with a very high probability,\par
+in general, of clicking because I like a lot of stuff.\par
+I like going out.\par
+I like buying deals for bars or for restaurants.\par
+So what I'm going to do is I'm going\par
+to capture the fact that this probability is\par
+going to have some component--\par
+similar cycle as before-- some component\par
+that this individual, the person who is a clicker- let's\par
+call it that way.\par
+But this person, this probability,\par
+could depend also on something that\par
+is totally variable over time, which\par
+is going to be, for example, variables like,\par
+what is the discount?\par
+And you're offering a date, at time t.\par
+Or, for example, let's call it, what is the type of deal\par
+that you included?\par
+Did you include restaurants, for example,\par
+on that particular email because I always buy restaurants?\par
+So there will be a parameter here, that I call alpha again,\par
+that is going to capture the relationship of those things\par
+that change over time with those things that\par
+are individual characteristics.\par
+I'm going to predict your probability of clicking today.\par
+And then I'm going to observe click.\par
+Now, as I said, I'm going to include\par
+these individual parameters.\par
+What do I mean by that?\par
+Again, this is something unobservable.\par
+Every time I put a circle around it,\par
+it's something I don't know.\par
+But it's something I'm going to be able to figure out\par
+with the model and the data.\par
+In this case, let's say, it's like you know,\par
+people are heterogeneous on the extent they click on emails,\par
+on the extent they buy things from the internet.\par
+So I'm going to assume that these parameters distributed\par
+across a population with a normal distribution of mean mu\par
+beta and sigma beta.\par
+So the model I just described right now\par
+has an i t component, which is individual times t.\par
+We know that.\par
+Oh, it goes up to here.\par
+i t .\par
+Then this is up to level i.\par
+And all these parameters are what we call\par
+population-level parameters.\par
+So if I'm going to make inferences for the company\par
+as to how to sell more--\par
+well, how do you sell more?\par
+You sell more when people have higher probabilities.\par
+How do people have higher probabilities?\par
+Well, if I learn about alpha, if I learn what in the deals--\par
+is it discounts, the prices, the type, is it\par
+the picture you insert?\par
+What in the deals is making people have high probability?\par
+That's one way.\par
+The other one is, look.\par
+This beta i recognizes that not everybody has\par
+the same propensity to click.\par
+So by modeling this and looking at the beta i's and how\par
+the beta i's are distributed--\par
+the same way as we did with the probabilities of renewal.\par
+If I estimate this model, I can figure it out beta i\par
+across everybody.\par
+And I can sort people on the basis of their beta i.\par
+That way the model will allow you\par
+to detect who are the customers who have a higher propensity\par
+to click naturally.\par
+So that way the manager would understand,\par
+A, what in the email makes them click but, B, also,\par
+how is the heterogeneity in the population?\par
+Who are the people who are more likely to click or not?\par
+This would be a very easy approach\par
+to model such a problem.\par
+Now, let's complicate things a little bit\par
+and think about, you know, but I also observe,\par
+if somebody opens the email and if somebody unsubscribes\par
+the email.\par
+So could I model those behaviors as well\par
+and learn more about how people purchase in this environment?\par
+What I can perfectly do and very easily do,\par
+is the same way that I observe clicks,\par
+I can say, look, I also observe open behavior.\par
+And I also observe unsubscription behavior.\par
+Person i t, person i t.\par
+So this probability of clicking is not\par
+going to be the probability in which--\par
+I'm not going to flip the same coin to unsubscribe.\par
+I might have a different coin.\par
+This is the probability of opening.\par
+This is the coin of clicking.\par
+And this is the coin of unsubscription.\par
+So far I could perfectly model these independently.\par
+This could be a model.\par
+This could be a model.\par
+This could be another model.\par
+But the idea here is that I am able to connect\par
+these pieces by the individual characteristics.\par
+That's it.\par
+I said before that this beta i captures\par
+some individual traits, some characteristics of the person\par
+that I do not observe as the manager,\par
+but that determines the fact that this person clicks a lot.\par
+Well, what if I estimate this parameter, this effector,\par
+that is going to have a combination of--\par
+OK, a person is a heavy clicker.\par
+A person is a heavy or light opener.\par
+And a person is a high or a low unsubscription rate.\par
+They're a person who has a higher chance to unsubscribe\par
+or a lower chance to unsubscribe.\par
+So now what I'm putting here is this beta.\par
+Let me put it here just as an example.\par
+This beta-- I put a hat because now it's going to be a vector.\par
+Let's say 0.2, 0.5, 0.9.\par
+Why did I put three dimensions?\par
+Because it's going to refer to three probabilities.\par
+And another person, say beta j is another person.\par
+It's like 0.1, 0.5, and, say, we'll put a 2 here.\par
+So know that these numbers are not necessarily\par
+the probabilities but are numbers\par
+that feed into a probability.\par
+I will make a mathematical transformation\par
+to make sure that this p i stays between zero and one.\par
+That's just like a useful transformations.\par
+So if I connect the three behaviors\par
+within the same underlying latent\par
+trait, what I'm learning?\par
+What I'm learning is that--\par
+let's say beta is monotonic with p, meaning the higher\par
+the beta, the higher the p.\par
+Let's say that is transformation and the mathematical\par
+transformation of these arrows.\par
+So what I know is that, for example, this person--\par
+i versus j, this person is going to have a higher--\par
+given that they observe the same email,\par
+this person will have a higher probability\par
+of opening, a higher probability of clicking\par
+than this person given open.\par
+And compared to j, she's going to have a lower\par
+probability of unsubscription.\par
+I'm just doing relative between i and j.\par
+I would have the whole histogram of people.\par
+I will have 5,000, 10,000, 1 million customers.\par
+I can estimate what are the probabilities--\par
+not the probabilities, but the inherent\par
+propensities to do each of the behaviors more or less.\par
+Why this is relevant?\par
+Well, because I actually estimated\par
+a model similar to this.\par
+And this is what I found.\par
+What I found is that, by allowing\par
+for an individual underlying parameter affecting these three\par
+behaviors, I can understand the relation between those.\par
+But for example, I'm not going out\par
+into the details of the results because of time constraints\par
+now.\par
+But I'm going to tell you more or less what I\par
+can find with a model as such.\par
+What I find with a model as such is that I find people.\par
+This beta free.\par
+This beta, I'm going to estimate a distribution of that.\par
+This beta's a vector that is allowed to be as high or as low\par
+as minus infinity if that's infinity of multiple behaviors.\par
+What I found in this particular example\par
+using the data from a company similar to Groupon\par
+was that I pretty much found three types of customers.\par
+And these three types of customers\par
+were all determined by how their beta i's looked like.\par
+What I thought was a group of customers\par
+that were a very, very high probability, very\par
+high probability to click, and very low probability\par
+to unsubscribe.\par
+So I got a bunch of people--\par
+a bunch of i's--\par
+who's beta i was like that.\par
+It makes the person who's going to open a lot,\par
+is going to click a lot, and is going\par
+to unsubscribe very little.\par
+But also I found a bunch of j's, a bunch\par
+of people, other customers, who--\par
+based on the data, what I found was that these people\par
+were opening a lot.\par
+However, these people were not clicking at all.\par
+And you know what?\par
+These people were much more likely to unsubscribe\par
+than those here.\par
+And then, finally, and unfortunately for the company,\par
+I also found another group of customers--\par
+here I'm going to put k--\par
+in which the vector k told me more or less\par
+what their behavior was.\par
+And their behavior was as follows.\par
+These people were not opening at all.\par
+They were not clicking.\par
+And they were not unsubscribing.\par
+These people were not doing absolutely anything.\par
+So, in this case, by combining the three behaviors\par
+within the same underlying parameter\par
+or set of parameters, what I can do\par
+is I can estimate those parameters,\par
+look at the posterior, and then understand them.\par
+By looking at those parameters, I\par
+understood that I could perfectly\par
+have three segments in the population that,\par
+based on the estimates for the individual parameters,\par
+have very different behavior.\par
+So I'm going to stop it here because it's very, very messy.\par
+And I'm not going to get into estimation details.\par
+But I wanted here is to illustrate what--\par
+with the Bayesian model, you can actually\par
+expand the complexity of the model\par
+such that you can figure out many other observables that\par
+are going to make you make better decisions.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

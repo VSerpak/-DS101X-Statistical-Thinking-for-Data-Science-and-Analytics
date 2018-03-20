@@ -1,0 +1,362 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Now I'm going to demonstrate some Bayesian modeling\par
+in practice.\par
+For the rest of this lecture, you're\par
+going to see no formulas, no equations,\par
+not even any numbers.\par
+I'm going to show you a lot of results,\par
+and I'm going to tell you why we needed\par
+to use Bayesian inference without giving you\par
+all the details in order to get a sense of how\par
+we use these methods to solve real problems.\par
+I'm going to start with a survey that\par
+was done in the last month of the 2012 presidential election,\par
+a survey in which respondents were asked whether they\par
+supported Barack Obama or Mitt Romney\par
+or any other candidate for president.\par
+This was a special kind of survey.\par
+The survey was done in people's living rooms,\par
+but the survey interviewers didn't have\par
+to go into their living rooms.\par
+Why is this?\par
+The survey was conducted on the Microsoft Xbox video game\par
+platform.\par
+Players on the Xbox had the opportunity to vote in a poll.\par
+They were prompted by Microsoft every few days\par
+to have the opportunity to vote to cast their opinion.\par
+The resulting poll was not a random sample of Americans.\par
+It was some non-random sample of people\par
+who were on the Xbox at certain times\par
+and felt like answering these questions.\par
+But we were able to use these data to estimate\par
+public opinion, and in some ways,\par
+we were able to learn more from our Xbox poll\par
+than from conventional surveys.\par
+So what happened?\par
+This graph shows support for Obama in blue, Romney in red,\par
+and other or no opinion in white,\par
+among Xbox respondents during the month\par
+and a half before the 2012 election.\par
+Obama and Romney start out in the same place,\par
+then Obama pulls into the lead, then they're tied again,\par
+then Romney pulls into the lead.\par
+Romney stays ahead, and by the election,\par
+Romney is ahead by a couple points.\par
+So the Xbox survey worked.\par
+It correctly predicted that Romney\par
+was going to win the election.\par
+But wait a second.\par
+Romney didn't win the election, actually.\par
+The Xbox survey failed in this case.\par
+What happened?\par
+The Xbox respondents are not representative\par
+of the general population.\par
+They had too many Romney voters.\par
+We need to do something about that.\par
+While you wouldn't know ahead of time that there are too\par
+many Romney voters in the sample,\par
+the whole purpose of the service to find out how many people\par
+support Obama and Romney.\par
+But we know that the Xbox population\par
+doesn't match the general population in other ways.\par
+We have a lot of data on these respondents.\par
+We have their age, we have their sex,\par
+we have what state they live in, we have their education levels.\par
+We can adjust for these things.\par
+We can fit a statistical model estimating\par
+the support for Obama and Romney in the general population,\par
+correcting for the fact that the sample is not\par
+the same as the population.\par
+We fit a regression model to make this predictions.\par
+Having done this, we can estimate\par
+the underlying distribution of Obama and Romney voters\par
+in the general population of voters.\par
+And here's what we find.\par
+After adjusting for demographics,\par
+this graph shows the support for Obama over time.\par
+Obama started out in the lead.\par
+Then, for a brief period, Romney was in the lead.\par
+Romney caught up.\par
+The line goes below 50%, meaning Romney was ahead.\par
+And then at the end, Obama pulled into the lead\par
+and he won.\par
+And the dotted line shows what happened\par
+in the actual election.\par
+In this graph the solid lines show support for Obama\par
+among the people who supported one candidate or another\par
+over time, as estimated from our adjusted survey data,\par
+and the gray shows uncertainty bounds.\par
+Now what do we get out of this graph beyond what one might\par
+get out of a regular poll?\par
+Probably the big advantage of the Xbox survey here,\par
+compared to what you would usually read in the newspaper,\par
+is we have data from every day.\par
+So each dot in this graph shows the results\par
+from survey respondents in that particular day.\par
+We can see fine structure in the data in public opinion\par
+that we wouldn't be able to see from usual polls.\par
+And usually, when you hear about polls in the newspapers\par
+or online, you get moving averages over several days.\par
+You get more of a blurry picture.\par
+So that's one thing.\par
+But now, having the ability to see fine structure,\par
+let's try to use it.\par
+As you see, Obama was well ahead of Romney,\par
+and then something seemed to happen\par
+on that dotted vertical line on October 3,\par
+and then Romney did better.\par
+What happened on October 3?\par
+The three dotted vertical lines in this graph\par
+are the three presidential debates.\par
+In the first debate on October 3, Romney did very well.\par
+Obama didn't look so good.\par
+And the pundits agreed, on the left and on the right.\par
+Karl Rove described Mr. Romney's bounce as significant.\par
+Nate Silver of The New York Times\par
+said, "Mr. Romney has not only improved his own standing,\par
+but has also taken voters away from Mr. Obama's column."\par
+Now is this actually true?\par
+In this graph, we saw support for Obama in the Xbox survey\par
+after adjusting for demographics,\par
+after adjusting for age, sex, education,\par
+and some other variables.\par
+But we can do more.\par
+We also have survey data from the Xbox respondents\par
+of their party identification, whether they consider\par
+themselves Democrat, Republican, or independent,\par
+as well as who they voted for the previous election.\par
+These are questions that we asked people\par
+at the very beginning of the survey period\par
+when they joined the poll.\par
+And so we can adjust for these variables\par
+in order to match to a constant population of potential voters.\par
+And now I'm going to show you what\par
+happened after we adjust not only for demographics, but also\par
+for partisanship.\par
+In this graph, the light line shows our estimated support\par
+for Obama every day just based on adjusting for demographics.\par
+The solid line, the black line, shows what we really believe,\par
+which is after adjusting for demographics and partisanship.\par
+We believe that the solid line represents the true underlying\par
+opinion more accurately.\par
+What's the difference between the two lines?\par
+The difference comes to non-response.\par
+Look at what's happening in the first part of the time series\par
+from September 24 to October 3.\par
+There the light line is heavier than the dark line.\par
+What that means is that Xbox respondents, even\par
+after controlling for demographics,\par
+had too many Democrats.\par
+Once we adjusted for partisanship\par
+and adjusted for the fact that our sample was\par
+over representing Democrats, the line went down.\par
+Obama's support was not a strong as it seemed.\par
+Later on during the time series, in mid-October, the light line\par
+is below the dark line.\par
+What that means is that our survey was\par
+over representing Republicans.\par
+Why was this happening?\par
+Think about the election campaign.\par
+In late September, Obama was well ahead.\par
+He was cruising to reelection.\par
+Imagine you're filling out the Xbox poll at this point\par
+and you're a Democrat.\par
+You might say, sure, let me play this game.\par
+This will be fun.\par
+Let's see who's going to win.\par
+I'm going to vote for Obama.\par
+If you're a Republican, you might\par
+feel like, I'm don't want to do this.\par
+I'm sick of the election already.\par
+So you get an over turnout among Democrats in this poll.\par
+Later on, Romney's doing really well.\par
+He's leading in the polls.\par
+He did so well in the debate.\par
+And now it's time to play the Xbox game,\par
+and you're a Democrat, and you're like,\par
+I don't feel like doing this.\par
+Republicans, like, yeah, let's do it.\par
+I'm really psyched about Romney.\par
+The survey response itself is not random,\par
+and by adjusting for partisanship,\par
+we can get a more accurate picture of what's actually\par
+happening in the polls, what's actually happening\par
+among the voters, I should say.\par
+The actual underlying opinion among voters\par
+is much more stable than what you\par
+would see in surveys because of differential\par
+non-response between Democrats and Republicans.\par
+So we learned something from this Xbox poll\par
+that we were not able to learn some conventional surveys.\par
+Because the Xbox poll was what's called a panel survey, meaning\par
+we sampled people repeatedly, we're\par
+able to see that a lot of what appeared\par
+to be changes in public opinion were actually\par
+just changes in differential non-response rates.\par
+For our next example, I'm going to share a study\par
+we did about where political partisanship comes from,\par
+and how it changes as you get older.\par
+I'm going to start with a story of the George W. Bush\par
+Democrat and the Jimmy Carter Republican.\par
+A few years ago, I had a conversation with someone\par
+about my age who described himself\par
+as a Jimmy Carter Republican.\par
+So I said, what do you mean?\par
+What's a Jimmy Carter Republican?\par
+You mean you like President Carter\par
+because he was tough on the Russians,\par
+he deregulated industries, you think\par
+he was truly a Republican?\par
+And my friend said, no.\par
+Jimmy Carter made me a Republican.\par
+Jimmy Carter, Democratic president,\par
+was so unpopular that this man, who was in his teens\par
+at the time, decided that the Democrats were not for him.\par
+A few years later, we had an entire generation\par
+of George W. Bush Democrats, young people who\par
+vote for Obama after experiencing\par
+eight years of George W. Bush and deciding\par
+that the Democrats were going to serve their interests\par
+a little bit better.\par
+This graph shows the pattern in more detail.\par
+This is from a large survey conducted in 2008.\par
+It was big enough that we could actually\par
+estimate public opinion by single year of age.\par
+I'm showing support for the Republican candidate\par
+for president as a function of age.\par
+As we said before, the youngest voters\par
+were much more likely to support Barack Obama\par
+and oppose the Republicans.\par
+As we get older, though, we see an interesting nonlinear\par
+pattern responding to different generations\par
+of presidential voters.\par
+George W. Bush Democrats, Jimmy Carter Republicans,\par
+Ronald Reagan Republicans, John F. Kennedy Democrats,\par
+all the way back to the New Deal period.\par
+I'm going to show you this graph again along with similar graphs\par
+from polls in other years.\par
+The plot on the left shows public opinion support\par
+for Republicans as a function of age in 2008.\par
+The middle graph shows four lines,\par
+support for Republicans in 2002, 2004, 2008, and 2012,\par
+each as a function of age.\par
+And as you can see, this graph looks like a mess.\par
+If you take this middle graph, all you can really say\par
+is there's not very clear relationship between age\par
+and how you vote.\par
+But now we're going to try something.\par
+We're going to take the line from 2000\par
+and shift it over by 12 years.\par
+We're going to take the line for 2004\par
+and shift it by eight years.\par
+We're going to take the line for 2008\par
+and shift it by four years, and the line for 2012\par
+and shift it by zero years.\par
+Thus, we're lining up the four curves now not\par
+as a function of your age, but as a function\par
+of the year you were born.\par
+And that's the graph on the right.\par
+And this is pretty amazing.\par
+There are clear generational patterns.\par
+From election to election, there are\par
+patterns of people born in different decades who\par
+are strongly Democratic, then a strong Republican era, e then\par
+there's another era where people born in this period\par
+were more likely to support Democrats\par
+than Republican and so forth.\par
+There's an alternation, a gradual alternation\par
+that's happening not over time, but over birth year.\par
+And these vote patterns continue over your life.\par
+How people vote based on their age\par
+is very similar in 2000, 2004, 2008, and 2012.\par
+And so that implies that how you vote is, to a large part,\par
+determined by things that happen to you when\par
+you're relatively young.\par
+And we decided we would fit a statistical model\par
+to these data.\par
+In the model we fit, your political attitudes\par
+are a sum of things that happened to you in the past.\par
+And we quantified that based on presidential approval.\par
+We have data going back to the 1940s\par
+on the approval of the presidents,\par
+and our model is that when there's a Democratic president\par
+and he's popular, that makes your generation more\par
+likely to support Democrats, not just then, but in future years\par
+as well, future elections as well.\par
+Similarly, if there's a popular Republican president\par
+like Dwight Eisenhower or Ronald Reagan,\par
+that will cause you to support Republicans later on in life.\par
+Conversely, an unpopular Democrat\par
+such as Jimmy Carter or an unpopular Republican\par
+such as George W. Bush will cause\par
+you to like that party less.\par
+So we fit a model in which there's\par
+a coefficient for each year of age.\par
+In each year of age, presidential popularity\par
+has an effect on your future voting.\par
+Here's the result from our model.\par
+This graph shows the importance, the weight\par
+of presidential popularity on your future voting\par
+as a function of your age.\par
+These are estimates and uncertainty bounds\par
+based on the Bayesian model that we fit.\par
+We estimate that the most important years in your life,\par
+in terms of affecting future voting,\par
+are between the ages of 15 and 30.\par
+After that, as you get older, the popularity of the president\par
+becomes less of a factor in your future voting, which\par
+makes sense.\par
+You get more set in your ways.\par
+We estimated this graph by fitting data\par
+to decades of poll data and integrating that\par
+with presidential approval.\par
+This was a Bayesian model.\par
+We used Bayesiam methods because their model had\par
+a large number of parameters.\par
+This graph alone shows parameters\par
+for each year of age, but we also\par
+have parameters for chronological years.\par
+And we also have to include various demographic corrections\par
+in our models, similar demographic corrections\par
+to the corrections that we did in our earlier Xbox study.\par
+We have a model with a large number of parameters\par
+and somewhat sparse data.\par
+And that's where Bayesian modeling\par
+becomes particularly useful.\par
+Now let me speak a bit more generically about what we did.\par
+In the two previous examples, we had survey data,\par
+sample data that did not completely\par
+match the population.\par
+In the first example, there's a very bad mismatch\par
+between sample and population, and we\par
+needed to adjust for a lot of predictors\par
+in order to make reasonable statements\par
+about the general population of voters.\par
+In the second example, the sample\par
+was somewhat representative, but we\par
+needed to get estimates for every year of age.\par
+In that case, our data were sparse\par
+and we needed to do statistical modeling in order\par
+to fit a coherent model to the data\par
+from different ages and different years.\par
+In both of these cases we used Bayesian methods\par
+in order to capture the uncertainty\par
+and regularize our predictions.\par
+A simple statistical estimate, a simple non-Bayesian estimate\par
+would be too noisy.\par
+A simple non-Bayesian estimate wouldn't\par
+allow us to include all the predictors\par
+that we needed to include in order\par
+to do the adjustments that were necessary.\par
+So in this case, we used prior information,\par
+and I'm not going into the details here,\par
+but we used prior information to control the estimates,\par
+to keep them more stable, more numerically stable,\par
+which allowed us to include more information\par
+and get more accurate summaries of the underlying population\par
+that we're interested in.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

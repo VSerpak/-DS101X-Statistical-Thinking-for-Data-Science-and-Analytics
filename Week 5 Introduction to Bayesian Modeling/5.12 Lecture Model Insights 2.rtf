@@ -1,0 +1,366 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So let's jump into the data, and let's jump into the results.\par
+Remember from the model.\par
+What we were looking at basically\par
+was how do sales respond to changes of price and display?\par
+So now we build the model.\par
+We collected the data.\par
+We run this data through the computer,\par
+and what the computer does to us is it just draws,\par
+just keeps drawing from the posterior distribution.\par
+So what did I get by drawing from this posterior\par
+distribution?\par
+What I put here are the results for price,\par
+so this exactly here is the posterior distribution\par
+of the parameter that was with price.\par
+That parameter was, I think, beta one.\par
+Beta 1 was the parameter that was linking with sales,\par
+and this is how this posterior parameter looks like.\par
+So what do we learn from here?\par
+From here, I can summarize this histogram.\par
+I can give you the histogram.\par
+But if we're going to have to report in many, many values,\par
+then generally it is better to go with a table\par
+and give some numbers that people are more\par
+used to understanding.\par
+So for example, from the histogram, what I computed was,\par
+what is the posterior mean, meaning what\par
+is the average outcome from this distribution, which\par
+happens to be minus 102.5.\par
+That number should be somewhere around here, second row\par
+here, more or less.\par
+This is going to be where the average is going to be.\par
+And then I can also look at what is\par
+the posterior central interval.\par
+What do I mean by that?\par
+Around the central part of the distribution,\par
+I'm going to give you an interval that\par
+is more likely to happen.\par
+So for example in this case, what I did,\par
+the numbers minus 115.1, which is\par
+going to be somewhere around here, and minus 89.9,\par
+which is going to be somewhere around the 90,\par
+almost in the 90.\par
+What it means is that all these outcomes compose 95%\par
+of probability of happening.\par
+In other words, with 95% certainty,\par
+I can tell you that the outcome of this parameter\par
+lies within this interval.\par
+So in many cases when you look at the results\par
+of Bayesian statistics, you will see the posterior mean.\par
+In this case, it's going to be this number,\par
+but it's always more complete to also report\par
+not only the posterior mean but also the interval.\par
+Why?\par
+Because to give us an idea of how uncertain\par
+we are about this quantity, so now we\par
+know what a histogram represents,\par
+how to actually summarize it.\par
+Now, the question is, what does it mean?\par
+What does it mean in this particular case\par
+that the posterior mean of the beta for price is minus 102?\par
+For this, we have to go back to our model\par
+and remember that our model was something on the way--\par
+sales of each store in its time followed a normal distribution\par
+that it was here.\par
+We had a beta parameter, beta zeta\par
+plus beta 1 price plus beta 2 display.\par
+Sorry, we had a variance here for the norm.\par
+So what this posterior mean means is that if you increase\par
+the price by 1 unit, then sales are\par
+going to increase by minus 102.\par
+Let's put that in better English.\par
+This means that, well, if you were\par
+to increase the price of this products,\par
+if you were to increase the price by $1, then\par
+sales in number of units, we expect\par
+it to decline by 102 units, which makes sense.\par
+When you increase price, most people buy less,\par
+and this is what this model is representing here.\par
+Now, let's try to understand also\par
+what happens to the beta 2, which\par
+is the parameter for display.\par
+So I did exactly the same.\par
+For the model for display what I am going to do\par
+is I'm going to also show you the histogram,\par
+but I'm going to also show you the summaries\par
+for the posterior, both the posterior mean\par
+and the posterior interval.\par
+What do we have here?\par
+The posterior mean in this case is about 87.7,\par
+which is going to be somewhere here approximately,\par
+and then we have the posterior interval,\par
+which is going to be from 72, which\par
+is about here, to 103, which is going to be somewhere here.\par
+So again, what is this saying to us?\par
+We can say that given the data at hand\par
+in these particular markets, what\par
+happens is that when you add more\par
+marketing into these products by adding display to them,\par
+the way we measure display, then sales are going to be going up.\par
+By how much?\par
+Well, we have to go back to the unit in which display\par
+was represented.\par
+In this case, it was that percentage.\par
+It was something between 0 and 1,\par
+which is the proportion of products that I had on display,\par
+and then we have to relate that to sales.\par
+So one could think about it and say, well,\par
+if instead of being point 1 displace point 2,\par
+I just have increased the unit by 0.1,\par
+then sales are going to increase by 8 units.\par
+Why 8?\par
+Because it's going to be 87 times 0.1,\par
+which is the unit that increased.\par
+So interpretation in this case depends on two things.\par
+One is where the numbers I'm obtaining for this posterior\par
+distribution.\par
+In this case, I am using the posterior central interval.\par
+There are other metrics for that,\par
+but this is the one I'm picking for this example.\par
+Those numbers, and now I have to take these numbers to the model\par
+and understand what they actually represent in terms\par
+of my outcome, which was sales.\par
+So before we keep talking about the insights\par
+that we get from this model, one thing that is very important\par
+which I'm going to mention here in one particular metric--\par
+but there are many others.\par
+I would recommend readings for that.\par
+One very important thing is to actually check\par
+that our model is valid, meaning does our model really\par
+represent the data properly?\par
+Because we could estimate any model.\par
+We could make any assumptions about what\par
+sales would look like following a gamma\par
+distribution, a normal distribution,\par
+but we don't really know whether those parameters that we\par
+have interpreted right now actually make sense.\par
+So in order to do that, what we need to do\par
+is validate the model.\par
+How am I going to show you some idea of how\par
+to validate the model here?\par
+Well, let's look at if actually the model is\par
+very good at predicting actual sales.\par
+So how do we do that?\par
+What I'm going to do is I'm going\par
+to convert the actual data, which I observe perfectly,\par
+with the amount of sales that our model would predict\par
+given the information we have.\par
+So a little bit of kind of notation,\par
+again, I'm going to show here.\par
+The model we were estimating was sales,\par
+was following a normal distribution of some parameters\par
+and some variance.\par
+Remember?\par
+And what I have been doing now is\par
+I have been interpreting those betas.\par
+So how can I actually see if this model predicts the data\par
+properly or accurately?\par
+One way to look at that is I know x because this\par
+is the data I know.\par
+I know price.\par
+I know display.\par
+Now I have estimated the betas, and I have estimated also\par
+sigma, even though now we are not going to spend time\par
+interpreting sigma.\par
+But this is the parameter you estimate from the model.\par
+Now, I can take the two unknowns that now I know.\par
+I can plug into the data, and what I can perfectly do\par
+is I can predict what sales would look like if I exactly\par
+knew x, beta, and sigma.\par
+And this is exactly computing the predicted values\par
+of the model.\par
+And it's very easy to do it in Bayesian\par
+because the only thing you need to do\par
+is in every single draw, when I draw\par
+beta and sigma in my estimation, I just\par
+have to plug those numbers into the equation for sales.\par
+And I'm going to compute what would be the predicted sales\par
+for that week for that store.\par
+So this is exactly what I have done here,\par
+so now let's look at how these predictions look like.\par
+So here what I did is on the x-axis,\par
+we have over time of the number of weeks.\par
+Here, just for illustration, I pick one of the stores.\par
+Here on the y-axis, we have the amount of sales the store has,\par
+and this is the line for how sales evolve over\par
+time for this particular store.\par
+Now, given the model, every time I\par
+draw this beta and this sigma, what I did\par
+is very easily just computed predicted sales.\par
+So now let's look at how these two\par
+lines would compare together.\par
+So, well, actually, our model is doing a pretty good job\par
+at actually understanding the fluctuation of sales\par
+and definitely of getting the mean level for sales.\par
+These models-- I mean, one could think,\par
+well, these two peaks here are not captured by the model.\par
+These peaks in the model we just did\par
+will be these differences there.\par
+It could be the amount of error we\par
+have for that particular observation.\par
+If, for example, we look at the calendar,\par
+and we see that these peaks correspond to, for example,\par
+a holiday season, we can easily add that information\par
+into the model, something that we discuss very soon\par
+after this interpretation.\par
+So this is one way to validate the model.\par
+There are plenty of summary statistics\par
+and different metrics to look at that.\par
+Again, I'm not going to cover all these metrics here.\par
+I will refer again to you to Gelman's book,\par
+but this is just a daily of getting behind.\par
+We need to validate the model.\par
+We have to understand how the model actually fits the data.\par
+Now, once we have a model that is validated,\par
+we know how to, A, interpret the betas,\par
+interpret the parameters in the model\par
+and see what those imply in business.\par
+Another thing that we can do is instead of just predicting\par
+what would have happened--\par
+well, we know what happened.\par
+But could we predict what would have\par
+happened should the manager have changed prices?\par
+That is an outcome that is very easy for us to change.\par
+Why?\par
+Because we have already modeled how sales relate to this axis,\par
+so now what I did is just from my own estimation,\par
+the same way I predicted these sales--\par
+this is the predicted sales I just showed.\par
+The same way I predicted those sales, what I can do\par
+is say, look.\par
+OK, I can take the current prices.\par
+I could cut prices by, say, $0.50 and see what happens\par
+to the math.\par
+This is how the model could be perfectly used\par
+to actually forecast sales.\par
+In this example, I used data just to show the same data,\par
+but you should use it for future periods.\par
+What I did is this is the predicted sales at the level\par
+of price and display that we have observed in the data,\par
+and this is exactly how sales would look if one went\par
+to discount prices by $0.50.\par
+As we discussed with the price coefficient,\par
+we know that if we increase price, sales decrease.\par
+The same way, when we decrease price, the sales increase.\par
+And here with this type of plot, the manager\par
+can understand how sales will respond to changes in price.\par
+What if the manager also observes\par
+a different type of data?\par
+How will the model change if we have some more information that\par
+could affect sales?\par
+For example, what else can we observe?\par
+Well, we know that depending where store is located,\par
+maybe sales might change.\par
+So I might be able to add some information about the location,\par
+or even no location, but maybe I could add information\par
+about how many people live around the store\par
+or live or walk.\par
+Imagine this is a store located in the middle of Times Square,\par
+versus this is a store located in a very small place where\par
+there's not a lot of kind of population density.\par
+So that information could be important to actually model\par
+sales more accurately.\par
+Another way to look at more data that would be useful would be,\par
+what if each store has been doing\par
+different sorts of advertising, maybe sending advertising\par
+to the houses around it?\par
+Or another way to think about useful information\par
+to this model would be, what if I\par
+can collect the price of the competing products?\par
+Our model was sales is a function of the price.\par
+Say it's of Coca Cola.\par
+It's a function of price of Coca Cola,\par
+but what if I can also add the prices of Pepsi?\par
+Prices of Pepsi will likely affect demand for Coca Cola\par
+as well, so manager could also decide\par
+to collect these pieces of information.\par
+So now the question is now that we\par
+expand the amount of information we have,\par
+how is the model going to change to allocate this?\par
+Well, the good news is that this is a very straightforward\par
+exercise to do because if you remember very briefly what\par
+we had before in the graph--\par
+we had that sales were a function of the betas\par
+and also a function of the sigmas.\par
+Well, I know that these betas in my previous example\par
+were beta 0, beta 1, and beta 2.\par
+Correct?\par
+And then I have the sigma squared.\par
+Now, that was the constant.\par
+Then I have the price, and I have the display.\par
+Well, what if I incorporate the price of the competing product?\par
+I can perfectly just say, I have another parameter in the model\par
+that I'm going to add into the equation for sales,\par
+and then this beta 3 is going to capture the affect of competing\par
+product price on my sales.\par
+If I have the density of the population around each store,\par
+what I can have is a parameter that\par
+measures the effect of that.\par
+So all these pieces of information that we believe\par
+may affect sales also in a linear way,\par
+they can be actually modelled in the exact, exact same way\par
+as we had before.\par
+We will be keeping for now a simple model which\par
+has the dependent variable.\par
+Data is at the IT level.\par
+And the parameters are common across all stores.\par
+Very well.\par
+So this is the end of the module,\par
+so let's do some quick concept check\par
+before we jump into the exercises.\par
+First of all, we discussed a little bit\par
+what is intuition behind what it means\par
+to draw from a distribution.\par
+I started with the example for the dice, which\par
+is very easy for everybody to understand\par
+what it means to roll dice.\par
+Drawing from a posterior distribution\par
+has exactly the same idea.\par
+Our posterior distribution is going\par
+to be a distribution of unknowns.\par
+And how do we discover them?\par
+By drawing for that distribution.\par
+So estimating a computational in Bayesian\par
+means I'm going to be drawing for a distribution such\par
+that I can give you a summary of what\par
+this distribution of unknowns looks like.\par
+So as such, when we talk about the parameters in our model,\par
+the parameters are not going to be numbers.\par
+Those parameters are going to be outcomes.\par
+Those outcomes are going to be a distribution.\par
+How is it generally best to summarize the distribution?\par
+Well, if you only have a few parameters in the model,\par
+I would highly recommend to just show the histogram.\par
+The histogram is the best representation\par
+of what the distribution is going to look like.\par
+In most of the cases, what happens\par
+is we have many, many parameters in the model,\par
+and then showing all the distribution\par
+is actually even overwhelming.\par
+So this is why most people use some sort of summary statistics\par
+of that posterior distribution.\par
+It's is very, very common to observe the posterior mean\par
+and the posterior intervals.\par
+These two numbers provide you an idea\par
+of what is the average outcome but also what\par
+is the uncertainty around it.\par
+Now, once the parameters are obtained\par
+and we understand where the parameter lies\par
+within around these numbers or what is more likely to happen,\par
+then interpretation is going to depend on two things.\par
+It's going to depend on A, those numbers from the distribution.\par
+Remember price?\par
+The posterior mean was about minus 100,\par
+and then there was an interval.\par
+But what does it mean to sales, exactly?\par
+For that, we have to revisit our likelihood function,\par
+and we have to revisit the assumptions\par
+and then interpret what happens.\par
+With that, we're going to conclude this module,\par
+and you're going to jump now to have some exercises.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

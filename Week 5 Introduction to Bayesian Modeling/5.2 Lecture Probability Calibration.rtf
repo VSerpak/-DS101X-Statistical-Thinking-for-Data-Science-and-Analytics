@@ -1,0 +1,322 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Bayesian modeling is how I learn from data.\par
+We start with a probability model\par
+for the data and the underlying parameters\par
+describing the data generating process.\par
+Combine that probability model with the data\par
+that we observe and conclude with what's\par
+called a posterior distribution or a summary of our inferences\par
+about our unknowns.\par
+I'll Illustrate with several examples.\par
+But before doing Bayesian statistics,\par
+we need to understand probability.\par
+Probability mathematically is a number between 0 and 1\par
+that satisfies certain laws of probability.\par
+We need to apply this concept not just\par
+to problems like rolling dice, shuffling cards, and flipping\par
+coins, but to uncertain quantities\par
+such as the probability that the Democrats will win the election\par
+next year, the probability that I get cancer next year,\par
+or the probability of a major earthquake in a certain city\par
+during the next 10 years.\par
+And so forth.\par
+These are probabilities that are determined\par
+not by any randomization process but by some combination\par
+of natural variation and uncertainty.\par
+In order to do Bayesian inference\par
+we need probabilities that we understand.\par
+To have probabilities we understand,\par
+we need to have a method of evaluating the probabilities.\par
+A way of assessing whether the probabilities that we use\par
+make any sense, and whether they correspond to reality\par
+once we've done that, we can apply them in Bayesian\par
+inference to make decisions.\par
+A probability is called calibrated if it's\par
+empirically correct on average.\par
+Let me give you an example.\par
+The National Weather Service says\par
+there's a 30% chance of rain tomorrow in your city.\par
+How ca we evaluate this forecast?\par
+What if it rains tomorrow? is the forecaster of then correct?\par
+30% chance of rain.\par
+It seems like the forecaster's only correct\par
+if it doesn't rain.\par
+But that's not quite right either.\par
+It should get rain 30 percent of the time.\par
+So in fact you can't evaluate this forecast based on one day.\par
+30% chance it means it could happen or might not happen.\par
+In the aggregate, though, we can evaluate this forecast\par
+and we can calibrate it.\par
+When the weather forecast is a 30% chance of rain--\par
+if we aggregate all those statements,\par
+30% of the time it should rain and 70%\par
+it shouldn't, but you can't tell from just one day.\par
+Mathematically, calibration is defined\par
+by collecting all of a class of instances.\par
+If a calibrated forecaster says there's\par
+a 30% chance of rain for n independent outcomes,\par
+then the actual number of successes,\par
+the actual number of rains should\par
+have a binomial distribution with probability p equals 0.3.\par
+So it's interesting.\par
+We're using probability in a sort of reverse way.\par
+That when you learn probability, you\par
+start with a bunch of assumptions\par
+and then you have a model.\par
+So you make certain assumptions and then\par
+you get the binomial distribution.\par
+In calibration, it's the opposite.\par
+We're using the mathematics of the binomial distribution\par
+to evaluate a stated probability.\par
+So it's good that's somebody's already figured out\par
+the mathematics of the binomial distribution,\par
+because that allows us to understand\par
+the empirical implications of a statement such as 30% chance\par
+of rain.\par
+OK so to continue with our 30% chance of rain example.\par
+The ideal situation would be what we call calibration.\par
+That we get a bunch of data and 30% of the time\par
+when they say it's 30% chance of rain It actually rains.\par
+Or we could have non-calibration where you look up the data\par
+and when I said 30% chance of rain it turned out\par
+that it rained 50%.\par
+Then I'm not calibrated.\par
+You need to fix my probabilities.\par
+I say 30%.\par
+The real thing is 50%.\par
+In practice though, there is a difficulty\par
+of sampling variation.\par
+So you wouldn't think exactly 30% anymore\par
+than you would think when you flip a coin 100 times,\par
+you wouldn't expect to get exactly 50 heads every time.\par
+So in practice, when we study calibration,\par
+we have to account for the fact that we only have finite data.\par
+So calibration can never be perfect.\par
+We'll illustrate with an example of 365 days of forecast.\par
+I made up these numbers.\par
+In this hypothetical year, there are 140 days where the weather\par
+forecaster said it can't rain.\par
+There are 20 days where the weather forecaster assessed\par
+a 10% chance of rain.\par
+30 days with an assessed 20% chance of rain.\par
+40 days with 30% chance of rain, and so forth.\par
+For each of these we can then compute the expected number\par
+of days of rain.\par
+When there's expected to be 0% chance of rain\par
+you should see no rain.\par
+It should never rain once.\par
+In the 20 days in which there was a 10% chance of rain,\par
+you expect to see rain two days.\par
+In the 30 days where you're expected\par
+to see a 20% chance of rain, you expect\par
+to see six days, et cetera.\par
+The final column here is a question mark\par
+indicating that we don't know exactly how\par
+many are going to happen.\par
+The question mark represents our data.\par
+The data that we would use to assess our calibration.\par
+Now under the calibration model, the data in that graph\par
+should come from this binomial distribution, which,\par
+given the sample sizes are approximately\par
+normally distributed, which means that we can actually\par
+give an estimate and a standard error for the number of days\par
+of rain in each category.\par
+So for example, there were 40 days in our chart\par
+where the probability of rain was 30\par
+and the expected number of rainy days there is 12 times 0.4\par
+If we're calibrated we can use the mathematics\par
+of the binomial distribution to assess what we might see.\par
+Let me give an example.\par
+In the row of the previous chart with 30% chance of rain\par
+we had 40 days in which the weather forecaster said\par
+there's a 30% chance of rain.\par
+The expected number of rainy days\par
+is then 0.3 times 40 or 12.\par
+And from the binomial distribution\par
+we can get the standard deviation\par
+of the number of days.\par
+The square root of 0.3 times 0.7 times 40.\par
+That gives us an estimate and a standard deviation,\par
+which mathematically given the normal approximation\par
+to the binomial, is approximately a 68%\par
+predictive interval.\par
+If we take this interval there's a 68% chance\par
+that the number of days of range should\par
+fall inside that interval.\par
+And then you can check and see if it does or it doesn't.\par
+Here's an example I'd like you to think about yourself.\par
+Suppose we have data from a hundred days,\par
+and each of the days the forecast\par
+was a 60% chance of rain.\par
+Perfect calibration would be that it\par
+rained on exactly 60 days.\par
+So here's my question to you.\par
+Would you call it a calibrated forecast\par
+if it rains on 61 of those days?\par
+Would you call the calibrated forecast\par
+if it rained on 65 of those days?\par
+And would you call it a calibrated forecast\par
+if it rained on 70 of those days?\par
+To answer this question, you have\par
+to think about the meaning of calibration\par
+in the presence of sampling error.\par
+So now you understand that calibration\par
+is a slippery topic.\par
+There is such a thing as perfect calibration\par
+which you'd never expect in real life,\par
+and then there's approximate calibration\par
+you'd expect to see or hope to see with real data.\par
+So now we've seen the difficulty of assessing calibration.\par
+We'd like to have perfect calibration but with real data\par
+we'll never see perfect calibration.\par
+In fact it's worse than that.\par
+Often when people give you a probability\par
+they're grossly uncalibrated.\par
+They can be terrible.\par
+And I'm gonna demonstrate with you.\par
+I'm going to actually try to trick you into giving\par
+really bad probabilities.\par
+I'm going to try to scare you into realizing\par
+that you don't understand probability\par
+as well as you think.\par
+Now why am I so confident that I could scare you like this?\par
+Because this is one of my favorite classroom\par
+demonstrations.\par
+I do this every year to my students.\par
+Every year I have them assess probabilities,\par
+and every year they're uncalibrated.\par
+And in a systematic way, as we'll see.\par
+What I do is I give my students a series of questions.\par
+A series of questions with numerical answers.\par
+Questions they don't know the answers to.\par
+And for each question I ask them to construct\par
+uncertainty intervals.\par
+And then we check how calibrated the intervals are.\par
+We check whether their 50% intervals really\par
+contain the true value 50% of the time,\par
+and we check whether their 95% intervals really contain\par
+the true value 95% of the time.\par
+Before getting to that activity, in this classroom activity,\par
+once we calculate how many intervals\par
+contain the true value, we can assess calibration.\par
+And as it turns out-- as I said, people\par
+are not as calibrated as you might hope.\par
+Before getting to the classroom activity which you're\par
+going to do on your own, I'll share with you a classic story\par
+of uncalibrated experts.\par
+This example came from an engineering conference--\par
+a civil engineering conference in which\par
+a speaker described an embankment that\par
+was subject to flooding.\par
+And the question he had to experts in this room\par
+after giving them a picture of the embankment\par
+and describing the story was at what height\par
+what a certain levee fail how high with the water\par
+have to be before the levee would a collapse.\par
+And each of the experts in his audience gave and interval.\par
+Subjective 50% interval, which meant that he or she thought\par
+that there's a 50% chance that the levee would\par
+fail at that particular height.\par
+This graph shows the intervals given by the seven experts.\par
+And this is pretty amazing.\par
+So the first thing is, well, after people\par
+gave the interval he told people the true value and amazingly\par
+enough, none of the seven intervals\par
+contain the true value.\par
+That's bad calibration.\par
+When your 50% intervals never contain the true value.\par
+But it was even worse than that in a sense,\par
+because you could say, well maybe\par
+it was an unusual embankment and that's just life.\par
+Sometimes everybody overestimates or underestimates\par
+something because it's unexpected.\par
+But no.\par
+The seven experts weren't even consistent with each other.\par
+Different experts had intervals that\par
+didn't even overlap with other intervals.\par
+Now, what does that mean to you or to me?\par
+Experts are overconfident.\par
+You cannot just accept a probability statement\par
+that's given to you.\par
+Now it's time for you to play the game\par
+of assessing your uncertainty.\par
+We have a handout with 10 questions corresponding\par
+to uncertain quantities.\par
+For example, the percent of African-Americans from the US\par
+census in 1990.\par
+Or the total egg production in the United States in 1965.\par
+The total number of airplane passengers\par
+who died in crashes in 1980.\par
+Now, I purposely chose these questions\par
+because you don't know the answers to them.\par
+But you should still be able to express your uncertainty.\par
+Oh, here's another one.\par
+It's an interesting one because you do know something about it.\par
+It's the percentage of babies born who are girls.\par
+you know a lot about this one.\par
+And so on.\par
+For each of these questions, I'd like\par
+you to give a subjective 50% interval.\par
+That is, a lower bound and an upper\par
+bound so that for each of these, there's\par
+a 25% chance the true value is below the lower\par
+bound, a 25% chance the true value's\par
+above the upper bound, and a 50% chance\par
+that the true value's inside of your 50% interval.\par
+You should do your best on this.\par
+What that means is questions that you don't know much about\par
+you should try your best.\par
+Question such as the percent of babies\par
+who are girls that you know more about,\par
+you should be giving narrower intervals\par
+to express your knowledge about those questions.\par
+Once you've done that, write them all down.\par
+Write all your intervals down and come back\par
+and we'll compare them to the true values.\par
+OK.\par
+Now let's compare to the true values.\par
+Here they are.\par
+13.5% of Americans in 1990 describe themselves as black.\par
+There were 95.4 billion eggs produced in the United States\par
+in 1965.\par
+439 people worldwide died in plane crashes in 1980.\par
+48.8% of babies born in the United States are girls.\par
+And so on.\par
+For each of these you should just\par
+be able to check the true value is either inside\par
+or outside your interval.\par
+If all goes well, the true value should be inside your interval\par
+five of the times and outside five of the times.\par
+But it's random.\par
+It could be six or seven or three or four.\par
+I'll tell you something.\par
+When I did this with my class, most of the time the true value\par
+was outside the interval.\par
+People were like those experts-- students\par
+were like those experts.\par
+They're overconfident.\par
+Their intervals were too narrow.\par
+People are saying it's here, but the true value's over there.\par
+And this is characteristic.\par
+Psychology researchers have studied\par
+this for a long time, this phenomenon of overconfidence.\par
+What happened when we did it for the entire class?\par
+About 1/3 of the intervals contain the true value\par
+and about 2/3 of them didn't.\par
+The empirical coverage of people's 50% intervals\par
+was something like 33%.\par
+People are not like weather forecasters.\par
+Actually, the National Weather Service\par
+is much more calibrated, but that's\par
+because calibration is part of their mission.\par
+They actually check that they're calibrated.\par
+They know to look at this.\par
+The literature on this topic dates from 1950,\par
+and the first paper on the topic was actually\par
+about weather forecasting.\par
+End of transcript. Skip to the start.\par
+Downloads and transcripts\par
+Handouts\par
+}
+ 

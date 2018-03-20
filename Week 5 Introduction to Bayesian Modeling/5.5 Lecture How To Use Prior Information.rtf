@@ -1,0 +1,276 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Next, we'll consider an example where\par
+the prior information is much stronger\par
+than the available data.\par
+The story begins with a paper published\par
+in the Journal of Theoretical Biology\par
+several years ago, claiming that more attractive parents were\par
+more likely to have girls and less attractive\par
+parents were more likely to have boys.\par
+The data used to support this claim came from a survey.\par
+A survey of 3,000 people, 3,000 parents,\par
+for whom the attractiveness was measured and also\par
+the sex of their child was recorded.\par
+And her are the data.\par
+The parents in the most attractive category, 5,\par
+56% of their children were girls.\par
+Then as you go down to the lower categories only about 1/2,\par
+a little bit less than 1/2, of the children were girls.\par
+So you see a big difference between the most attractive\par
+parents and the others.\par
+And this led the researcher to claim, to draw the conclusion,\par
+that there was a correlation between attractiveness\par
+and sex the child.\par
+A correlation is present in the data,\par
+but the question is, to what extent\par
+is it present the general population?\par
+Well, the first natural thing to do, here,\par
+is to fit a regression line to the data.\par
+And here, we have a slope, and we have\par
+uncertainty about that slope.\par
+And this represents what the data can tell us.\par
+Now, let's move to the prior information.\par
+To do Bayesian analysis, we need to define a parameter.\par
+In this case, the parameter theta\par
+is the difference in probability of having\par
+a girl comparing more attractive parents to less\par
+attractive parents.\par
+We can get prior information from the literature.\par
+There's actually a large literature on sex ratios.\par
+It turns out that in almost all comparisons of sex ratios\par
+the difference between different groups of people\par
+is less than 1/2 a percentage point.\par
+It's very rare to see anything more than that.\par
+Given that attractiveness in the survey's\par
+itself measured with error, it would be very, very surprising\par
+to see any true difference in the population\par
+more than 0.3 percentage points in absolute value.\par
+As a result, we assign a prior distribution\par
+representing a conservative statement\par
+about our uncertainty about this parameter with a mean of 0\par
+and a standard deviation of 0.003.\par
+That's 3/10 of one percentage point.\par
+When we combine this with the data estimate of 1.5 percentage\par
+points, or 0.015, with a standard error of 0.014,\par
+we can put these together and see what we get.\par
+Now, just a peek ahead.\par
+The prior distribution has a much stronger-- much smaller\par
+standard deviation than the data estimate.\par
+As a result, the prior's much stronger,\par
+and our estimate is going to have to be much closer\par
+to the prior than to the data.\par
+Here we have the formula.\par
+The prior estimate is 0, based on the fact\par
+that before we had any data there was no real reason\par
+to believe that either more or less attractive\par
+parents would be more likely to have boys or girls.\par
+So it's the prior information divided\par
+by the prior standard devi-- by the prior estimate-- multiplied\par
+by the prior estimate.\par
+Then we have the data estimate, which\par
+is 0.015, divided by the square of the standard error\par
+of that estimate.\par
+And then the denominator is what we need\par
+to create a weighted average.\par
+The result is 0.001, 1/10 of 1%.\par
+Because the prior information is so much stronger than the data,\par
+the estimate gets pulled almost all the way to 0.\par
+Essentially, we learned nothing from this experiment.\par
+Now, that's fine.\par
+That's life.\par
+What's really interesting though, is\par
+that we could have realized we were\par
+going to learn nothing from this experiment\par
+even before gathering any data.\par
+Because with a sample size of 3,000 in a study like this,\par
+you can really, pretty much, ahead of time\par
+compute the standard error of your estimate.\par
+And the standard error is going to be about 0.014,\par
+something close to that.\par
+And so, we know ahead of time the prior information\par
+is so much stronger than the data.\par
+You'd actually need hundreds of thousands of data points\par
+in order to get enough information to really learn\par
+anything here.\par
+Now, we're going to use Bayesian inference, the combination\par
+of prior information and local data information,\par
+in order to attack the problem with spell checking.\par
+And I'll give you a simple example.\par
+I type the word Radom, R-A-D-O-M, in my text.\par
+We have three hypotheses to what the word could actually be.\par
+I could have meant to type random,\par
+but maybe I made a random error in typing.\par
+I could have meant to type radon,\par
+because I actually do research on the risk of exposure\par
+of radon gas.\par
+Or I could have typed Radom, R-A-D-O-M.\par
+Perhaps that was what I meant to type for some reason.\par
+We're simplifying the problem in that we're considering\par
+only these three options.\par
+But nonetheless, this gives the general flavor\par
+of how Bayesian inference can be used to combine information\par
+in this sort of problem.\par
+We have two pieces of information now.\par
+The prior and the likelihood.\par
+The prior distribution is what we\par
+know about the distribution of these words, irrelevant,\par
+irrespective of how I-- what I typed.\par
+In this case, there are three words.\par
+I called up my friends at Google,\par
+and I asked them to look up the frequency of these three words\par
+in your database.\par
+They found that random appeared 7.6 times 10 to the minus 5\par
+of all words.\par
+That is of all the words in their corpus, the probability\par
+of that word being the word random was 7.6 per 100,000.\par
+The word radon was a little rarer.\par
+It was 6.05 per million.\par
+And finally, the word Radom was the least common.\par
+It was 3 per 10 million.\par
+Radom actually is a word.\par
+It's a town in Poland.\par
+So it appears occasionally, but less commonly the radon,\par
+and even less commonly than random.\par
+The next step is the likelihood.\par
+The likelihood represents the probability\par
+of seeing what we saw given the true underlying parameter.\par
+If the true underlying parameter,\par
+that is the true word was random,\par
+it turns out the probability that I would type R-A-D-O-M\par
+and drop the letter N is 0.00193.\par
+That is about 2/10 of 1%.\par
+Where did I get this probability from?\par
+I called up my friends at Google.\par
+They have a model for typos and miss-prints.\par
+They have a model for the probability\par
+that you'll type one thing when you meant to type something\par
+else.\par
+The next question is could-- what if the true word had\par
+been radon?\par
+Then to do Radom, I would have had\par
+to type an M instead of an N. M and N\par
+are next to each other on the keyboard,\par
+so maybe that's not so unlikely.\par
+On the other hand, this sort of error turns out to be rarer.\par
+Dropping a letter as in going from random to Radom\par
+is more common than switching a letter.\par
+And that's how we know, because-- we know this\par
+because Google gave us their estimated probability, which\par
+is about 1/10 as high of having that.\par
+Finally, we have the probability of typing R-A-D-O-M if you\par
+meant to type R-A-D-O-M. That is the probability of typing\par
+a five letter word with no typos.\par
+Well, most of the time when we type five letter words,\par
+we don't have typos.\par
+So the probability is close to 100%.\par
+If the true word were R-A-D-O-M, the probability of typing\par
+R-A-D-O-M IS close to 100%, and that's what we see IN this\par
+table.\par
+Next step, is to put these probabilities together and make\par
+inferences.\par
+We need to combine the prior and the likelihood\par
+to get the posterior distribution.\par
+For each of the three probabilities,\par
+for each of the three possibilities, random, radon,\par
+and Radom we start with their prior probabilities, which\par
+you see listed in the table there,\par
+then we multiply each of these by the likelihood,\par
+and then we get the unnormalized posterior distribution for each\par
+of these possibilities.\par
+We then re-normalize that.\par
+We take the unnormalized probabilities, which are all\par
+really low, divide them by their sum,\par
+and get three numbers that sum to 1.\par
+And what do we find?\par
+Based on the information we've included here,\par
+we find that the probability that the true word was random\par
+is 0.325.\par
+The probability the true word was radon was 0.002,\par
+and the probability that the true word was Radom\par
+was 0.673 according to this model.\par
+So let's just talk this through, briefly.\par
+How come radon lost out so much?\par
+Radon lost out because, first, it's not a very common word,\par
+and second, according to Google the probability\par
+of a transposition error, of typing an M instead of an N,\par
+is extremely unlikely.\par
+So it's an unlikely word.\par
+It's very unlikely that it would end up in the data we saw,\par
+so it has a very low posterior probability.\par
+Random it's also unlikely to be typed,\par
+but not as unlikely to be typed.\par
+Also, it occurs more frequently in the corpus,\par
+and we have a higher probability.\par
+And finally, Radom, although it's a very rare word,\par
+the likelihood is very strong and very supportive of Radom.\par
+So that turns out to be the best choice.\par
+Now, let's move to decision making.\par
+Suppose you're a computer, and you want to-- someone types\par
+R-A-D-O-M, what do you want to do with that?\par
+The natural solution would be to say 0.673 this is correct.\par
+This is the most likely possibility,\par
+so don't change it.\par
+I think what I might want to do in this situation is actually\par
+flag the word.\par
+and say, do you mean to type random?\par
+Because, after all, there's a one in three\par
+chance that it's a typo.\par
+Most words we type the spelling information\par
+is consistent with the context.\par
+And there's no reason to suspect it.\par
+In this case, there's a 1/3 chance,\par
+according to the model, that the word was wrong.\par
+And depending on the context, you\par
+might actually want to flag that and have a human check it.\par
+The next step is model checking, model criticism.\par
+This model is not perfect for a few reasons.\par
+First, the prior distribution represents\par
+words in Google's corpus.\par
+But I told you that I typed the word R-A-D-O-M,\par
+and shouldn't that tell us something?\par
+If that tells us something, where does it go?\par
+Well, it goes in this prior distribution.\par
+I'm a statistician, if you haven't guessed,\par
+and I type the word random a lot.\par
+Random is one of the more common words I use.\par
+So the prior probability of random\par
+should be much higher than is given here.\par
+Radon also, I happen to work in that field,\par
+and so I type the word radon fairly often.\par
+R-A-D-O-M, I've never been to Poland.\par
+I never heard of this town in Poland\par
+before doing this example, so it's extremely unlikely\par
+that I would ever type that.\par
+So you put that together, and my probability\par
+should be different.\par
+Well, how would you assess that?\par
+The answer is empirically.\par
+You could, for example, go through a corpus\par
+of all of my writing.\par
+Go through the many millions of characters that I've ever typed\par
+and the millions of words, and through that\par
+find the frequencies of those.\par
+Well, that might not be the best estimate either.\par
+And this is certainly not a procedure\par
+that you could use to do spell checking for someone who\par
+you have no prior data on.\par
+But when you do have additional information,\par
+it should be possible to use.\par
+To put it another way, let's suppose we do our inference\par
+and we see this.\par
+And we say, well, this makes no sense.\par
+I personally don't think it's so likely I would've typed\par
+R-A-D-O-M. That implies that I have prior information that was\par
+not included in our model.\par
+And that's fine.\par
+Statistical estimates and statistical inferences\par
+are only as good as their assumptions.\par
+We always have to go back and check our assumptions,\par
+and try to understand where models came from.\par
+And then, we can improve our models\par
+and do better for the problems for which this is important.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

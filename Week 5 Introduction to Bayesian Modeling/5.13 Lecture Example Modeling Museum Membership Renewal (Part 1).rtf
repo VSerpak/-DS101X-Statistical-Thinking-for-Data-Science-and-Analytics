@@ -1,0 +1,350 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 We're in the final segment of this model.\par
+And what we're going to do in this segment\par
+is we're going to apply what we have been covering before\par
+about model building, and model estimation, and insights.\par
+But what we're going to do now is\par
+we're going to model individual level decisions.\par
+What do I mean by that?\par
+If you think about the store level data\par
+we analyzed before, those were sales for a week,\par
+in a particular store.\par
+But all these sales, what are sales?\par
+Sales are just the aggregation of multiple people making\par
+decisions.\par
+So nowadays, it's very, very easy\par
+to collect data at individual level, which\par
+is we're going to collect exact decision\par
+that a person makes at a certain point in time.\par
+So in this final module, what we're going to do--\par
+final segment-- what we're going to do\par
+is I'm going to use two different case studies with two\par
+different data sets, that our data says that are really\par
+available for many companies.\par
+And I'm going to apply, based on statistics,\par
+to keep looking for more insights\par
+and how to actually learn something\par
+about the customers doing freely what\par
+they will do in the future.\par
+The two case studies that I'm going cover here,\par
+one refers to a membership organization,\par
+say something like a museum that has an annual membership.\par
+And the other one is going to be understanding how people\par
+make decision in email content.\par
+And I'm going to use an example of a company\par
+similar to Groupon, or one of those that\par
+sell deals in a daily basis.\par
+So let's just start with the first business example.\par
+As I said, this is what I'm going\par
+to use is I'm going to use an organization.\par
+Let's imagine it's a museum.\par
+It could be, for example, in New York, The Museum of Modern Art.\par
+Let's say the MOMA has a number of membership.\par
+And the idea is that as the manager\par
+wants to identify at the end of each year which customers\par
+and which members or patrons are going\par
+to be more likely to renew, because similarly he\par
+will understand who of these people\par
+will be less likely to renew.\par
+Right?\par
+So this manager, or this person in the organization,\par
+has certain levels of data.\par
+So what does she observe?\par
+She knows, for example, in this particular case,\par
+what are some pattern's characteristics, for example,\par
+gender.\par
+Also what they know is when somebody became a member,\par
+the person was given some interests about, oh, I'm\par
+more into photography, more into sculpture,\par
+or other types of interest that the company asked\par
+at the joining moment.\par
+And also, the company has collected some information\par
+along the year that whether the person went online and download\par
+certain content, or whether the person actually\par
+visited the museum.\par
+So with this data at hand, I'm going to show you\par
+how the data looks like.\par
+With this data on hand, we're going\par
+to model exactly this behavior.\par
+And we're going to try to figure out\par
+which customers, individual customers,\par
+are more likely to make the decision of renewal\par
+or not renewing, which is what the manager cares about.\par
+So this is an example of the database I'm going to use.\par
+We have different individuals.\par
+Whether there female or male, I just coded it one being female.\par
+And then, photography and sculpture\par
+means that the person selected that box when they signed up\par
+for the membership.\par
+So these two are just like person specific.\par
+I am a person that likes photography\par
+versus some other person that also like sculpture,\par
+or one of the other.\par
+And then, the last two columns that I put here, those\par
+are the data that the company has collected over the year.\par
+So let's think how one could build a model\par
+to actually estimate what is the probability that a person is\par
+going to renew.\par
+Notice now that this is when business statistics becomes\par
+very useful.\par
+The probability that a person is going to review\par
+is not really observed, is it?\par
+The only thing we observe is whether the person makes\par
+a decision of renew or not.\par
+So similar to the figure, the graph,\par
+that I created when we were talking about store level data,\par
+I'm going to do these for this particular example.\par
+So one way to look at this is saying, well,\par
+renew, the person I renew, right?\par
+This is an observed variable.\par
+That's why I'm going to use a square here.\par
+It's a realization of some probability.\par
+So let's imagine, just for the sake of the modeling building,\par
+that each person has a coin.\par
+At the end of the year, I'm going to flip my coin\par
+and I'm going to decide whether to renew or not with the MOMA.\par
+So the way we're going to think about that is everybody's\par
+going to have an observed probability,\par
+that I call PI, of renewing.\par
+Now, how can I model this probability?\par
+Well I can say, OK, this probability is observed.\par
+I'm going to estimate that probability.\par
+But this probability is going to be\par
+a function of many other things that I observe.\par
+So similar to the notation I introduced\par
+before, what I'm going to do is say,\par
+look this probability is going to be\par
+some combination of some parameter vector\par
+that I'm going to estimate.\par
+And all of these characteristics that I\par
+had like, for example, is going to be gender,\par
+is going to be, for example, whether the person likes\par
+the photography or whether the person likes the sculpture,\par
+or how long since the person last visited the museum.\par
+So these characteristics, what I'm going to do\par
+is I'm going to make a linear combination of those\par
+with a parameter beta.\par
+This information is going to determine\par
+my probability of renewing.\par
+And then I'm going to assume that renewing follows,\par
+for example, a Bernoulli--\par
+Bernoulli is the flip of a coin--\par
+of that particular probability.\par
+So now, in this final segment, because I\par
+want to introduce multiple ways in which we model of data,\par
+I'm not going to go into the details of the modeling.\par
+And I'm going to jump into the results.\par
+The idea of modeling this, the estimate in this model\par
+is the same as we did before when\par
+we were talking about sets.\par
+So let's see what the results are.\par
+Which results I'm going to show you?\par
+I'm going to show you two types of results.\par
+One is the betas, the same way we did in the previous example.\par
+We wanted to analyze relationship\par
+between some observables and the rest of the behavior,\par
+and then we do that through the parameters.\par
+But here, I have introduced a new thing.\par
+I have introduced a parameter that is individual.\par
+For each person, I am going to estimate this probability,\par
+and it's unobserved.\par
+So I cannot feed data into these.\par
+I'm going to feed the data into these.\par
+This is all I know, renewal and other types of behavior.\par
+And with the business statistics,\par
+I'm going to estimate these, and I'm going to gather the betas.\par
+But also, I'm going to compute what\par
+is the probability that a person is going to renew.\par
+So let's look at the results.\par
+So what happens if we have multiple observations\par
+per person?\par
+What happens if we observe people year after year?\par
+So this is what happens.\par
+What we can do is we can perfectly adapt our model\par
+to incorporate the fact that I have multiple observations\par
+per person year after year.\par
+So what I'm going to do is I'm going to change colors,\par
+but I'm going to adapt this model to account for the fact\par
+I actually have a richer data.\par
+So what would happen here?\par
+Here I put renew, the person, i, renews.\par
+Why?\par
+Because I had one observation of renew.\par
+But now I'm going to see people over time.\par
+So what I have, really, is whether the person, i, renews\par
+at period t.\par
+Right?\par
+So one way to do this I could say, look, each person\par
+has an enhanced probability of renewing.\par
+I'm a person who really, really likes\par
+the museum versus another person who doesn't really\par
+like it that much.\par
+So what I'm going to model is I'm\par
+going to model all these data points that I have per person,\par
+all these years year after year after a person totally cancels,\par
+as just a function of the same probability\par
+that is constant across time.\par
+That would be one way to model this.\par
+If we think about the hierarchy of this model,\par
+we have up to here, we have the level of aggregation\par
+here would be the unit, would be i and would be t.\par
+Remember we talked about units?\par
+Here, we'll be talking at the level of the individual.\par
+Here, would be just the person, because we\par
+have an individual level parameter, which\par
+is undermined by some data and some of the parameters.\par
+This is one way to model these when\par
+we have multiple data points.\par
+But let's think about something.\par
+Here, what I said earlier, was that these probability\par
+that the person, i, renews was a function\par
+of many, many observances.\par
+But some of these things actually\par
+happen to change over time.\par
+The gender, in this case, does no changing.\par
+Whether the person is interested in photography or not\par
+is not changing, because that's something\par
+that the person's stated when the person joined.\par
+But I was talking about other characteristics,\par
+such as the number of downloads.\par
+Or, for example, how many months since the last visit.\par
+These two variables should not be\par
+going to a parameter that is constant over time,\par
+because these variables change over time.\par
+So how I'm going to do this?\par
+The way I'm going to do this is by actually not\par
+estimating just one probability per person forever.\par
+What I'm going to do is modeling and estimating\par
+the probability that each person is going to renew each year.\par
+So what I can do is I can say, look,\par
+the probability of renewing person i in time t\par
+is the same model as I did before.\par
+This is going to be t, right?\par
+But I also observe renewal times the person i times t plus 1.\par
+Renewal the person i times t minus 1.\par
+And each of these ones is going to be a gain of Bernoulli,\par
+a realization of a coin.\par
+The only thing that I am assuming here\par
+is that the coin is changing year after year.\par
+So a reasonable way to model this\par
+would be thinking, well I'm putting here\par
+a coin that is changing every year.\par
+Fine.\par
+How can I characterize that coin and how can I\par
+estimate something that is relevant for the manager?\par
+Well what I could do something is say, look,\par
+I know that some people really like the arts and others not.\par
+They just happen to be less excited about it.\par
+So the way I'm going to do this is\par
+that these probabilities that change\par
+over time, what I'm going to assume\par
+is they all come for some individual level parameter,\par
+in this case individual level characteristic.\par
+It could be related to gender.\par
+It could be related to interest.\par
+But also could be related to something\par
+that I don't even know.\par
+But I am going to estimate with the model.\par
+How I'm going to estimate this in the model?\par
+What does it mean?\par
+These mu that I just drew here is\par
+something that is going to affect\par
+all the probabilities that a person, i, renews overtime.\par
+But it's something individually specific.\par
+Something about this person could be perfectly be the fact\par
+that this person has a lot of spare time versus not.\par
+We do not observe that in the model,\par
+but we will estimate it conditional to the fact\par
+that we'll have multiple observations\par
+for multiple people.\par
+In this case, because this is something I don't observe,\par
+I'm going to assume these parameter\par
+full of some distribution across the population,\par
+I'm going to assume that this is going\par
+to be following a normal distribution with parameter--\par
+and I'm going to call the beta, no I'm going to call\par
+this parameter the beta i.\par
+And I'm going to call, this is going to be\par
+the mean of this parameter n.\par
+The variance of this parameter is\par
+going to be something that I will estimate.\par
+This part here is just capturing the fact\par
+that I have multiple observations per person.\par
+Hence, I can estimate something about it.\par
+This inherent probability of like in the arts, for example,\par
+are having a lot of time, affects in every single period\par
+the probability that the person would renew.\par
+But also, there will be all other aspects, other factors\par
+such as, for example, how many times you\par
+went to the museum, how the exhibitions of the museum\par
+have changed over time.\par
+There will be many other observables\par
+that we are going to relate to the model\par
+in its particular period.\par
+So what I just did is sparsely complicating the graph.\par
+It looks like commands of arrows and boxes and unobservables.\par
+But the idea here is that once I can lay all my assumptions\par
+about how data is realized, this is how\par
+I'm going to build my model.\par
+What are the assumptions for this messy part here?\par
+Well the assumptions are as follows.\par
+We have people renew year after year.\par
+All of a sudden, somebody doesn't renew.\par
+And then, all of the sudden, the person is no more.\par
+What I'm assuming here is that every time somebody's\par
+going to make the decision, individual decision,\par
+of renewing, this is just flipping a coin\par
+that this probably reflects the fact\par
+that I'm very likely to renew or not that likely to renew.\par
+So let's say I've been a member of MOMA for six years now.\par
+That means that when I was flipping this coin six times,\par
+I had a high chance to renew.\par
+Right?\par
+These high coined was a function of something personal of me,\par
+something that, in particular, I really like the arts, of I\par
+enjoy going to the museum on the weekends,\par
+or I have a lot of time on the weekends.\par
+And was also reflecting the fact that there\par
+were other things happened to change over time that\par
+affect my individual decisions.\par
+Now, can we estimate this model?\par
+Well what this models needs to be estimated is multiple\par
+observations of these behavior for a lot of people,\par
+for a lot of i's for a lot of t's.\par
+And then, as long as these unobservables are all\par
+dependent on each other, but there's\par
+no circular relationship between them,\par
+I should be able to estimate.\par
+Why?\par
+This is the data.\par
+What is the probability of the data given the parameters?\par
+I know exactly how it all looks like.\par
+I know the probability of renewing,\par
+given that I know the coins.\par
+But I don't know the coins, do I?\par
+No, the coins are going to be a function\par
+of these individual parameters, and also the external factors,\par
+such as, for example, the exhibitions\par
+that the year was offering in the museum.\par
+And now, again, I don't know these, do I?\par
+I don't know this individual inherent trait\par
+of going to the museum or not.\par
+Well but that's why I'm going to estimate\par
+how these is distributed across the population.\par
+What I need at the end of the day,\par
+once I put a prior for this parameter, this parameter,\par
+and this parameter, I should be able to estimate\par
+a whole system, conditional on the fact\par
+that I have enough information so the posterior\par
+is going to really learn from the data\par
+what all these parameters look like.\par
+We're going to stop here with this example.\par
+We're going to look at more examples in which we also\par
+have more dynamics in it.\par
+But I'm going to stop for now and we're\par
+going to have a little break to do an exercise.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

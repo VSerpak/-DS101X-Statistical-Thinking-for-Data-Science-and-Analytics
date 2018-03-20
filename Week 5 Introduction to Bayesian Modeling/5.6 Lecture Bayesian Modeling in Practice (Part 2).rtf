@@ -1,0 +1,256 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 For our next example, we'll look at time trends\par
+and public attitude towards abortion.\par
+As I'm sure you're aware, abortion is a polarizing issue.\par
+Democrats, on average, are much more supportive\par
+of abortion rights than Republicans,\par
+with independents in between.\par
+But as this graph from the national election study shows,\par
+this pattern is relatively recent.\par
+Only since the Bill Clinton era, only since 1992,\par
+have there been such sharp differences\par
+between Democratic and Republican voters.\par
+Even in the 1980s, as late as the '80s,\par
+when Ronald Reagan was president,\par
+voters for the Democrats and voters for the Republicans\par
+did not differ in any meaningful way on their attitude\par
+towards abortion.\par
+This is a pattern we'd like to understand and model\par
+for a couple reasons.\par
+First, the increasing polarization\par
+of American politics is a cause for concern.\par
+Abortion is an example of partisan polarization.\par
+Second, abortion has sometimes been considered\par
+to be a potential wedge issue for Latinos in the United\par
+States, Latinos, Hispanics, are more conservative on abortion\par
+than the average American.\par
+But Latinos are also more likely to vote for Democrats.\par
+So for many years, there have been Republicans\par
+who felt that one way to get more of the Latino vote\par
+would be to make the abortion issue more salient to them.\par
+Before we get to Latinos, I just want to summarize the pattern\par
+that we see so far.\par
+This shows the difference between Democrats\par
+and Republicans.\par
+I'm going to frame this another way now.\par
+I'm going to predict your party identification, whether you\par
+support the Democrats or Republicans,\par
+using as a predictor your attitude towards abortion.\par
+I'm going to see how that varies over time.\par
+The graph on the left is pretty much\par
+a repeat of what we saw before.\par
+It's the difference between Republicans and Democrats\par
+in their support for abortion.\par
+It started out around zero, but in recent years\par
+Republicans have been much more pro-life than Democrats.\par
+The graph on the right shows pretty much the same pattern,\par
+but expressed as regression coefficients, so\par
+a predictive model.\par
+We're predicting party identification.\par
+We're predicting whether you're Republican given your abortion\par
+attitude.\par
+And again, in recent years, your attitude on abortion\par
+has become a very strong predictor of how you will vote.\par
+This was for everybody.\par
+Now I'm going to break it down by ethnic group,\par
+and the results you're going to see are stunning.\par
+This graph shows the coefficient for abortion,\par
+how effective is attitude on abortion\par
+at predicting your party identification among whites,\par
+blacks, Hispanics, and others?\par
+Among blacks and Hispanics, the coefficient is close to zero.\par
+All the change that's occurred since 1992\par
+has been among whites and others.\par
+It seems it will be difficult to convince Hispanics\par
+to vote for Republicans based on their abortion attitudes, given\par
+that almost all of the partisan polarization of abortion\par
+is occurring among whites and others,\par
+not among blacks and Hispanics.\par
+Now where did Bayesian analysis come into this?\par
+Again, there are no formulas here,\par
+no numbers, no Greek letters.\par
+Underlying this, though, is quite a bit of modeling.\par
+This is not a graph of raw data.\par
+If we were to just take the raw data,\par
+or simply fit a separate regression\par
+model for each ethnic group in each year,\par
+the graph would look much noisier.\par
+The sample sizes in any given year from the survey\par
+are pretty small.\par
+So we fit a hierarchical model in order\par
+to smooth the coefficients for all these groups.\par
+The underlying model states that we\par
+expect the coefficients to not be so variable,\par
+and the variability that we do see in this graph\par
+represents what's pretty much enforced upon us by the data.\par
+So we can't really just look at the raw data.\par
+We need to do quite a bit of modeling to see this pattern.\par
+We can go further now.\par
+As you can see, the biggest changes\par
+in political polarization on abortion\par
+are occurring among whites.\par
+Also among others, but they represent a very small fraction\par
+of the population, so we can focus on the whites here.\par
+I'm going to take this white group\par
+and break them up in two different ways.\par
+The graph on the left shows polarization\par
+on abortion, that is, the coefficient of abortion\par
+predicting partisanship among four groups of whites,\par
+low income, medium income, middle income, and high income.\par
+The graph on the right shows the predictive power\par
+of abortion attitude on partisanship among whites\par
+of four education levels, low, medium, high, and highest.\par
+It's clear that the political polarization of abortion\par
+is concentrated on upper income, more well-educated whites.\par
+Blacks and Hispanics do not show such polarization,\par
+and lower income, less educated whites\par
+don't see the polarization either.\par
+This is a pattern we'd seen in other analyses of polling data.\par
+Political polarization in America\par
+is concentrated among middle and upper income whites.\par
+We read a lot about political polarization in the newspaper,\par
+perhaps because most newspaper reporters are themselves\par
+middle- to upper income whites.\par
+By drilling down into the data, being\par
+willing to fit a model that's flexible,\par
+a model that's non-linear, a model with different patterns\par
+for different ethnic groups and different demographic\par
+categories, we're able to learn so much.\par
+And to me, that's what I see as the power of Bayesian data\par
+analysis, that we're able to fit complex models,\par
+learn about structure and data that we didn't even\par
+know that we were looking for.\par
+I'll conclude with another example\par
+in which we can drill down using Bayesian methods to learn more\par
+from data.\par
+And it starts with a paper that was published\par
+a couple years ago, Influence of Valentine's Day and Halloween\par
+on Birth Timing.\par
+A couple of researchers took public data,\par
+the number of babies born every day in the United\par
+States over a 20-year period, and found\par
+a surprising and interesting pattern which\par
+they showed in these graphs.\par
+Let's look at the graph on the left.\par
+The graph shows natural births, cesarean births,\par
+and induced births during this 15-day period.\par
+As you can see, there's a peak on Valentine's Day.\par
+More babies are born on Valentine's Day\par
+than on any of the days in the week before or the week after.\par
+The researchers then did a similar analysis\par
+looking at Halloween.\par
+Look at the graph of the right.\par
+This shows Halloween and the week before and the week after,\par
+and there's a dip on Halloween.\par
+More babies born on Valentine's Day,\par
+fewer babies born on Halloween.\par
+The cause of this is not mysterious.\par
+There's a discretionary element in births.\par
+Many births are induced, are scheduled,\par
+and it's quite reasonable to suppose that the doctors\par
+and patients were more likely to schedule\par
+such births on Valentine's Day than the day before and after,\par
+and perhaps less likely to schedule on Halloween.\par
+So this is fine.\par
+Valentine's Day and Halloween are just two days, though.\par
+We wanted to understand the whole pattern.\par
+So how are we going to do this?\par
+We could start by graphing the data.\par
+Here's a graph of the raw number of babies\par
+born each day of the year, all 366 days from January 1\par
+to December 31.\par
+If you look carefully, you can see Valentine's Day\par
+and Halloween there.\par
+It's hard to know how to interpret it, though.\par
+There's a lot of variation.\par
+So there's a few obvious things.\par
+Fewer people born on New Year's, on July 4, on Christmas.\par
+There's patterns over time.\par
+More babies are born in the late summer.\par
+Fewer babies are born in the winter and spring.\par
+There's also this funny wiggly pattern.\par
+How do we understand that?\par
+The wiggly pattern's sort of interesting.\par
+More babies are born during the week than on the weekends.\par
+The hospitals are less staffed on the weekends,\par
+and they schedule more births Monday through Friday.\par
+They schedule fewer births to the extent\par
+they can be scheduled on Saturday and Sunday.\par
+But this is not a graph of day of the week,\par
+it's a graph of date of the year.\par
+So why would you see a weekly pattern?\par
+The reason is that the 20 years of these data\par
+are not a full cycle.\par
+That is, in any given day, date of the year like March 14\par
+or April 3 or whatever, it's not necessarily\par
+going to have equal numbers of weekdays and weekends.\par
+There are 365 or 366 days in a year,\par
+there's seven days in a week.\par
+Seven does not divide evenly into 365 or 366.\par
+So day of the week effects are actually\par
+appearing in this indirect way in the date of the year.\par
+That suggests that we shouldn't simply look at the raw data.\par
+We need to fit a statistical model, a time series\par
+decomposition.\par
+We need to pull out the different effects.\par
+What are the different effects?\par
+There's time of year effects.\par
+Certain times of year are more likely to have babies\par
+than other times of year.\par
+There's day of the week effects.\par
+There's long-term effects.\par
+During the 20-year period, there are\par
+some years when more babies are born than others.\par
+And finally, there are effects of special days,\par
+and we want to pull out all of those effects.\par
+If we're interested in the effects on special days\par
+such as January 1, July 4, even Valentine's Day and Halloween,\par
+we can best understand these with reference\par
+to other patterns in the data.\par
+I want to pull out the day of the week effects\par
+and the day of year effects in order to better understand\par
+the pattern of individual days.\par
+And we do this by fitting a Bayesian model.\par
+We fit an additive model in which\par
+the number of babies born each year\par
+is a sum of several factors, including long-term time\par
+trends shown in the upper left graph,\par
+day of week effects shown in the lower left graph, time\par
+of year effects shown in the upper right,\par
+and finally, special days, which are shown in the lower right.\par
+And look at the resolution we get.\par
+By fitting more model to the data,\par
+we're able to pull out the patterns of the special days\par
+much more clearly.\par
+So I love looking at raw data.\par
+I love exploratory analysis.\par
+I do that all the time.\par
+But one of the roles of exploratory analysis\par
+is to see patterns which we then model.\par
+You don't stop at the exploration.\par
+I don't stop and say, hey, that graph zigged and zagged.\par
+It jumped around.\par
+There must be day of the week effects.\par
+I don't stop there and complain.\par
+I say, there must be day of the week effects.\par
+I'm going to model the day of the week effects.\par
+So we fit a Bayesian model to estimate all these things.\par
+And then as a result, we can decompose the data\par
+and pull out the effects we're particularly interested in,\par
+which are the special days, in this case.\par
+And of course, one could decompose the data further.\par
+One could do more.\par
+The analysis we do is not the last word.\par
+It's just something that we did so far.\par
+Bayesian methods were useful here because, again, our model\par
+is complicated.\par
+It had many, many parameters.\par
+Bayesian inference allowed us to regularize our estimates.\par
+It allowed us to get more stable parameters,\par
+and it allowed us to understand and summarize\par
+our posterior uncertainty.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

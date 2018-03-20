@@ -1,0 +1,206 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Very well.\par
+In the previous segment, we discussed,\par
+with the data at hand, how to actually build\par
+a model that is going to give us different insights--\par
+for example, how the customers respond to prices, displays,\par
+et cetera, and also how to forecast.\par
+Through this, we haven't actually\par
+done it yet, because the only thing we did\par
+was to build the model we're going to estimate.\par
+So in this segment, we're going to be talking\par
+about the intuition behind how computationally we\par
+get those insights.\par
+And we're going to interpret those insights for the manager.\par
+So before we do that, I want to just remind you very briefly\par
+what we did last time.\par
+So this is the data we had at hand.\par
+So this is, say, a store that is selling Coca Cola over time.\par
+So we have multiple stores, one here,\par
+multiple observations of store 1,\par
+multiple observations of store 2.\par
+And the only difference between the data\par
+shown in the previous segment and this one\par
+is that actually here, Sales, I transfer sales\par
+from the dollars to units.\par
+Why?\par
+Because we're going to model what\par
+is the impact of changing prices on sales.\par
+So that's why we wanted units, not price on price, right?\par
+So what we're going to do in this segment,\par
+we're going to take exactly this data,\par
+and we're going to estimate the model we just built.\par
+What does it mean to actually estimate a model?\par
+So let me very briefly remind what our model was.\par
+I'm going to do the graph we did very, very briefly.\par
+We said sales for each store in each time, right?\par
+They were going to be a function of the parameters of the model.\par
+Here, there was a response to price and to this place,\par
+and some variance that we actually put in there.\par
+Normal model that was fitting to the data, right?\par
+So at the end of the day, all we built\par
+here was coming from something.\par
+We said, you know, the probability\par
+of the parameters given the data is going to be proportional\par
+to the probability of the data given the parameters, which\par
+is exactly this, and then the prior for the parameters,\par
+right?\par
+So what does it mean to estimate a model?\par
+We're going to figure out what this is.\par
+And figuring out what that is in Bayesian statistics\par
+means that we're going to draw from this posterior\par
+distribution.\par
+So what does it mean to draw from a posterior distribution?\par
+At the end of the day, it's drawing from a distribution.\par
+What do I mean exactly by that?\par
+I want to start with a very, very simple example, actually,\par
+nothing about the data we have, nothing\par
+about Bayesian Statistics.\par
+But it's, I think, a very good example\par
+of what do we mean by drawing from a distribution.\par
+Let's say you have a die and you're going to roll it.\par
+You have one single die and you're\par
+going to roll it multiple times.\par
+Say you roll it 10 times.\par
+What is going to happen?\par
+Very well.\par
+So here, I wrote all the outcomes that we just saw, OK?\par
+So what does it mean to draw?\par
+It means that I'm going to just sample outcomes\par
+from the distribution I have in mind.\par
+Now, what do I do with this data?\par
+How do I deal with this sequence?\par
+I'm going to tell you that rolling a die\par
+means 1, 5, 5, 3, 2.\par
+Now what I'm going to do is I'm going to summarize\par
+this data on, for example, a histogram, which\par
+is how frequent each number has come up, right?\par
+So I can perfectly say, well, if I roll a die,\par
+the outcome is going to be something from one,\par
+two, three, four, five, six, until six, right?\par
+I said, how often one of these happens?\par
+Well, in our example, one happened twice,\par
+two happened only once, three happened only once,\par
+four happened only once, five happened twice,\par
+and six actually happened three times.\par
+So what I just plotted here is what we call the histogram.\par
+Here, it could be something like frequency.\par
+How frequent this outcome happened\par
+after rolling a die 10 times.\par
+But drawing from the distribution,\par
+we know that when we roll a die, something\par
+could happen from one to six.\par
+And we actually know that in reality,\par
+the probability of getting each of these outcomes\par
+would be the same.\par
+So why are we seeing this and not a flat line?\par
+Well, this is because we didn't roll the die enough times.\par
+But I replicated that with a computer.\par
+I'm going to show you what happens.\par
+So what I basically replicated here\par
+is what we just saw with only 10 observations,\par
+but here is having a million observations.\par
+So a million observations means that we're\par
+going to have a much better representation of what it\par
+means to draw one die, right?\par
+So for example here, what I show here\par
+is what we call the histogram, which\par
+is going to show on the y-axis how frequent is this value\par
+to happen.\par
+And then here, we have that as one, two, three, four, five,\par
+et cetera.\par
+So it's very simple.\par
+If I asked you what would happen if you roll a die,\par
+we know what is going to happen.\par
+It's going to happen somewhere between one and six.\par
+So now, what happens if you roll two dice instead of one?\par
+So this is what happens if you roll two dice a million times.\par
+What we have plotted here is the histogram, as we did before.\par
+And now we see that the shape has changed.\par
+Of course, it has changed because now the realization\par
+of this posterior distribution--\par
+we're going to be talking in Bayesian, but in this case,\par
+it would be the distribution of the two dice--\par
+is different than the distribution of one die.\par
+What we see here is what would be the average outcome you get?\par
+Well, the average is going to be right here.\par
+It's going to be exactly at seven, which,\par
+in this particular case, it also happens\par
+to be the value at which we have the highest likely to happen.\par
+What do I mean by that?\par
+The bar here, the height of the bar,\par
+it means how likely is each of the outcomes to happen?\par
+So we see that here, the number seven\par
+is much more likely to happen than, for example, number two.\par
+So how one person could summarize\par
+what happens when you roll two dice,\par
+one way to summarize it would be I\par
+show you the distribution of this.\par
+And you understand more or less what\par
+is going to be the likely outcome to happen.\par
+I could also just give you, for example,\par
+the average number that I told you,\par
+just the average of the distribution.\par
+But I could also give you some sort of interval.\par
+I could say, you know, the most likely to happen\par
+is a number between, say, four and 10.\par
+In that interval, I can compute the exact probability\par
+that you will get any value between four and 10.\par
+So why am I introducing all this about the dice?\par
+The reason why I introduce about the dice\par
+is because now that you understand\par
+what happens when you draw one die,\par
+two dice, et cetera, in reality, drawing for the posterior\par
+distribution is exactly the same.\par
+We learned that actually, we can have this expression here\par
+of the probability of the parameters given the data.\par
+We know how to do that as the probability of the data given\par
+the parameters, and then the prior probability\par
+of the parameters.\par
+So the idea of estimating in Bayesian\par
+what happens to your parameters is simply\par
+drawing from the posterior distribution.\par
+Why?\par
+Because it's a probability distribution.\par
+So the same way we draw from one die, from two dice,\par
+we can perfectly draw from this.\par
+So, as I mentioned in the introduction,\par
+we're not going to go into details\par
+about the computations of that.\par
+What I want here is to understand\par
+the intuition behind it and the implications for what\par
+happens when we draw from our posterior\par
+distribution of the parameters.\par
+For many more details about computation,\par
+I highly recommend all the students\par
+to look at Andrew Gelman, who was\par
+teaching the previous model, has a fantastic\par
+book about Bayesian statistics that I have already\par
+mentioned before.\par
+They have very, very comprehensive information\par
+about how to do computations.\par
+There will be other resources that we will be distributing\par
+at the end of the course.\par
+So with this in mind, now let's jump into our example\par
+that we had from the previous module with sales data.\par
+So now we know what it means to draw from the posterior.\par
+So what are we going to show you?\par
+I'm going to show you a histogram\par
+or I'm going to show you some point\par
+summaries, as I mentioned.\par
+The average, for example, seven was the average number\par
+when you draw dice.\par
+Or I'm going to show you intervals\par
+of what the posterior is going to look like.\par
+And the intervals are going to give us\par
+an idea of how certain or uncertain\par
+we are about that quantity.\par
+So this is a summary of how we're\par
+going to report the posterior distributions\par
+of our parameters, which is very much related with exactly\par
+how we describe what happened when you rolled two dice.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

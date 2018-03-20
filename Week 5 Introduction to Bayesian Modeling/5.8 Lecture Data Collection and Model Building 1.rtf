@@ -1,0 +1,226 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 OK, so let's jump into the first segment of this module in which\par
+we're going to be talking about which data to collect-- how\par
+to build models to actually apply Bayesian statistics\par
+to business problems.\par
+So the best way to learn those things is through examples.\par
+That's why I have selected different case studies in which\par
+I'm going to be using the data from those case studies\par
+to build different models with different purposes.\par
+So let's start today talking about a case example, which\par
+is going to be.\par
+Let's think about a business that,\par
+for example, sells a national brand-- think of it Coca Cola.\par
+You could think also of Starbucks and espresso,\par
+many other brands.\par
+But let's think about Coca Cola just\par
+for the sake of this example.\par
+Let's say you distribute Coca Cola.\par
+You sell Coca Cola to customers through multiple retailers\par
+that are located in different markets.\par
+And the manager in charge of those markets, what\par
+she observes generally is going to be sales--\par
+is going to be what the prices are\par
+set because she sets prices.\par
+Right?\par
+And she's going to observe other marketing activities that\par
+are targeted to customers in those markets.\par
+So what does the data look like?\par
+What does the data that this manager goes to her computer,\par
+and she finds something like that?\par
+What I put here is that we have multiple stores.\par
+So the first observations go to store 1.\par
+Then, the second set of observations goes to 2.\par
+Then it will be going down like store 3,\par
+store 4, multiple stores.\par
+And for each store, have a weekly metric\par
+of how much were the sales of that particular category, say,\par
+how much was sold in Coca Cola products.\par
+What was the average price of the Coca Cola products?\par
+And something that I call here display.\par
+Display is something that is a very general marketing\par
+term, which in this case represents\par
+what is the percentage of Coca Cola products that where\par
+on display in the retailer or supermarket?\par
+When you go to the supermarket, sometimes some products\par
+are more displayed than others.\par
+This is a metric for that.\par
+Generally, the higher the display,\par
+the more the customer is going to observe the Coca Cola brand,\par
+and then the more likely they will buy it.\par
+So this is the manager of these particular set of markets\par
+with all these data at hand, why would it\par
+be useful for this person to use Bayesian statistics to do\par
+something better in her business?\par
+In other words, what is the goal of modeling?\par
+Why are we going to put a model there estimating some data?\par
+So what is it that the manager really want to know?\par
+Well, the manager really wants to know a few things.\par
+First of all, if I change the prices,\par
+how does the manager respond to that?\par
+She can also be interested in, oh, this\par
+display that I just displayed.\par
+Is it really worth it to spend effort and money\par
+by changing the display?\par
+Is it going to affect sales really?\par
+Or not only that, but she is going\par
+to actually want to predict what is going to be future sales.\par
+For stock purposes, for example, she\par
+would be interested in knowing how much sales she\par
+could expect in the future.\par
+And very importantly, actually, she\par
+could say, well, if I increase or decrease prices by 10%,\par
+how are my sales going to change?\par
+All these questions can be answered\par
+by just building a model for sales data\par
+with the other variables that we have in our data set.\par
+So in essence, when we model something,\par
+specifically in the examples I'm going\par
+to be using in all these segments,\par
+there are generally two goals.\par
+They might be more in other applications.\par
+But generally, in marketing, or in business,\par
+we have two goals of the modeling.\par
+The modeling is there so we understand customers' behavior.\par
+What do we mean by customer behavior?\par
+I mean how do customers respond to certain actions, actions\par
+such as price or display.\par
+You could be thinking about also actions\par
+that such as what if I run this advertising campaign?\par
+How are my sales going to be depending on that?\par
+So various understanding of how customers behave,\par
+and then using that information then, we\par
+can use to predict future outcomes.\par
+So let's see how we can model the data we have at hand,\par
+so we're going to be able to answer\par
+those questions in the future.\par
+So let's think about the data we had.\par
+I just showed you a table.\par
+By the way, I have to disclaim that the sales I'm going\par
+to show you now in all of these examples are not exactly\par
+the sales of the company who provided me with the data\par
+because I cannot release this information.\par
+I'm going to be using the sales I\par
+got with some factor of a number like multiplied\par
+by 7, or 13, or 12.\par
+So you know exactly where this is coming from.\par
+That's going to be through all the examples.\par
+But anyway, let's think about the aspects\par
+of the data that are going to be helping us\par
+on developing the model.\par
+So what do we have in the data?\par
+What is the main variable of interest in this problem?\par
+Sales.\par
+This is what generally in econometrics and statistics\par
+is called the dependent variable.\par
+This is the variable that is going to be the outcome of it,\par
+right?\par
+So the manager is interested in knowing what's\par
+going to happen to sales.\par
+Now, very important, especially when\par
+we start building more complex models as this course evolves,\par
+the very important aspect of the data\par
+is what is the unit of analysis?\par
+Meaning, do you have multiple people?\par
+Do have multiple markets?\par
+Do you have things over time?\par
+What is the unit in which it's going to be repeated?\par
+The observations are repeated.\par
+So in this particular case, I said\par
+that we have multiple stores that\par
+were observed over different periods of time, right?\par
+We have weekly store 11 data.\par
+This is what we'll see later.\par
+The week is going to be what we call t.\par
+The store is going to be what we call i\par
+whenever I go to the notation.\par
+But this is not that relevant how we call it.\par
+The important thing is here knowing\par
+that we have two dimensions of observation--\par
+across the stores and over time.\par
+So this is two things about the main variable.\par
+Now, what else do we know?\par
+In this case, we know price--\par
+what was the average price of the product being sold.\par
+And we also know the level of display\par
+which we can think about it as a measure of marketing activity\par
+within the store.\par
+Right?\par
+So now let's think, OK, I know my goal.\par
+My goal was A: to understand customers' behavior depending\par
+on these variables here.\par
+My second goal was actually being able to predict sales.\par
+So let's think about how to build a model that\par
+is going to be solved using Bayesian statistics that\par
+is going to actually help us get an answer to those questions.\par
+So there we go.\par
+Let's think about the model building.\par
+And let's think about first of all what you have already\par
+covered in the previous module with Andrew Gelman\par
+and what actually I revisited at the beginning\par
+of the introduction.\par
+How do we estimate in Bayesian statistics?\par
+Bayesian statistics are pretty much what\par
+the goal-- not the goal, maybe, but the core of it\par
+is going to be-- and we know that the probability\par
+of a parameter given some data is\par
+proportional to the probability of that data given\par
+the parameter times the probability of that parameter.\par
+Right?\par
+This is an equation that is going\par
+to happen many, many times during this course.\par
+And definitely all of you will be familiar by now.\par
+So let's think about how to translate these\par
+into the model for the data that I just described.\par
+Well, as we discussed before, theta here, it's our unknown.\par
+This is going to be the quantity we don't know about.\par
+It could be parameters in the model, unobservable, things\par
+that we don't know.\par
+The data is very clear.\par
+The data that we have are sales.\par
+We know that.\par
+Now, just to refresh a little bit the concepts,\par
+how do we call that?\par
+That was the posterior, correct?\par
+Why?\par
+Because it's the probability of the parameter given\par
+the information we have that was posted here.\par
+Then let's go here.\par
+That was the probability of the parameter.\par
+This is the prior, right?\par
+This is going to be some probability distribution\par
+that we're going to assume, say normal, say uniform, say gamma.\par
+We're going to assume some probability distribution\par
+for this parameter.\par
+And then we have this bunch in the middle.\par
+What does it mean the probability of the data given\par
+the parameter?\par
+When we build models, what this is called--\par
+this is the likelihood function.\par
+And I'll be talking about likelihood\par
+a lot for these different case studies\par
+that we're going to investigate.\par
+So what is the likelihood?\par
+In different words, what is the probability of getting\par
+the sales I'm getting given the prices, and advertising,\par
+and all other parameters in the model.\par
+So on model building, what does it mean to build a model?\par
+Building a model means I'm going to make assumptions about how\par
+the likelihood is, which is what is going\par
+to be the relationship between sales, price,\par
+and display in all these parameters.\par
+I'm going to make an assumptions about what is the prior.\par
+And then once I have these two elements,\par
+Bayesian statistics is going to give me the answer to these.\par
+So my estimation of Bayesian inference\par
+is going to tell me what is the probability of all\par
+this parameters, all the unknowns, given\par
+the data you observe?\par
+I don't need to worry about this quantity right now, why?\par
+Because the moment I have these, and I have that,\par
+then this part of the equation just follows.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

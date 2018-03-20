@@ -1,0 +1,257 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So good.\par
+Now that we have the bits that we are interested on,\par
+all the bits we need for estimate this model innovation\par
+paradigm, so let's think about how to build these pieces.\par
+So we can compute--\par
+actually, we can estimate the model.\par
+Again, these pieces where the ones I'm interested now are I'm\par
+going to be building the likelihood\par
+and then we'll be discussing later\par
+on what will be the good priors for this model.\par
+So let's think about the likelihood\par
+function for a second.\par
+What am I wanting to do?\par
+What I want to figure out is what\par
+would be the probability of the data, which is sales, given\par
+the parameters in the model?\par
+Well, so let's just start thinking about that.\par
+Which unit of preservation do I have?\par
+I had different stores in different weeks.\par
+So let's just start by thinking--\par
+let's define for i, I'm going to use i\par
+for the store, different store, and I'm\par
+going to use t for different week.\par
+So let's think about this.\par
+What is y? y is the dependant variable.\par
+So have to put that, OK.\par
+Sales of a particular store in a particular week--\par
+how do I build the model for sales?\par
+What are my assumptions behind how sales are related\par
+with the data we also have?\par
+Well, so sales are going to be definitely\par
+a function, a relationship, with the price that each store is\par
+charging each week.\par
+We saw that we have to have variation in price\par
+across the stores across time.\par
+Also, it's going to be a function of how much\par
+display of that particular brand, that's it,\par
+or how much kind of marketing activity.\par
+Let's leave it vague for now.\par
+So what I'm going to assume in this particular model\par
+is that sales are a linear relationship of price, display,\par
+and maybe other things that I don't observe.\par
+How do I express that in an equation?\par
+Well, I'm saying sales, i t, are going to be some let's say base\par
+level of sales.\par
+I'll go to that in a second.\par
+And then sales are going to respond to how price vary.\par
+So they're going to respond to some parameter beta i.\par
+What does beta i represent here?\par
+It means if price increases by $1,\par
+then sales are going to increase by beta 1.\par
+But how is it possible that you're\par
+telling me that when price increase, sales also increase?\par
+We know from economics is generally the other way around.\par
+Well, that's why this model most likely\par
+is going to give us a parameter beta that is negative.\par
+So the answer parameter beta is going\par
+to be something about, I don't know, minus 1,\par
+minus 2, something like that--\par
+means that when I increase prices by $1,\par
+sales will decrease by $2.\par
+That would be the way to understand this equation.\par
+Now, not only price affects sales, but also display\par
+affects sales, and we're going to assume\par
+another linear relationship here, with another parameter.\par
+Again, this beta 1 and beta 2, what they capture\par
+is that this relationship between increases and decreases\par
+of prices and sales and display and sales, respectively.\par
+Now, I started saying that I was going to put a beta 0.\par
+Why do I need beta 0?\par
+This is basically for those of you\par
+who haven't done any modeling before,\par
+that's important to think about.\par
+If I'm assuming this relationship,\par
+imagine what sales would be if price is set to 0\par
+and say display is set to 0.\par
+Well, sales would be--\par
+this part is 0, gone; this part is 0, gone.\par
+Sales would still be something.\par
+That's why I need to put here, which is generally\par
+called the constant, some parameter beta 0.\par
+It's going to capture what sales would\par
+be in the absence of any other of the covariance.\par
+So for now, what I'm saying is that sales\par
+follows this relationship.\par
+Now, are you telling me that sales over time\par
+are exactly always this same relationship with prices\par
+and display?\par
+Well, we know that sales move around week after week.\par
+So what do we need to add here is some sort of uncertainty\par
+about sales, which we generally put in the terms of an error\par
+term--\par
+you could use different letters for that;\par
+I'm going to just call it error because we're not\par
+going to worry too much about it today--\par
+error term that happens in a particular week\par
+in a particular store.\par
+So many of you might have seen this before.\par
+Some of you who have already covered some linear regression\par
+analysis, this is exactly it.\par
+Now, I want to estimate this innovation paradigm\par
+because over the course of the segments,\par
+we're going to see the beauty of that\par
+and how that actually help managers make better decisions.\par
+The idea here is that if this is indeed\par
+what is going on about sales, how\par
+do I translate this equation in my goal\par
+which is here, which is a probability of data given\par
+parameters?\par
+Remember, that was my likelihood.\par
+I want to write this equation as a probability.\par
+Well, a way to do that which is very common in statistics would\par
+be, well, if I assume that the error term which I don't\par
+observe follows some normal distribution,\par
+I can rewrite this equation exactly as follows.\par
+I can say, well, sales in a particular store\par
+in a particular week follow a normal distribution that\par
+have mean of what?\par
+What is the mean of this particular distribution?\par
+It will be exactly all this expression here,\par
+which could be the base sales, the price and display,\par
+the relationship between them, which for now I'm\par
+going to call it x beta.\par
+I'm going to expand that in a second\par
+for those who haven't seen any vectoral notation.\par
+And then I have a normal distribution, I have the mean,\par
+and now I need the variance.\par
+I'm going to assume that this error term has\par
+a variance sigma squared.\par
+So what did I just do?\par
+What I did is assuming what is the probability of the data\par
+given the parameters.\par
+So in this case, what would be the parameters?\par
+Back to our example here.\par
+Well, the parameters, which we're\par
+going to call theta all the time, my theta here going\par
+to be--\par
+I have the beta 0.\par
+I also have the beta 1 and the beta 2,\par
+and I also have the variance of this error, which\par
+is sigma square.\par
+So now translating our problem to the Bayesian specification\par
+of the model, what are the parameters?\par
+We have four parameters in the model, which\par
+are beta 0, beta 1, beta 2, which I put here\par
+in notation as beta hat--\par
+not hat, really beta vector--\par
+and then the sigma squared, which\par
+is an assumption from my side, which\par
+is going to be the distribution of these error terms.\par
+So far, what do we have?\par
+We have exactly this.\par
+This part of the equation is covered.\par
+Why?\par
+Because we know exactly what is the probability\par
+of the data given the parameters.\par
+You give me the parameters, which are beta,\par
+x is observed because it's data that I\par
+observe each week, each time.\par
+I know those data is price and display.\par
+You give me the parameters and I can tell you\par
+exactly what is the probability of [INAUDIBLE].\par
+Now, the next thing I need to do is\par
+I need to figure out what my prior is going to be.\par
+Now, prior is I was going to say trickier easy thing generally\par
+in this type of business problems.\par
+Why?\par
+Because what you saw with Andrew in the previous module\par
+was that the idea of the prior, the prior's\par
+going to add to the model every previous information\par
+we have before.\par
+And actually, the choice of the prior\par
+is quite important because it's going\par
+to reflect how much you knew from it, and most of the time,\par
+it's going to change the outcome.\par
+You change the prior, and the posteriors\par
+are not going to be the same.\par
+In marketing, and in business problems in general,\par
+the beauty of the prior is that we're\par
+going to have a lot of data to estimate these models.\par
+Nowadays we have in this example,\par
+for example, we can easily collect data over a year\par
+or two years of time--\par
+say these like are more than 100 weeks.\par
+We have multiple stores, which would be,\par
+let's say you have 30 stores.\par
+So what you will have is a lot of data to estimate this model.\par
+What does it mean that you have a lot of data?\par
+It means that the probability of the data given the parameter\par
+has a lot of information in it.\par
+Hence, the prior you have here doesn't weight so much\par
+into the posterior because you have a lot of data,\par
+and this is the beauty actually now\par
+of the era of big data or analytics,\par
+however you and I call it--\par
+that is, that we have plenty and plenty of information\par
+that if we plug into the models, now\par
+we don't need a lot of information about the prior\par
+because the data is going to help us.\par
+The data pretty much is going to speak for themselves.\par
+So in general, the approach I'm going to take in this module,\par
+which I'm going to use across examples, is for the priors,\par
+in all cases I'm going to be using what\par
+is called an informative priors, in the sense that I'm going\par
+to apply some distribution.\par
+Let's say in this case, I could preferably\par
+say that beta 0, beta 1, and beta 2--\par
+I have no idea what this relationship could be.\par
+I'm going to assume a prior, say, each of them\par
+follows a normal distribution with mean 0\par
+and variance 10, variance 100.\par
+That doesn't matter really for me.\par
+Why?\par
+Because I'm going to have a lot of information\par
+to understand what the likelihood is.\par
+Hence, it's going to fit the posterior.\par
+Then for sigma square, sigma square\par
+represents the variance of the error term.\par
+And we know that a variance can never be negative,\par
+so that's why my prior is not going to be, for example,\par
+normal in this case, because a normal distribution could\par
+be negative.\par
+But is going to do something, for example,\par
+you could assume uniform--\par
+0, 10.\par
+You could assume a chi distribution,\par
+you could assume a gamma distribution, inverse gamma\par
+distribution.\par
+So I won't go deep into the priors.\par
+I will give you further resources later in the module\par
+to actually learn more about that,\par
+but for now what we're going to do is we're\par
+going to keep ourselves thinking about the intuition\par
+of the likelihood, which is generally\par
+the most interesting part for modeling business decisions.\par
+So this is our setup, probability of the data given\par
+the parameters.\par
+We know that we're going to have some uninformative\par
+priors for the parameters, and now how do we do this?\par
+How do we assume?\par
+How do we compute the probability of the parameters\par
+given the data?\par
+Well, this is exactly why we're going\par
+to use Bayesian statistics, because we don't have\par
+to do that because this is exactly--\par
+we know how this looks like.\par
+Once I have set up p y given theta and p theta,\par
+this expression is exactly proportional to that.\par
+So what we just did, we just built a model\par
+that we can estimate, which we will\par
+estimate in the next segment.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

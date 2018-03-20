@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So as I said, the essence of Bayesian data analysis,\par
+of Bayesian inference, is the combination of information\par
+from different sources.\par
+I'm gonna illustrate with a few examples now.\par
+A few simple examples before later we\par
+get to some demonstrations of some real world problems.\par
+My first example comes from a demonstration\par
+that I do in my statistics classes.\par
+One day in class when I'm introducing\par
+the concept of combining information,\par
+I give the students in the class two trivia quizzes.\par
+Each quiz, your score is between zero and ten.\par
+It's ten question quiz.\par
+The quiz is not too easy and not too hard,\par
+so most of the students get between three and seven\par
+on the quiz.\par
+They take the first quiz.\par
+I write down the scores of all the students on the first quiz\par
+on the board and I draw the histogram-- it's\par
+gonna be something like this.\par
+Here's zero, here's ten, here's five,\par
+and you get some distribution roughly like this.\par
+Then every student takes the second quiz.\par
+And I tell the students that I can predict your score\par
+on the second quiz given your score on the first quiz.\par
+Now it turns out, suppose you got, for example,\par
+an eight on the first quiz.\par
+It turns out that my best prediction\par
+of your score in the second quiz is not eight.\par
+It's something a little bit lower than eight.\par
+Something closer to the mean of the distribution.\par
+The best prediction turns out to be a weighted average, lambda\par
+times your score in the first quiz\par
+plus 1 minus lambda times the average class\par
+score of everybody who took the quiz, the first quiz.\par
+Now lambda is some number between 0 and 1.\par
+Lambda is an important number in Bayesian statistics.\par
+So let's stop and think about it for a little bit.\par
+Suppose lambda equals zero.\par
+If lambda equals zero, we're only\par
+using your average-- we're only using the average class score.\par
+So if lambda is zero, our prediction\par
+for your score on exam two is just-- well it's just five\par
+or whatever.\par
+It's just the average class score on exam one.\par
+OK, so I'll say that, it's just the class average.\par
+At the other extreme, I'm going to put the other extreme\par
+at the bottom.\par
+If lambda equals 1, then our prediction is just--\par
+our prediction for your score on exam two\par
+is just your score on exam one.\par
+And then anything in between, like lambda equals 0.3,\par
+or lambda equals 0.5, or lambda equals 0.8\par
+are some sort of compromise.\par
+So what are these stories-- lambda\par
+correspond to different stories about reality.\par
+Lambda equals zero, what story is that?\par
+That's the story that your score is completely random.\par
+So if you happen to score high on the first trivia quiz,\par
+you could score low on the next one.\par
+That is, under the lambda equals zero model,\par
+your score in the trivia quiz contains\par
+no information about you.\par
+It's just basically a random number\par
+that you happened to draw.\par
+Now under the lambda equals one model,\par
+your score on the trivia quiz tells us exactly\par
+your ability-- your trivia ability.\par
+So, in that case, we would just take your score on exam one\par
+and it's a perfect measure of your ability\par
+so we would use it on exam two.\par
+Anything in between is more realistic.\par
+It's a compromise.\par
+And what it says that your score on the trivia quiz\par
+is a compromise.\par
+It's a mixture of your a true ability--\par
+how good you are trivia-- and a certain level of randomness.\par
+Because they happen to have questions on things\par
+that you happen to know about on one quiz but not the other.\par
+And the best prediction for your score on quiz two\par
+is going to be this average.\par
+And when I do this in class, like when I say this to you it\par
+all-- I think it all makes sense.\par
+It should make sense because it's mathematically correct.\par
+But when I do the class, it surprises the students\par
+a little bit.\par
+Because I think they tend to feel, especially\par
+the students who did well on quiz one,\par
+there's sort of like-- there's something\par
+a little embarrassing to them or interesting\par
+that they scored well on quiz one and then they take quiz two\par
+and I don't actually know how well they did on quiz two.\par
+They just wrote it down themselves\par
+and then I give them their prediction.\par
+And usually in class I just use lambda\par
+equals 0.5, which is a good starting guess\par
+if I have to use something.\par
+It turns out that, systematically,\par
+my predictions using lambda equals\par
+0.5 tend to be better than just taking your score on exam one.\par
+So seeing this as a general statement about other people\par
+is sort of fun, but when you see it happen to yourself\par
+and you realize that your own score is actually\par
+just a noisy prediction of your true ability,\par
+it's somewhat of a surprise.\par
+But the mathematics really works.\par
+And before going on to the next example,\par
+let me abstract the key principles here.\par
+The key principle is that we're using two pieces of information\par
+to forecast your score in exam two.\par
+We're using local data, which is how well you did on exam one.\par
+And we're using prior information or contextual\par
+data, which in this case is how everybody in the class\par
+did on the exam.\par
+Putting these two pieces of information\par
+together is better than using any piece alone.\par
+My next example is close to my professional interests,\par
+it's election forecasting.\par
+We're going to combine two pieces of information\par
+to get our best forecast of a hypothetical election.\par
+The first piece of information is our prior estimate\par
+from a forecasting model.\par
+Given what we know about the election up to this point,\par
+we forecasted a certain candidate\par
+is going to get 51% of the vote, but with an uncertainty,\par
+a standard deviation of 5 percentage points.\par
+So it's just our favorite little normal distribution.\par
+It doesn't have to be a normal distribution,\par
+but typically it is.\par
+Our forecast is 0.51 with the standard deviation of 0.05.\par
+This is our prior, it's from our forecast.\par
+And let me emphasize that this prior estimate,\par
+this prior distribution, does not come from asking an expert.\par
+It doesn't come from telling a student\par
+that an election is coming and please give me a 50% interval.\par
+It's actually comes-- it actually\par
+comes from a regression model, a model fit to past data.\par
+And the uncertainty in this forecast\par
+corresponds to the uncertainty in the regression model.\par
+It corresponds to the idea that the track record of this\par
+forecast, so that the forecast is not perfect,\par
+it has a predictive standard deviation of about 0.05.\par
+So this prior is a calibrated distribution.\par
+The distribution comes from a previous statistical analysis.\par
+Now we add to this a data estimate.\par
+Then we get data and our data is a poll.\par
+And in the poll, the candidate had 60% of the vote.\par
+But there is uncertainty, there is a standard error of 0.03.\par
+And how do we combine these two pieces of information?\par
+There's a mathematical rule.\par
+I'm not gonna derive the rule for you,\par
+but it could be derived based on the mathematics\par
+of the normal distribution.\par
+You take a weighted average of the prior forecast and the data\par
+estimate.\par
+And the weights correspond to the inverses\par
+of the uncertainties-- the inverse squares\par
+of the uncertainties about the estimates.\par
+So in this particular formula, the weighted average is 0.58.\par
+The forecast-- the estimate we get\par
+by combining the prior forecast and the data\par
+is 0.58, which is closer to the data than to the prior.\par
+Why is that?\par
+Because the data-- in this hypothetical example,\par
+the data have a precision of 0.03, an uncertainty of 0.03.\par
+And the prior has an uncertainty of 0.05.\par
+So in this case, the data is stronger than the prior.\par
+Later, we're going to consider an example\par
+where the prior information is stronger than the data.\par
+But here the data is stronger than the prior,\par
+so our estimate, our combination,\par
+is closer to the data.\par
+Now I want you to look at this formula,\par
+I want you to stare at this formula\par
+and consider some special cases.\par
+Sigma is the uncertainty.\par
+Suppose the prior uncertainty was infinity.\par
+OK, so suppose that this-- instead of a distribution\par
+with standard deviation 0.05, suppose\par
+it was a very broad distribution with essentially\par
+an infinite variance.\par
+In that case, when we get to our formula instead of one\par
+over 0.05 squared we'd have one over infinity\par
+squared times 0.51.\par
+One over infinity is zero and then\par
+we would just get the data estimate.\par
+Conversely, suppose the data were completely useless.\par
+Suppose this data uncertainty were infinity.\par
+So a really bad poll.\par
+The standard error is just essentially infinite.\par
+In that case, all that matters is our prior estimate\par
+and that's our prior forecast.\par
+That's what we would use.\par
+Finally, consider the special case\par
+in which the prior and data have equal uncertainty.\par
+Suppose these uncertainties are both 0.05.\par
+In that case, we'd weight the prior and the data equally.\par
+We weight the source of information\par
+that is more precise.\par
+And again, to loop back to what we talked about earlier,\par
+that's why we're so obsessive about getting probabilities\par
+accurately, about getting uncertainties accurately.\par
+Because it's the uncertainty that\par
+tells us how much to weight different pieces\par
+of information.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

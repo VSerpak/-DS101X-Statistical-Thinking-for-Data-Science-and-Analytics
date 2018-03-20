@@ -1,0 +1,247 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 There's more research to calibration beyond what\par
+we've talked about so far.\par
+One has to understand how to calibrate continuous statements\par
+like, "the high today will be 69 degrees,"\par
+and also how to calibrate discrete statements like,\par
+"there's a 30 % chance of rain today."\par
+And how to calibrate statements that mix these two things.\par
+So a lot of work is still going on in this field.\par
+Now, why is this important to you?\par
+You might be thinking you're not planning\par
+to become a weather forecaster.\par
+And you might also quite reasonably think\par
+that who cares that you didn't know\par
+how many eggs were going to be produced in 1965 in the United\par
+States.\par
+The reason why it's important is because in statistics,\par
+in Bayesian statistics, we use probability\par
+capture uncertainty.\par
+If our probability statements or too narrow,\par
+then were understating our uncertainty.\par
+We're making statements that are too strong.\par
+And we don't want to do that.\par
+We don't make harsh or rash decisions.\par
+So we need to think about calibration because\par
+of the mapping between data, uncertainty, and decision\par
+making.\par
+From the statisticians point of view probabilities\par
+are measurements.\par
+You can measure probability just as you\par
+can measure someone's height or weight or anything else.\par
+And as with any measurement there's\par
+an inherent accuracy to the measurement,\par
+and beyond that accuracy any further decimal places\par
+don't really convey any information.\par
+I'm giving an example from the 2012 election\par
+when political analyst Nate Silver reported in the New York\par
+Times that Obama had a 65.7% chance of winning the election.\par
+What does that mean.\par
+I want to unpack that statement, 65.7%.\par
+I'm going to argue that that 0.7 doesn't really\par
+mean anything at all.\par
+How do we understand this claim, this claim that Obama has\par
+a 65.7 % chance of winning the election.\par
+I'm going to understand it by mapping probability of winning,\par
+which is hard to understand and hard to calibrate,\par
+to something that we can understand better, which\par
+is vote share.\par
+Let's suppose that we can forecast Obama's vote share\par
+using a normal distribution.\par
+And we know that if Obama wins the elec--\par
+if Obama gets more than 50% of the vote he wins the election.\par
+That's not exactly correct because there\par
+is the electoral college, but it's approximately correct,\par
+and for the purpose of understanding the mathematics\par
+that's all we need to do.\par
+Obama has a 65% chance of winning the election.\par
+So the 0.657 is the probability here,\par
+and the probability here is 1 minus 0.657, so that's a 0.343.\par
+This bell shaped curve, or normal distribution,\par
+is a conventional way of representing uncertainty,\par
+and I think it's actually pretty reasonable for forecasting\par
+the election.\par
+If we have a distribution where there's a 65.7%\par
+of being above 0.5 and a 34.3% chance of being below, and also\par
+it turns out that we know that the uncertainty\par
+in this forecast is roughly plus or minus 1.5 percentage points.\par
+Here I should do it all.\par
+And this is 1.5 percentage points.\par
+So actually I'm going to label this as 50%\par
+here to keep it consistent.\par
+Mathematically if we have a normal distribution\par
+with a standard deviation of 0.015,\par
+or 1.5 percentage points, and the 65% chance-- 0.7% chance\par
+of being greater than 50%, we can back out\par
+the mean of this distribution.\par
+And it turns out the mean of this distribution\par
+to spend 50.55%.\par
+And we can figure out all sorts of things\par
+from this distribution.\par
+We can figure out there's a 95% chance\par
+that the election outcome is within 2 standard deviations\par
+of the prediction.\par
+And you can, again, figure out the probability\par
+Obama wins the popular vote.\par
+And if you do that I got 0.643.\par
+So it's actually funny, because I\par
+derive this to get a probability 0.657,\par
+and then I got 50.55 percentage points as the popular vote,\par
+and then you work it out and you get 0.6543.\par
+So how is that?\par
+It's not 0.657.\par
+That's because of rounding error.\par
+That once you round it to 50.55 and 1.5 percentage points,\par
+you compute the probability, you get\par
+something slightly different.\par
+So the difference between 0.657, which is what was reported,\par
+and 0.643 is rounding error to the fourth decimal place\par
+of the probability.\par
+Now clearly if the forecast probability\par
+changes based on the fourth decimal place\par
+of the predicted vote share, that's\par
+going to be pretty much noise.\par
+There's a great uncertainty in what the election's going\par
+to be, and this is last digits here don't really tell us\par
+anything at all.\par
+This one does, but not this.\par
+This last digit is this really purely speculative.\par
+So to say that there's a 65.7% chance Obama when\par
+the election is a little bit like the weatherman telling you\par
+that there's a 31.82% chance of rain tomorrow.\par
+It's a meaningless statement.\par
+Or it's a little bit like telling somebody\par
+that his height is five feet 9.38 inches.\par
+More precise than the data can bear.\par
+And I demonstrated this by perturbing these numbers.\par
+So if Obama's predicted vote share is 50.55%,\par
+then we get a probability of winning the election of 64.3.\par
+If his predicted vote share is 50.65%,\par
+almost barely distinguishable, then his probability of winning\par
+goes up to 66.8%.\par
+So I would say anything in this range is equally true,\par
+you just can't consider estimating the probability more\par
+accurately than that.\par
+We can now shift in the other direction to 50.65%\par
+and we get a probability of 61.8% that Obama wins.\par
+So very tiny shift in his predicted vote corresponds\par
+to a big shift in his probability of winning.\par
+And I just think you can report a number\par
+to that sort of precision.\par
+You have to accept that uncertainty.\par
+Now if that's true why are people presenting numbers\par
+like 65.7%.\par
+And I think there's a conflict between journalistic and\par
+scientific motivations.\par
+So if the goal is scientifically to understand your uncertainty\par
+about the election, it would be enough to say that Obama\par
+has a 65% chance of winning, or even just\par
+say 70% chance of winning and leave it that,\par
+because anything more precise than that it's not\par
+really meaningful.\par
+On the other hand, if you were reporting in the newspaper\par
+and trying to get clicks on the internet,\par
+then there's an advantage to giving\par
+a more precise probability.\par
+The advantage of giving a more precise probability\par
+is then when you change your forecast\par
+from one day to the next these numbers jump around a lot,\par
+so then there's news.\par
+Obama's chance of winning went up from 65% to 68%,\par
+down to 61%, up to 63%.\par
+Every day there's new news, even though it's really about as\par
+noisy as saying that somebody's height is\par
+5 feet 9.3 inches one day in 5 feet 9.4 inches another.\par
+And, again, now to loop this back to statistical practice,\par
+it's important because when we do Bayesian inferences\par
+we do need to assess probabilities\par
+and we need to use probabilities.\par
+And we need to know how accurate we're required to do so.\par
+We're not really required to get probabilities in general\par
+to this level of accuracy.\par
+Now there are some cases where you\par
+can get a probability to this level of accuracy,\par
+such as the probability of a girl birth being 0.488,\par
+because there's a huge amount of information.\par
+There's 4 million babies born in the United States every day.\par
+But usually we don't need that sort of precision,\par
+and that's actually good news.\par
+We can work with probabilities.\par
+We don't need hyperprecision.\par
+What we need is approximate calibration, and even more\par
+important, a procedure by which we can calibrate.\par
+We need to give people probabilities\par
+and then we need to be able to assess\par
+the probabilities that we give.\par
+One fun thing about probability and one important thing\par
+about probability is that it's quantitative.\par
+I'm going to demonstrate with another example from the 2012\par
+election campaign where somebody made a statement which\par
+sounded reasonable, but which falls apart\par
+when you look at the numbers.\par
+This is from the web.\par
+Someone wrote, "If you're willing to bet on Romney\par
+you can get slightly better than two to one odds\par
+at the betting site Betfair.\par
+That suggests a 33% chance that Romney will win.\par
+This is not a tied ballgame.\par
+Romney's a touchdown behind with five minutes to play."\par
+Was Romney a touchdown behind with five minutes to play.\par
+Let's look at the data.\par
+I went online found a site called advancedNFLstats.com,\par
+which will tell you the probability that your team will\par
+win the football game given the score and the time\par
+remaining in the game.\par
+So I typed it in.\par
+If you're a touchdown behind with five minutes to play,\par
+the probability you'll win the game is 10%.\par
+So Romney was actually doing better than that.\par
+You can try to calibrate this a little better.\par
+If you're winning by two points with five minutes to go,\par
+you have a 65% chance of winning the football game.\par
+So instead of saying Romney was a touchdown behind,\par
+Romney was two points behind with five minutes to go.\par
+How does this connect to applied problems in general?\par
+The connection is that probabilities are quantitative.\par
+And we want to go beyond saying, "oh, we\par
+think this is going to happen, I'm 99% sure.\par
+It's never going to happen, I'm 1% sure.\par
+I'm not sure, 50-50." we have to be more precise than that.\par
+There's actually a difference between a 90% probability\par
+and 65% probability.\par
+Those differences have quantitative impacts.\par
+We use Bayesian data analysis to combine different sources\par
+of information.\par
+When you combine information you need\par
+to weigh the strength of each piece of the information.\par
+Weighing the strength means how uncertain are you, which\par
+corresponds to the probability.\par
+If we systematically overstate the strength\par
+of certain information or understate\par
+the strength of other information,\par
+then when it comes to combining we're going to do a bad job.\par
+Suppose we have a forecast from one source and direct data\par
+from another source.\par
+The forecast is pretty good, but not perfect.\par
+The direct data is direct, but it's a little bit noisy,\par
+so we want to combine the information.\par
+That's what Bayesian statistics is all about.\par
+To do that combination we need to assess\par
+how accurate are forecasts are, and also\par
+how precise are our direct measurements.\par
+It's just not enough to say the forecast is\par
+things are going well.\par
+The data say things are going bad.\par
+What we do.\par
+Do they cancel out?\par
+It depends.\par
+So I'm devoting some effort to numerical calibration\par
+to say what really the 65% mean.\par
+Because if we cannot use these numbers quantitatively,\par
+if we cannot use probabilities quantitatively,\par
+we will fall apart later on we try to combine information.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

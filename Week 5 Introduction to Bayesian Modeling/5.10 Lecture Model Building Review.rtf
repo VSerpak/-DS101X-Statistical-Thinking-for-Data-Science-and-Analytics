@@ -1,0 +1,212 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 So what I'm going to do right now,\par
+I'm going to take all these equations, with the parameters,\par
+with the data and what not, and I'm\par
+going to just represent the same thing we did in a graph.\par
+Why I'm going to do that?\par
+Because this graph is going to help us later on,\par
+A, to understand all the bits of the model and B,\par
+to understand how the model could be expanded\par
+to, for example, different context, for example,\par
+adding new data, for example, adding different complexities\par
+to the model.\par
+So, remember what we had before?\par
+It was just sales that was represented as y.\par
+So this is the main variable we have, sales each store,\par
+each week.\par
+So when I'm going to put a square,\par
+it means that I observed this piece of information.\par
+When I don't know the parameter, I'm\par
+going to put a circle instead.\par
+So graphically, everything we just did\par
+is like, same as saying OK, sales for each week of it's\par
+t, Depend on, say, price, i t.\par
+Again, square.\par
+Why?\par
+Because I have certain data.\par
+It was also a function of the display.\par
+Again, square.\par
+But we know there was some parameter that\par
+was with price, some parameter that went with display also\par
+some parameter beta 0 that was the day sales.\par
+But also there was something else in this model, right?\par
+It was the measure of uncertainty\par
+of how is the variance of week after week of sales.\par
+So there was this sigma square.\par
+So this is a very convoluted way,\par
+we're going to simplify in a second\par
+but the idea is that everything I\par
+said before could be represented as this.\par
+The squares are going to mean our data.\par
+The circles are going to mean our parameters.\par
+And these other squares are also data\par
+we observed that fit into the main variable.\par
+So this is the dependent variable.\par
+This is the covariates.\par
+Now instead of driving a different kind\par
+of box and a different circle for the combination\par
+of parameters, another way to do this exactly could be to say,\par
+look.\par
+I am going to put here, in this box\par
+here, I'm going to define that as all the data I know,\par
+X i t and this covers all of them.\par
+Covers display, coves price.\par
+If we had more information, we could incorporate them\par
+into the model.\par
+And then I'm going to define a parameter, a vector of betas,\par
+which is what's described before was I call it\par
+like these beta, which is a vector, which is exactly\par
+the same as I did before.\par
+Graphically, our model says that sales\par
+for store i for week t for the relationship that\par
+is it's a combination of the data we are served\par
+in the covariates, parameter beta, and parameter sigma\par
+squared.\par
+So what is this?\par
+This is the simplified version of the model we just did.\par
+For those who have read something about the topic\par
+and for those that you're going to be reading more\par
+about the topic, you're going to become\par
+familiar to some concept which is called\par
+a directed acyclic graph.\par
+What is that exactly?\par
+This is it.\par
+A graph representing what is the data and then\par
+has to be some directed relationships.\par
+Why directed?\par
+Because what we know is that the probability of these given\par
+these follows a normal distribution.\par
+So it's given these, once I know these I'm\par
+going to know the probability of y, so that's why it's directed.\par
+And these, exactly why?\par
+Because if, for example, these graph now I would say something\par
+like, but do you know what?\par
+And then beta depends on how much the store\par
+is going to sell Coca-Cola.\par
+So I do something like that.\par
+Well, let me tell you we cannot solve this model because this\par
+model is cyclical.\par
+So we cannot estimate a beta that affects sales,\par
+which at the same time, the sales are affecting beta.\par
+So this is a very good way to represent the models\par
+and to understand what we're going to be estimating.\par
+Again, in this model I just described,\par
+this is a very, very simple exercise.\par
+Later on when we'll start adding complexity to the models,\par
+we will see how this becomes much more useful.\par
+So strictly speaking, when you look at any of the DAGs,\par
+what happens is that generally you don't observe,\par
+you don't include the observed data.\par
+The way these models are generally represented is just,\par
+I'm going to just clean this one here,\par
+these models are purely represented by,\par
+what is the data?\par
+What are the parameters?\par
+And then it's very good to think about what we discussed\par
+that was the unit of analysis.\par
+Well, I'm saying here that the sales\par
+of pizza store of each week follow our distribution\par
+with these parameters, so generally what\par
+we do in these graphs is we draw boxes for the unit of analysis,\par
+which is, for example, everything that is inside\par
+this box is at the level of the store,\par
+at the level of the week.\par
+The parameters, they lie outside this box,\par
+are parameters that do not vary over time or over stores.\par
+If we had parameters that are different parameters\par
+for different stores, then those parameters\par
+would be inside some box that has some i in it.\par
+The idea of representing a whole model in a graph\par
+helps us understanding what is homogeneous across all stores\par
+and across time, what varies over time, etc.\par
+So this is a very simple version in which\par
+only the data varies across time and across the stores\par
+and then the parameters are outside it.\par
+The pretty much one of the simplest model\par
+I can think about will be building complexity\par
+into these models so we can actually answer more questions.\par
+And before we jump into segment two in which we will be talking\par
+about how to actually estimate this model,\par
+how to infer the relationships in this model,\par
+how to understand the parameters, before we go there\par
+we're going to take a quick step and we're\par
+going to have some concept check of what we discovered,\par
+what we covered today.\par
+And you're going to be doing some exercises for that.\par
+So what did we cover in this segment?\par
+Very briefly first of all, what the goals of any analysis?\par
+Why are we modeling this?\par
+We have to have that in mind very, very early on.\par
+Otherwise, why model it?\par
+So in this example and many others that follow,\par
+what are the goals of the analysis?\par
+Well, we wanted to understand behavior.\par
+And by that we mean, what is the relationship between actions\par
+that business make to actually what happens to the outcome,\par
+in this case was demand.\par
+Then once we understand that, what we want to do eventually\par
+is to make predictions.\par
+And in the following segment we will\par
+see exactly how we use the model we just described\par
+to predict sales over time.\par
+So with these goals in mind, then\par
+other things we discussed today was, well,\par
+let's think about the inputs in our model.\par
+The inputs in the model are going to be the data.\par
+And the good news for us is that we'll have plenty of it.\par
+So I got started with a very, very aggregated level data,\par
+which is the sales per store.\par
+Later on we'll use actual source of information\par
+about actually which customers buy what.\par
+And also we can add many, many other covariates nowadays\par
+because we can measure many other things.\par
+Now this is inputs.\par
+Then once we start modeling this data,\par
+we have to make certain assumptions.\par
+And this is actually one of the challenges in model building\par
+is to make sure that the assumptions we're making\par
+are valid.\par
+Again, we will talk about validity of this model\par
+later on, but just from today we know\par
+that there were two things in which we were\par
+making our own assumptions.\par
+One is the one we spent most of our time\par
+we're talking about the likelihood function.\par
+So the likelihood function again, it\par
+was this relationship between the inputs and output\par
+that we assume.\par
+In our case was sales are a linear combination\par
+of price and display.\par
+This was one of the assumptions.\par
+The other set of assumptions that we\par
+have to make as a modeler are the prior.\par
+And as I said, for now, we'll use the informative priors\par
+because we have plenty of data and we don't need\par
+to worry about that that much.\par
+Now with all that in mind, what are going to be the outputs?\par
+The outputs of this model, which is\par
+what we're going to do in the next segment,\par
+are exactly the posterior.\par
+What is the posterior again?\par
+Is the probability of these parameters given the data I\par
+have.\par
+Which is exactly what everything manager is\par
+interested in understanding the behavior meaning\par
+what are those betas?\par
+Do people respond really to prices?\par
+Do people respond really to this place?\par
+This is what we will do.\par
+And now just to check, just to double check out the concept,\par
+we discussed also what is a directed acyclic graph, which\par
+is going to be just a way to describe our model\par
+building that is going to help us understand,\par
+and what goes where, how to estimate things,\par
+and how to actually add complexity in modeling.\par
+With this I'm going to leave you with some questions\par
+and we will see in the next segment.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+Next \par
+}
+ 
